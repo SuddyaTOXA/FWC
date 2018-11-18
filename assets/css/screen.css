@@ -1,0 +1,225 @@
+/*fonts*/
+/*fonts-weight*/
+/*fonts-size*/
+/*line-height*/
+/*colors*/
+/*transition*/
+/*border-radius*/
+/*import global styles */
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  padding: 0;
+  margin: 0;
+  font: 400 18px/1.6 "CircularStd", Arial, sans-serif;
+  background: #ffffff;
+  color: #3e3e3e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, input, textarea {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  list-style: none; }
+
+select, input, textarea {
+  font-size: 18px;
+  vertical-align: middle;
+  color: #3e3e3e; }
+
+textarea {
+  vertical-align: top; }
+
+:focus {
+  outline: none; }
+
+input[type=submit], button {
+  cursor: pointer; }
+
+img, fieldset {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a:link, a:visited {
+  font-family: "CircularStd", Arial, sans-serif;
+  color: #3e3e3e;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r {
+  float: right !important; }
+
+.float-l {
+  float: left !important; }
+
+.no-float {
+  float: none !important; }
+
+.no-border {
+  border: 0 !important; }
+
+.no-bg {
+  background: none !important; }
+
+.no-margin {
+  margin: 0 !important; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.no-display {
+  display: none !important; }
+
+.display {
+  display: block !important; }
+
+.inline {
+  display: inline !important; }
+
+.overflow {
+  overflow: hidden !important; }
+
+.align-r {
+  text-align: right !important; }
+
+.align-l {
+  text-align: left !important; }
+
+.align-c {
+  text-align: center !important; }
+
+.clear {
+  clear: both; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+em, i {
+  font-style: italic; }
+
+strong, b {
+  font-weight: 600; }
+
+a, .btn {
+  -webkit-transition: 0.2s;
+  -khtml-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  user-select: none; }
+
+.container {
+  max-width: 1210px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+.vertical-align .container {
+  display: table;
+  width: 100%;
+  height: 494px;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+.vertical-align .container-box {
+  display: table-cell;
+  width: 100%;
+  min-height: 50px;
+  vertical-align: middle; }
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrapper {
+  position: relative; }
+
+.section {
+  position: relative; }
+
+.bg-img {
+  position: absolute;
+  z-index: 3;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -khtml-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+/* CircularStd @font-face kit */
+@font-face {
+  font-family: 'CircularStd';
+  src: url("../fonts/CircularStd-Book.eot");
+  src: url("../fonts/CircularStd-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Book.woff") format("woff"), url("../fonts/CircularStd-Book.ttf") format("truetype"), url("../fonts/CircularStd-Book.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'CircularStd';
+  src: url("../fonts/CircularStd-BookItalic.eot");
+  src: url("../fonts/CircularStd-BookItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-BookItalic.woff") format("woff"), url("../fonts/CircularStd-BookItalic.ttf") format("truetype"), url("../fonts/CircularStd-BookItalic.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'CircularStd';
+  src: url("../fonts/CircularStd-Medium.eot");
+  src: url("../fonts/CircularStd-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Medium.woff") format("woff"), url("../fonts/CircularStd-Medium.ttf") format("truetype"), url("../fonts/CircularStd-Medium.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'CircularStd';
+  src: url("../fonts/CircularStd-Bold.eot");
+  src: url("../fonts/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Bold.woff") format("woff"), url("../fonts/CircularStd-Bold.ttf") format("truetype"), url("../fonts/CircularStd-Bold.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+@font-face {
+  font-family: 'CircularStd';
+  src: url("../fonts/CircularStd-Black.eot");
+  src: url("../fonts/CircularStd-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd-Black.woff") format("woff"), url("../fonts/CircularStd-Black.ttf") format("truetype"), url("../fonts/CircularStd-Black.svg#bcc26993292869431e54c666aafa8fcd") format("svg");
+  font-weight: 800;
+  font-style: normal; }
+/*--------------------------------------MEDIA-----------------------------------------*/
+/* styles used throughout site */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0; }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.swiper-container {
+  width: 600px;
+  height: 300px; }
+
+/*# sourceMappingURL=screen.css.map */
