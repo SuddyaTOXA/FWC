@@ -23,6 +23,8 @@
     top: 32px;
   }
   .scrolling & {
+    min-height: 137px;
+    padding: 15px 0;
     background-color: $white;
   }
 }

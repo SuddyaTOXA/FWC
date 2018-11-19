@@ -1,0 +1,113 @@
+#footer {
+  padding-top: 82px;
+  background-color: $color-bg4;
+  .container {
+    max-width: 1240px;
+  }
+}
+  .footer-list {
+    overflow: hidden;
+    margin: 0 -10px;
+    padding-bottom: 66px;
+    > li {
+      float: left;
+      width: 20%;
+      padding: 0 10px;
+      &:first-child {
+        padding-left: 33px;
+        width: 22.8%;
+      }
+      &:nth-child(2) {
+        width: 22.5%;
+      }
+      &:nth-child(3) {
+        width: 20.2%;
+      }
+      &:nth-child(4) {
+        width: 17.6%;
+      }
+      &:last-child {
+        width: 16.9%;
+      }
+    }
+  }
+      .footer-box {}
+        a.footer-title,
+        .footer-title {
+          display: block;
+          margin-bottom: 26px;
+          font-size: $size-big;
+          line-height: 1.1;
+          color: $white;
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            color: $color-text2;
+          }
+          & + a.footer-title,
+          & + .footer-title {
+            margin-top: -20px;
+          }
+        }
+        a.footer-link,
+        .footer-link {
+          display: block;
+          margin-bottom: 1px;
+          padding: 5px 0;
+          font-size: $size-small;
+          line-height: 1.5;
+          opacity: .6;
+          color: $white;
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            color: $color-text2;
+            opacity: 1;
+          }
+        }
+        .social-list {
+          margin: 38px -2px 0;
+          > li {
+            display: inline-block;
+            width: 24%;
+            padding: 0 2px;
+            margin-bottom: 10px;
+            width: -webkit-calc(25% - #{4px});
+            width: calc(25% - #{4px});
+            a {
+              display: inline-block;
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              border: 1px solid $white;
+              border-color: rgba(255, 255, 255, .35);
+              @include border-radius(50%);
+              background-color: transparent;
+              i {
+                color: $color-text5;
+                opacity: .7;
+              }
+              &:hover,
+              &:focus {
+                border-color: $color-text6;
+                background-color: $color-bg6;
+                i {
+                  color: $white;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+  .footer-bottom-box {
+    padding: 24px 0 28px;
+    text-align: center;
+    border-top: 1px solid $white;
+    border-color: rgba(255, 255, 255, .05);
+  }
+      .copyright  {
+        font-size: $size-small;
+        color: $white;
+        opacity: .45;
+      }

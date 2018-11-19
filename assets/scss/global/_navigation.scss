@@ -65,8 +65,12 @@
   margin-right: 4px;
   width: 23px;
   height: 23px;
-  background-image: url(../../img/skiing_big.png);
+  background-image: url(../../img/skiing_big_light.png);
   @include bg();
+  .scrolling &,
+  &.dark {
+    background-image: url(../../img/skiing_big_dark.png);
+  }
 }
 
 
