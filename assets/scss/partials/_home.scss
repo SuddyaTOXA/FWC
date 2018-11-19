@@ -1,5 +1,82 @@
+.section-hero {
+  overflow: hidden;
+  height: 994px;
+  padding-top: 236px;
+  color: $white;
+  background-color: $black;
+  text-align: center;
+  @include bg();
+  .container {
+    position: relative;
+    z-index: 10;
+    max-width: 1220px;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: .8;
+  }
+  //.bg-img {
+  //  opacity: .8;
+  //}
+}
+
+    .hero-title {
+      position: relative;
+      margin-bottom: 5px;
+      font-size: 104px;
+      font-weight: 700;
+      letter-spacing: -.004em;
+      //word-spacing: -.03em;
+      line-height: 1.1;
+      span {
+        position: relative;
+        top: -15px;
+        margin: 0 -8px;
+        font-size: 80px;
+        &:after {
+          position: absolute;
+          content: '';
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 4px;
+          background-color: $color-bg2;
+        }
+      }
+    }
+    .hero-desc {
+      font-size: 30px;
+      line-height: 1;
+      p {
+        margin-bottom: 20px;
+      }
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+    .bg-img {
+      position: absolute;
+      z-index: 3;
+      top: -99999px;
+      right: -99999px;
+      bottom: -99999px;
+      left: -99999px;
+      min-height: 100%;
+      min-width: 100%;
+      width: auto;
+      height: auto;
+      margin: auto;
+    }
 
 .section-meet-popup {
+  display: none;
   .container {}
 }
   .video-container {
@@ -15,3 +92,16 @@
       height: 100%;
     }
   }
+
+.section-build-based {
+  display: none;
+}
+
+.section-social-slider {
+  display: none;
+}
+
+.section-upcoming-events {
+  display: none;
+}
+

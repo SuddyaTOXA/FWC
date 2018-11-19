@@ -154,13 +154,3 @@ img {
   .section {
     position: relative;
   }
-    .bg-img {
-      position: absolute;
-      z-index: 3;
-      min-height: 100%;
-      min-width: 100%;
-      width: auto;
-      height: auto;
-      margin: auto;
-      @include transform();
-    }

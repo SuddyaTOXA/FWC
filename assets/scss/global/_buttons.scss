@@ -1,0 +1,97 @@
+a.btn, .btn {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  min-width: 170px;
+  margin: 0;
+  padding: 15px 25px;
+  font-size: $size-main;
+  font-weight: $black-weight;
+  line-height: 1;
+  letter-spacing: $letter-spacing-20;
+  color: $color-text3;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid $color-bg2;
+  background-color: $color-bg2;
+  @include border-radius($radius-main);
+  &:hover {
+    color: $color-text2;
+    background-color: transparent;
+  }
+  //.main-nav > ul > li & {
+  //  padding: 15px 25px;
+  //  font-size: $size-main;
+  //  color: $color-text3;
+  //  font-weight: $black-weight;
+  //  letter-spacing: $letter-spacing-20;
+  //  word-spacing: -.08em;
+  //  &:hover {
+  //    color: $color-text2;
+  //    background-color: transparent;
+  //  }
+  //}
+
+  &.blue {
+
+  }
+}
+
+.main-nav > ul > li.btn-dealer a,
+.btn-dealer a {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  min-width: 170px;
+  margin: 0;
+  padding: 15px 25px;
+  font-size: $size-main;
+  font-weight: $black-weight;
+  line-height: 1;
+  letter-spacing: $letter-spacing-20;
+  word-spacing: -.08em;
+  color: $color-text3;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid $color-bg2;
+  background-color: $color-bg2;
+  @include border-radius($radius-main);
+  &:hover {
+    color: $color-text2;
+    background-color: transparent;
+  }
+}
+
+
+.btn-jump-to-content {
+  position: absolute;
+  display: block;
+  width: 300px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  background: #fff;
+  z-index: -9999;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  opacity: 0;
+  &:hover {
+    color: #015CE9;
+    text-decoration: none;
+  }
+  &:focus {
+    opacity: 1;
+    text-decoration: none;
+    z-index: 9999;
+  }
+}

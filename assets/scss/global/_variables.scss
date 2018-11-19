@@ -10,7 +10,7 @@ $black-weight: 800;
 
 /*fonts-size*/
 $size-main: 18px;
-//$size-small: 16px;
+$size-big: 24px;
 $size-hero-heading: 118px;
 $size-heading1: 70px;
 //$size-heading2: 40px;
@@ -20,14 +20,20 @@ $size-heading1: 70px;
 $line-height: 1.6;
 $line-height-heading: 1;
 
+$letter-spacing-250: 0.25em;
+$letter-spacing-20: 0.02em;
+
 /*colors*/
 $white: #ffffff;
 $black: #000000;
 $color-text: #3e3e3e;
+$color-text2: #ffc72c;
+$color-text3: #212020;
 //$color-text2: #313b43;
 //$color-text3: #ff614c;
 $color-bg1: $white;
-//$color-bg2: #ff4948;
+$color-bg2: #ffc72c;
+$color-bg3: #212020;
 //$color-bg3: #1d4d94;
 //$color-bg4: #d5d5d5;
 
@@ -36,5 +42,5 @@ $transition-link: 0.2s;
 $transition-other: 0.35s;
 
 /*border-radius*/
-//$radius-main: 10px;
+$radius-main: 5px;
 //$radius-small: 5px;

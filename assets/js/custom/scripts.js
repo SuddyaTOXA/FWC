@@ -1,26 +1,26 @@
 
 	// header fade
-	// $(function() {
-	//    var header = $('#header');
-	//    setTimeout(function(){
-	//    	header.addClass('show');
-	//    },800);
-	// });
+	$(function() {
+	   var header = $('#header');
+	   setTimeout(function(){
+	   	header.addClass('show');
+	   },800);
+	});
 
 	//header background on scroll
-	// var header = $('#header');
-	// $(window).on('scroll', function() {
-	//    var st2 = $(this).scrollTop();
-	//
-	//    if (st2 > 0) {
-	//       // console.log(st2);
-	//       header.addClass('scrolling');
-	//
-	//    } else {
-	//    	header.removeClass('scrolling');
-	//    }
-    //
-	// });
+	var body = $('body');
+	$(window).on('scroll', function() {
+	   var st2 = $(this).scrollTop();
+
+	   if (st2 > 0) {
+	      // console.log(st2);
+           body.addClass('scrolling');
+
+	   } else {
+           body.removeClass('scrolling');
+	   }
+
+	});
     // for smooth scroll
 	// if ( $('a').is('.smooth-scroll') ) {
     //     smoothScroll.init({
