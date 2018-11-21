@@ -1,3 +1,31 @@
+.section {
+  position: relative;
+  &.vertical-line {
+    &:after {
+      position: absolute;
+      content: '';
+      width: 4px;
+      height: 60px;
+      left: 50%;
+      bottom: 0;
+      background-color: $color-bg2;
+      @include transform(-2px, 0);
+    }
+    & + .section {
+      &:before {
+        position: absolute;
+        content: '';
+        width: 4px;
+        height: 103px;
+        left: 50%;
+        top: 0;
+        background-color: $color-bg2;
+        @include transform(-2px, 0);
+      }
+    }
+  }
+}
+
 .section-hero {
   overflow: hidden;
   height: 994px;
@@ -75,29 +103,100 @@
       margin: auto;
     }
 
+
 .section-meet-popup {
-  //display: none;
-  .container {}
-}
-  .video-container {
+  padding: 144px 0;
+  .container {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
-    iframe {
-      display: none;
+    &:before {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      z-index: 2;
+      content: '';
+      left: -254px;
+      bottom: -78px;
+      width: 707px;
+      height: 227px;
+      background-image: url(../../img/dot.png);
+      @include bg(left top, auto, repeat);
     }
   }
-  .section-title {
-    margin-bottom: 20px;
-    font-size: $size-heading1;
-    line-height: $line-height-heading;
+}
+  .youtube-video {
+    position: relative;
+    display: block;
+    &:after {
+      position: absolute;
+      content: '';
+      z-index: 5;
+      top: 47%;
+      left: 50%;
+      width: 142px;
+      height: 142px;
+      background-color: $color-bg7;
+      background-color: rgba($color-bg7, .9);
+      background-image: url(../../img/arrow-right@2x.png);
+      @include bg(52% 50%, 49px 54px, no-repeat);
+      @include border-radius(50%);
+      @include transform();
+      @include transition(opacity $transition-link ease-in);
+    }
+    &:hover,
+    &:focus {
+      &:after {
+        background-color: rgba($color-bg7, 1);
+      }
+      .video-preview {
+        &:after {
+          opacity: .35;
+        }
+      }
+    }
   }
+    .video-preview {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 0;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding-bottom: 49.6%;
+      @include border-radius($radius-main);
+      &:after {
+        position: absolute;
+        content: '';
+        z-index: 4;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-bg;
+        opacity: 0;
+        @include transition(opacity $transition-link ease-in);
+      }
+      img {
+        position: absolute;
+        z-index: 3;
+        min-height: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        top: -9999px;
+        left: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        margin: auto;
+      }
+    }
+  .section-title {
+    margin-bottom: 96px;
+    font-size: $size-heading1;
+    font-weight: $medium;
+    line-height: $line-height-heading;
+    text-align: center;
+  }
+
 
 .section-build-based {
   //display: none;
@@ -105,9 +204,117 @@
 
 .section-social-slider {
   //display: none;
+  &.vertical-line {
+    &:after {
+      height: 82px;
+    }
+    & + .section {
+      &:before {
+        height: 81px;
+      }
+    }
+  }
 }
 
 .section-upcoming-events {
-  //display: none;
+  padding: 103px 0 170px;
+  text-align: center;
+  background-color: $color-bg9;
+  .container {}
+  .section-title {
+    margin-bottom: 20px;
+  }
 }
+    a.go-link,
+    .go-link {
+      display: inline-block;
+      margin-bottom: 77px;
+      font-weight: $medium;
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: $color-text8;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    .events-list {
+      margin: 0 -13px -80px;
+      > li {
+        display: inline-block;
+        padding: 0 13px;
+        margin-bottom: 80px;
+        width: 24%;
+        width: -webkit-calc(25% - #{4px});
+        width: calc(25% - #{4px});
+        a {
+          display: block;
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+          .event-box {
+            text-align: left;
+          }
+            .event-img-wrap {
+              overflow: hidden;
+              position: relative;
+              padding-bottom: 74.5%;
+              margin-bottom: 42px;
+              width: 100%;
+              background-color: $black;
+              img {
+                position: absolute;
+                z-index: 3;
+                min-height: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                top: -9999px;
+                left: -9999px;
+                right: -9999px;
+                bottom: -9999px;
+                margin: auto;
+                opacity: .7;
+              }
+              &.wider {
+                img {
+                  max-height: 100%;
+                  max-width: none;
+                }
+              }
+            }
+              .event-date {
+                position: absolute;
+                z-index: 5;
+                top: 20px;
+                left: 24px;
+                padding: 5px 12px;
+                font-size: 20px;
+                line-height: $line-height-heading;
+                color: $white;
+                border: 2px solid $white;
+              }
+            .event-info {}
+              .event-location {
+                overflow: hidden;
+                display: block;
+                margin-bottom: 16px;
+                line-height: $line-height-heading;
+                opacity: 0.7;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+              .event-title {
+                overflow: hidden;
+                font-size: 22px;
+                font-weight: $medium;
+                line-height: $line-height-heading;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
 

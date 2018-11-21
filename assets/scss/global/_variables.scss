@@ -33,14 +33,20 @@ $color-text3: #212020;
 $color-text4: #0033a0;
 $color-text5: #989898;
 $color-text6: #fc4c02;
+$color-text7: #ff3f3f;
+$color-text8: #0e90ff;
+$color-text9: #f7f9fb;
 //$color-text2: #313b43;
 //$color-text3: #ff614c;
-$color-bg1: $white;
+$color-bg: #3e3e3e;
 $color-bg2: #ffc72c;
 $color-bg3: #212020;
 $color-bg4: #0033a0;
 $color-bg5: #989898;
 $color-bg6: #fc4c02;
+$color-bg7: #ff3f3f;
+$color-bg8: #0e90ff;
+$color-bg9: #f7f9fb;
 //$color-bg3: #1d4d94;
 //$color-bg4: #d5d5d5;
 
@@ -49,5 +55,5 @@ $transition-link: 0.2s;
 $transition-other: 0.35s;
 
 /*border-radius*/
-$radius-main: 5px;
-//$radius-small: 5px;
+$radius-main: 10px;
+$radius-small: 5px;

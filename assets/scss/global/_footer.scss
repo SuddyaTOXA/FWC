@@ -39,14 +39,16 @@
           font-size: $size-big;
           line-height: 1.1;
           color: $white;
+          & + a.footer-title,
+          & + .footer-title {
+            margin-top: -20px;
+          }
+        }
+        a.footer-title {
           &:hover,
           &:focus {
             text-decoration: none;
             color: $color-text2;
-          }
-          & + a.footer-title,
-          & + .footer-title {
-            margin-top: -20px;
           }
         }
         a.footer-link,
@@ -58,6 +60,8 @@
           line-height: 1.5;
           opacity: .6;
           color: $white;
+        }
+        a.footer-link {
           &:hover,
           &:focus {
             text-decoration: none;
