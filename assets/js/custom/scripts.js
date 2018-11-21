@@ -52,9 +52,13 @@ jQuery(document).ready(function($) {
 
         //initialize swiper when document ready
         var mySwiper = new Swiper ('.social-slider', {
-            // Optional parameters
-            direction: 'vertical',
-            loop: true
+            slidesPerView: 3,
+            spaceBetween: 30,
+            // loop: true,
+            navigation: {
+                nextEl: '.swiper-social-button-next',
+                prevEl: '.swiper-social-button-prev',
+            },
         })
 
 		//for popup

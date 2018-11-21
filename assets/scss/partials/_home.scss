@@ -1,5 +1,8 @@
 .section {
   position: relative;
+  &.inverse {
+    color: $white;
+  }
   &.vertical-line {
     &:after {
       position: absolute;
@@ -105,7 +108,7 @@
 
 
 .section-meet-popup {
-  padding: 144px 0;
+  padding: 144px 0 290px;
   .container {
     position: relative;
     &:before {
@@ -199,11 +202,73 @@
 
 
 .section-build-based {
-  //display: none;
+  position: relative;
+  .container {
+    overflow: hidden;
+    position: relative;
+    display: table;
+    max-width: 1920px;
+    width: 100%;
+    min-height: 736px;
+    //max-width: 1920px;
+    &:after {
+      position: absolute;
+      z-index: 5;
+      content: '';
+      top: 0;
+      left: 265px;
+      width: 100%;
+      width: calc(100% + #{25px});
+      height: 100%;
+      background-image: url(../../img/fourwh_truck_bg.png);
+      @include bg(left, contain);
+      background-color: #14afff;
+      @include border-radius(20em);
+    }
+    .section-title {
+      margin-bottom: 43px;
+      line-height: 1.1;
+      text-align: left;
+    }
+  }
+  .left-box,
+  .right-box {
+    position: relative;
+    z-index: 7;
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+  }
+  .left-box {
+    width: 55.7%;
+  }
+  .right-box {
+    padding: 80px 0;
+    width: 44.3%;
+  }
 }
-
+  .four-truck-img-wrap {
+    position: relative;
+    //z-index: 7;
+    left: -25px;
+    width: 85%;
+    margin-bottom: 55px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+    .build-based-box {
+      max-width: 500px;
+      margin-bottom: 60px;
+    }
+      .build-based-desc {
+        margin-bottom: 58px;
+        font-size: 22px;
+      }
 .section-social-slider {
-  //display: none;
+  padding: 218px 0 125px;
+
   &.vertical-line {
     &:after {
       height: 82px;
@@ -249,9 +314,14 @@
         width: calc(25% - #{4px});
         a {
           display: block;
+          @include transition($transition-other);
           &:hover,
           &:focus {
+            color: $color-text2;
             text-decoration: none;
+            img {
+              @include css3-prefix('transform', 'scale(1.1)');
+            }
           }
         }
       }
@@ -280,6 +350,7 @@
                 bottom: -9999px;
                 margin: auto;
                 opacity: .7;
+                @include css3-prefix('transform-origin', '50%, 50%');
               }
               &.wider {
                 img {
