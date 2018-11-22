@@ -1,7 +1,6 @@
 .swiper-container {
   width: 100%;
   max-width: 100%;
-  //height: 300px;
 }
   .swiper-slide {
     max-width: 370px;
@@ -24,11 +23,12 @@
       }
       &:before {
         top: 0;
-        background-image: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        @include background-gradient(bottom, $black);
       }
       &:after {
         bottom: 0;
-        background-image: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        @include background-gradient(top, $black);
+
       }
       > img {
         position: absolute;
@@ -57,10 +57,10 @@
         .slide-box {
           background-color: $color-bg10;
           &:before {
-            background-image: linear-gradient(to bottom, #00c7de 0%, rgba(61, 176, 200, 0) 100%);
+            @include background-gradient(bottom, #00c7de);
           }
           &:after {
-            background-image: linear-gradient(to top, #51b5c9 0%, rgba(65, 172, 195, 0) 100%);
+            @include background-gradient(top, #51b5c9);
           }
           > img {
             opacity: .7;
@@ -96,11 +96,13 @@
           .slider-social-table-footer {
             display: table-footer-group;
             vertical-align: bottom;
-            height: 140px;
           }
             .slide-desc {
               overflow: hidden;
               max-height: 140px;
+              @media all and (max-width: 1366px) {
+                max-height: 115px;
+              }
             }
 
       .slide-icon {
@@ -117,6 +119,10 @@
         font-size: $size-big;
         font-weight: $medium;
         line-height: 1.25;
+        @media all and (max-width: 1366px) {
+          max-height: 80px;
+          font-size: 22px;
+        }
       }
       .slide-desc {}
     .social-nav-box {
@@ -141,7 +147,7 @@
           width: 36px;
           height: 2px;
           background-color: #4e4e4e;
-          @include transform(0, -50%);
+          @include translate(0, -50%);
         }
         &:after {
           top: 50%;

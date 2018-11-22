@@ -51,7 +51,7 @@ strong, b {
   font-weight: $bold;
 }
 a, .btn {
-  @include transition(else-in $transition-link);
+  @include transition($transition-link);
 }
 img {
   -webkit-user-select: none;

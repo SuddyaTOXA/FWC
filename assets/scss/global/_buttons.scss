@@ -6,7 +6,7 @@ a.btn, .btn {
   margin: 0;
   padding: 15px 25px;
   font-size: $size-main;
-  font-weight: $black-weight;
+  font-weight: $normal;
   line-height: 1;
   letter-spacing: $letter-spacing-20;
   color: $color-text3;
@@ -15,26 +15,53 @@ a.btn, .btn {
   text-decoration: none;
   border: 1px solid $color-bg2;
   background-color: $color-bg2;
-  @include border-radius($radius-main);
-  &:hover {
+  @include border-radius($radius-small);
+  &:hover,
+  &:focus {
     color: $color-text2;
     background-color: transparent;
   }
-  //.main-nav > ul > li & {
-  //  padding: 15px 25px;
-  //  font-size: $size-main;
-  //  color: $color-text3;
-  //  font-weight: $black-weight;
-  //  letter-spacing: $letter-spacing-20;
-  //  word-spacing: -.08em;
-  //  &:hover {
-  //    color: $color-text2;
-  //    background-color: transparent;
-  //  }
-  //}
-
   &.blue {
-
+    color: $white;
+    border-color: #00a3e0;
+    background-color: #00a3e0;
+    &:hover,
+    &:focus {
+      color: #00a3e0;
+      background-color: transparent;
+    }
+    &.inverse {
+      color: #62666a;
+      background-color: transparent;
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: #00a3e0;
+      }
+    }
+  }
+  &.white {
+    border-color: $white;
+    background-color: $white;
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: transparent;
+    }
+    &.inverse {
+      color: $white;
+      background-color: transparent;
+      &:hover,
+      &:focus {
+        color: $color-text3;
+        background-color: $white;
+      }
+    }
+  }
+  &.big {
+    padding: 19px 32px;
+    font-size: 20px;
+    font-weight: $normal;
   }
 }
 
@@ -57,10 +84,15 @@ a.btn, .btn {
   text-decoration: none;
   border: 1px solid $color-bg2;
   background-color: $color-bg2;
-  @include border-radius($radius-main);
+  @include border-radius($radius-small);
   &:hover {
     color: $color-text2;
     background-color: transparent;
+  }
+  @media all and (max-width: 1366px) {
+    min-width: 140px;
+    padding: 13px 20px;
+    font-size: 16px;
   }
 }
 
@@ -75,18 +107,15 @@ a.btn, .btn {
   margin: 0 auto;
   padding: 10px 15px;
   font-size: 20px;
-  font-weight: 700;
-  color: #333;
+  font-weight: $normal;
+  color: $color-text;
   text-align: center;
   text-decoration: none;
-  background: #fff;
+  background-color: $white;
   z-index: -9999;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   opacity: 0;
   &:hover {
-    color: #015CE9;
+    color: $color-text2;
     text-decoration: none;
   }
   &:focus {

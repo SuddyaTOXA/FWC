@@ -39,6 +39,9 @@
           font-size: $size-big;
           line-height: 1.1;
           color: $white;
+          @media all and (max-width: 1366px) {
+            font-size: 22px;
+          }
           & + a.footer-title,
           & + .footer-title {
             margin-top: -20px;
@@ -60,6 +63,9 @@
           line-height: 1.5;
           opacity: .6;
           color: $white;
+          @media all and (max-width: 1366px) {
+            font-size: 16px;
+          }
         }
         a.footer-link {
           &:hover,
@@ -78,6 +84,7 @@
             margin-bottom: 10px;
             width: -webkit-calc(25% - #{4px});
             width: calc(25% - #{4px});
+            min-width: 44px;
             a {
               display: inline-block;
               width: 40px;
@@ -85,12 +92,13 @@
               line-height: 40px;
               text-align: center;
               border: 1px solid $white;
-              border-color: rgba(255, 255, 255, .35);
+              border-color: rgba($white, .35);
               @include border-radius(50%);
               background-color: transparent;
               i {
                 color: $color-text5;
                 opacity: .7;
+                @include transition($transition-link);
               }
               &:hover,
               &:focus {
@@ -114,4 +122,7 @@
         font-size: $size-small;
         color: $white;
         opacity: .45;
+        @media all and (max-width: 1366px) {
+          font-size: 16px;
+        }
       }

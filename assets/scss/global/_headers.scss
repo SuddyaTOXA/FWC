@@ -1,4 +1,4 @@
-.header {
+#header {
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -9,7 +9,7 @@
   padding-bottom: 29px;
   text-align: right;
   opacity: 0;
-  @include css3-prefix('transition', 'all 0.5s ease');
+  //@include css3-prefix('transition', 'all .5s ease-in opacity 0s');
   &.show,
   .no-js &,
   html:not(.js) & {
@@ -26,9 +26,7 @@
     min-height: 137px;
     padding: 15px 0;
     background-color: $white;
-    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
-    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+    @include box-shadow(0  5px 10px 0, rgba($black, .2));
   }
 }
 
@@ -54,20 +52,14 @@
   height: 0;
   width: 0;
   top: 75px;
-  -webkit-transition-delay: 0.35s;
-  -moz-transition-delay: 0.35s;
-  -o-transition-delay: 0.35s;
-  transition-delay: 0.35s;
+  @include css3-prefix('transition-delay',$transition-other);
   .admin-bar & {
     top: 108px;
   }
   &.showing {
     height: 100%;
     width: 100%;
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
+    @include css3-prefix('transition-delay','0s');
   }
 }
 .mobile-menu-overlay {
@@ -77,12 +69,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.25);
-  //background-color: transparent;
   opacity: 0;
-  -webkit-transition: opacity 0.35s;
-  -moz-transition: opacity 0.35s;
-  -o-transition: opacity 0.35s;
-  transition: opacity 0.35s;
+  @include transition(opacity $transition-other);
   .showing & {
     opacity: 1;
   }
@@ -95,15 +83,9 @@
   z-index: 2;
   padding-bottom: 100px;
   background-color: rgba(255, 255, 255, 0.9);
-  -webkit-transition: right 0.35s;
-  -moz-transition: right 0.35s;
-  -o-transition: right 0.35s;
-  transition: right 0.35s;
+  @include transition(right $transition-other);
   overflow: auto;
-  //-webkit-box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-  //-moz-box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-  //-o-box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
-  //box-shadow: -10px 10px 30px rgba(0,0,0,0.2);
+  @include box-shadow(-10px 10px 30px, rgba($black, .2));
   .showing & {
     right: 0;
   }
@@ -127,21 +109,13 @@
     cursor: pointer;
     height: 1px;
     width: 30px;
-    //background-color: $color-9;
-    -webkit-transition: all 0.35s;
-    -moz-transition: all 0.35s;
-    -o-transition: all 0.35s;
-    transition: all 0.35s;
+    @include transition(all $transition-other);
   }
   span {
     z-index: 999999;
     left: 50%;
     top: 50%;
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    @include translate();
   }
   span:before {
     top: -9px;
@@ -153,19 +127,11 @@
     background-color: transparent;
   }
   &.active span:before {
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
+    @include rotate(45deg);
     top: 0;
   }
   &.active span:after {
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    @include rotate(-45deg);
     bottom: 0;
   }
 }
