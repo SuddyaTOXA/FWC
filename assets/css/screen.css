@@ -1405,6 +1405,10 @@ a.footer-link:hover, a.footer-link:focus {
         width: 80px;
         height: 80px;
         background-size: 24px 27px; } }
+    @media all and (max-width: 767px) {
+      .youtube-video:after {
+        width: 60px;
+        height: 60px; } }
   .youtube-video:hover:after, .youtube-video:focus:after {
     background-color: #ff3f3f; }
   .youtube-video:hover .video-preview:after, .youtube-video:focus .video-preview:after {
