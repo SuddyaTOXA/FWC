@@ -9,25 +9,80 @@
     overflow: hidden;
     margin: 0 -10px;
     padding-bottom: 66px;
+    @media all and (max-width: 767px) {
+      margin-bottom: -30px;
+    }
     > li {
       float: left;
       width: 20%;
       padding: 0 10px;
+      @media all and (max-width: 767px) {
+        width: 33.33%;
+        margin-bottom: 30px;
+        &:nth-child(3n + 4) {
+          clear: both;
+        }
+      }
+      @media all and (max-width: 460px) {
+        width: 50%;
+        &:nth-child(3n + 4) {
+          clear: none;
+        }
+        &:nth-child(odd) {
+          clear: both;
+        }
+      }
+      @media all and (max-width: 380px) {
+        width: 100% !important;
+      }
       &:first-child {
         padding-left: 33px;
         width: 22.8%;
+        @media all and (max-width: 1024px) {
+          padding-left: 10px;
+        }
+        @media all and (max-width: 767px) {
+          width: 33.33%;
+        }
+        @media all and (max-width: 460px) {
+          width: 50%;
+        }
       }
       &:nth-child(2) {
         width: 22.5%;
+        @media all and (max-width: 767px) {
+          width: 33.33%;
+        }
+        @media all and (max-width: 460px) {
+          width: 50%;
+        }
       }
       &:nth-child(3) {
         width: 20.2%;
+        @media all and (max-width: 767px) {
+          width: 33.33%;
+        }
+        @media all and (max-width: 460px) {
+          width: 50%;
+        }
       }
       &:nth-child(4) {
         width: 17.6%;
+        @media all and (max-width: 767px) {
+          width: 33.33%;
+        }
+        @media all and (max-width: 460px) {
+          width: 50%;
+        }
       }
       &:last-child {
         width: 16.9%;
+        @media all and (max-width: 767px) {
+          width: 50%;
+        }
+        @media all and (max-width: 460px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -41,6 +96,10 @@
           color: $white;
           @media all and (max-width: 1366px) {
             font-size: 22px;
+          }
+          @media all and (max-width: 767px) {
+            margin-bottom: 18px;
+            font-size: 20px;
           }
           & + a.footer-title,
           & + .footer-title {
@@ -82,9 +141,10 @@
             width: 24%;
             padding: 0 2px;
             margin-bottom: 10px;
-            width: -webkit-calc(25% - #{4px});
-            width: calc(25% - #{4px});
-            min-width: 44px;
+            //width: -webkit-calc(25% - #{4px});
+            //width: calc(25% - #{4px});
+            //min-width: 44px;
+            width: 44px;
             a {
               display: inline-block;
               width: 40px;

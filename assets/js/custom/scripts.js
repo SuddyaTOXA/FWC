@@ -41,12 +41,13 @@ jQuery(document).ready(function($) {
     //         event.preventDefault();
     //     });
     // }
+
     // for burger menu
-    // $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function(){
-    //     $('.mobile-menu-toggle').toggleClass('active');
-    //     $('.mobile-menu-wrap').toggleClass('showing');
-    //     $(document.body).toggleClass('overflow');
-    // });
+    $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function(){
+        $('.mobile-menu-toggle').toggleClass('active');
+        $('.mobile-menu-wrap').toggleClass('showing');
+        $(document.body).toggleClass('overflow');
+    });
         // for empty link
         // prevent();
 
@@ -59,6 +60,21 @@ jQuery(document).ready(function($) {
                 nextEl: '.swiper-social-button-next',
                 prevEl: '.swiper-social-button-prev',
             },
+            breakpoints: {
+                // when window width is <= 320px
+                // 320: {
+                //     slidesPerView: 1,
+                //     spaceBetween: 10
+                // },
+                // when window width is <= 480px
+                540: {
+                    slidesPerView: 1
+                },
+                // when window width is <= 640px
+                767: {
+                    slidesPerView: 2
+                }
+            }
         })
 
 		//for popup

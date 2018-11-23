@@ -28,6 +28,17 @@
     background-color: $white;
     @include box-shadow(0  5px 10px 0, rgba($black, .2));
   }
+  @media all and (max-width: 1024px) {
+    min-height: 70px;
+    padding: 8px 0 3px;
+    text-align: left;
+    background-color: $white;
+    @include box-shadow(0  5px 10px 0, rgba($black, .2));
+    .scrolling & {
+      min-height: 70px;
+      padding: 8px 0 3px;
+    }
+  }
 }
 
 .logo {
@@ -38,6 +49,15 @@
   img {
     max-width: 100%;
     max-height: 100%;
+  }
+  @media all and (max-width: 1024px) {
+    //float: none;
+    //display: block;
+    max-width: 158px;
+    a {
+      //display: block;
+      //line-height: 1;
+    }
   }
 }
 
@@ -51,7 +71,7 @@
   right: 0;
   height: 0;
   width: 0;
-  top: 75px;
+  top: 70px;
   @include css3-prefix('transition-delay',$transition-other);
   .admin-bar & {
     top: 108px;
@@ -60,6 +80,9 @@
     height: 100%;
     width: 100%;
     @include css3-prefix('transition-delay','0s');
+  }
+  @media all and (max-width: 1024px) {
+    display: block;
   }
 }
 .mobile-menu-overlay {
@@ -94,9 +117,9 @@
 .mobile-menu-toggle {
   position: absolute;
   right: 0;
-  top: -21px;
-  height: 75px;
-  width: 75px;
+  top: -8px;
+  height: 70px;
+  width: 70px;
   vertical-align: middle;
   cursor: pointer;
   font-size: 26px;
@@ -109,6 +132,7 @@
     cursor: pointer;
     height: 1px;
     width: 30px;
+    background-color: $color-bg;
     @include transition(all $transition-other);
   }
   span {
@@ -133,5 +157,8 @@
   &.active span:after {
     @include rotate(-45deg);
     bottom: 0;
+  }
+  @media all and (max-width: 1024px) {
+    display: block;
   }
 }

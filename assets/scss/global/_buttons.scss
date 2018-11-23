@@ -62,10 +62,15 @@ a.btn, .btn {
     padding: 19px 32px;
     font-size: 20px;
     font-weight: $normal;
+    @media all and (max-width: 767px) {
+      font-size: 18px;
+      padding: 15px 25px;
+    }
   }
 }
 
 .main-nav > ul > li.btn-dealer a,
+.mobile-menu > li.btn-dealer a,
 .btn-dealer a {
   position: relative;
   display: inline-block;
@@ -94,6 +99,9 @@ a.btn, .btn {
     padding: 13px 20px;
     font-size: 16px;
   }
+}
+.mobile-menu > li.btn-dealer a {
+  margin: 10px 25px 8px;
 }
 
 
