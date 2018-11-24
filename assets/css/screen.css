@@ -209,6 +209,10 @@ a.btn, .btn {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px; }
+  @media all and (max-width: 767px) {
+    a.btn, .btn {
+      font-size: 16px;
+      padding: 12px 20px; } }
   a.btn:hover, a.btn:focus, .btn:hover, .btn:focus {
     color: #ffc72c;
     background-color: transparent; }
@@ -1141,9 +1145,7 @@ a.footer-link:hover, a.footer-link:focus {
   margin: 38px -2px 0; }
   .social-list > li {
     display: inline-block;
-    width: 24%;
     padding: 0 2px;
-    margin-bottom: 10px;
     width: 44px; }
     .social-list > li a {
       display: inline-block;

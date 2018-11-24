@@ -362,7 +362,6 @@
 }
   .four-truck-img-wrap {
     position: relative;
-    //z-index: 7;
     left: -25px;
     width: 85%;
     margin-bottom: 55px;
@@ -572,7 +571,6 @@
                 opacity: 0.7;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-                //@include transition($transition-link);
                 @media all and (max-width: 1366px) {
                   margin-bottom: 12px;
                   font-size: 16px;
@@ -585,7 +583,6 @@
                 line-height: $line-height-heading;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-                //@include transition($transition-link);
                 @media all and (max-width: 1366px) {
                   font-size: 20px;
                 }

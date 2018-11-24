@@ -16,6 +16,10 @@ a.btn, .btn {
   border: 1px solid $color-bg2;
   background-color: $color-bg2;
   @include border-radius($radius-small);
+  @media all and (max-width: 767px) {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
   &:hover,
   &:focus {
     color: $color-text2;

@@ -107,9 +107,7 @@
     a {
       position: relative;
       display: inline-block;
-      //font: $m-font-primary-nav;
       text-transform: uppercase;
-      //letter-spacing: $letter-spacing-200;
       margin: 10px 25px 8px;
       padding: 5px 0;
       color: $color-text3;
@@ -147,34 +145,11 @@
         }
       }
     }
-    //a:hover:after,
-    //&.current-menu-item > a:after {
-    //  text-decoration: none;
-    //  //background-color: $color-2;
-    //}
-    //a:hover:after {
-    //  opacity: 0.7;
-    //}
   }
   > .current-menu-item > a,
   > li > a:hover {
     text-decoration: none;
   }
-  //.expanded:after {
-  //  content: "\f107";
-  //  font-family: FontAwesome;
-  //  font-size: 16px;
-  //  line-height: 1;
-  //  text-indent: 0;
-  //  width: 18px;
-  //  height: 18px;
-  //  position: absolute;
-  //  top: 20px;
-  //  margin-top: -8px;
-  //  right: 10px;
-  //  display: inline-block;
-  //  color: $color-2;
-  //}
   &:hover:after {
     color: #0097de;
   }
@@ -185,11 +160,6 @@
     background-image: url(../../img/skiing_big_dark.png);
   }
 }
-//.header-btn-box {
-//  overflow: hidden;
-//  float: right;
-//  margin-top: 2px;
-//}
 
 .main-nav .sub-menu {
   overflow: hidden;
@@ -200,15 +170,9 @@
   left: -25px;
   min-width: 100%;
   padding: 10px 0;
-  //background: $color-0;
   opacity: 0;
   visibility: hidden;
   text-align: left;
-  //-webkit-transition: all .2s ease-in-out;
-  //-moz-transition: all .2s ease-in-out;
-  //-ms-transition: all .2s ease-in-out;
-  //-o-transition: all .2s ease-in-out;
-  //transition: all .2s ease-in-out;
 }
 
 .main-nav {
@@ -227,9 +191,7 @@
     a {
       display: inline-block;
       margin: 5px 20px 5px 25px;
-      //font: $m-font-primary-nav;
       text-transform: uppercase;
-      //letter-spacing: $letter-spacing-200;
     }
     a:hover,
     .current-menu-item a {
