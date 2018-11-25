@@ -23,7 +23,6 @@
 	});
 
 
-
     // for smooth scroll
 	// if ( $('a').is('.smooth-scroll') ) {
     //     smoothScroll.init({
