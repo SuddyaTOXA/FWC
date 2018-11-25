@@ -18,8 +18,8 @@ textarea                       { vertical-align:top; }
 input[type=submit], button     { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font-family: $font-main; color: $color-text; text-decoration:none; }
-a:hover                        { text-decoration:underline; }
+a:link, a:visited              { font-family: $font-main; color: $color-text; text-decoration:underline; }
+a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
 /*----------------------------------------------------------------------------------*/

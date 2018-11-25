@@ -79,14 +79,12 @@ a.btn, .btn {
   position: relative;
   display: inline-block;
   max-width: 100%;
-  min-width: 170px;
   margin: 0;
-  padding: 15px 25px;
-  font-size: $size-main;
-  font-weight: $black-weight;
+  padding: 13px 15px;
+  min-width: 130px;
+  font-size: $size-small;
+  font-weight: $medium;
   line-height: 1;
-  letter-spacing: $letter-spacing-20;
-  word-spacing: -.08em;
   color: $color-text3;
   text-align: center;
   cursor: pointer;
@@ -94,14 +92,23 @@ a.btn, .btn {
   border: 1px solid $color-bg2;
   background-color: $color-bg2;
   @include border-radius($radius-small);
+  &:focus,
   &:hover {
     color: $color-text2;
     background-color: transparent;
   }
-  @media all and (max-width: 1366px) {
-    min-width: 140px;
-    padding: 13px 20px;
-    font-size: 16px;
+  @media all and (max-width: 1280px) {}
+  .home & {
+    min-width: 170px;
+    padding: 14px 20px;
+    font-size: $size-main;
+    font-weight: $black-weight;
+    @media all and (max-width: 1440px) {
+      padding: 13px 15px;
+      min-width: 130px;
+      font-size: $size-small;
+      font-weight: $medium;
+    }
   }
 }
 .mobile-menu > li.btn-dealer a {

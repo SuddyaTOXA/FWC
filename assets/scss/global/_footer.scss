@@ -16,6 +16,9 @@
       float: left;
       width: 20%;
       padding: 0 10px;
+      > :last-child {
+        margin-bottom: 0;
+      }
       @media all and (max-width: 767px) {
         width: 33.33%;
         margin-bottom: 30px;
@@ -86,7 +89,9 @@
       }
     }
   }
-      .footer-box {}
+      .footer-box {
+        margin-bottom: 45px;
+      }
         a.footer-title,
         .footer-title {
           display: block;
@@ -140,6 +145,7 @@
             display: inline-block;
             padding: 0 2px;
             width: 44px;
+            margin-bottom: 9px;
             a {
               display: inline-block;
               width: 40px;

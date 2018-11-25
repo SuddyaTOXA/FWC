@@ -1,6 +1,6 @@
 /*fonts*/
 $font-main: 'CircularStd', Arial, sans-serif;
-//$font-heading: 'Patua One', 'Roboto', Arial, sans-serif;
+$font-roboto: 'Roboto', Arial, sans-serif;
 
 /*fonts-weight*/
 $normal: 400;
@@ -9,11 +9,13 @@ $bold: 600;
 $black-weight: 800;
 
 /*fonts-size*/
+$size-smaller: 16px;
 $size-small: 17px;
 $size-main: 18px;
 $size-big: 24px;
 $size-hero-heading: 118px;
 $size-heading1: 70px;
+$size-heading2: 40px;
 //$size-heading2: 40px;
 //$size-heading3: 28px;
 
@@ -53,8 +55,8 @@ $color-bg10: #00f0dc;
 //$color-bg4: #d5d5d5;
 
 /*transition*/
-$transition-link: 0.2s;
-$transition-other: 0.35s;
+$transition-link: .25s;
+$transition-other: .35s;
 
 /*border-radius*/
 $radius-main: 10px;

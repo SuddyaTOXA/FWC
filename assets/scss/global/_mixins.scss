@@ -73,3 +73,7 @@
 @mixin scale ( $scale: 1 ) {
   @include css3-prefix('transform', scale($scale));
 }
+//TRANSFORM SCALE
+@mixin transform-origin ( $x: 50%, $y: 50% ) {
+  @include css3-prefix('transform-origin', $x $y);
+}

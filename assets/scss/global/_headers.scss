@@ -4,9 +4,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 165px;
-  padding-top: 29px;
-  padding-bottom: 29px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  min-height: 132px;
+  //min-height: 165px;
+  //padding-top: 29px;
+  //padding-bottom: 29px;
   text-align: right;
   opacity: 0;
   &.show,
@@ -16,16 +19,33 @@
   }
   .container {
     position: relative;
-    max-width: 1812px;
+    .home & {
+      max-width: 1832px;
+      @media all and (max-width: 1440px) {
+        padding-top: 11px;
+        padding-bottom: 11px;
+        min-height: 132px;
+        max-width: 1210px;
+      }
+    }
   }
   .admin-bar & {
     top: 32px;
   }
+  .home & {
+    min-height: 166px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
   .scrolling & {
-    min-height: 137px;
-    padding: 15px 0;
+    //min-height: 137px;
+    //padding: 15px 0;
     background-color: $white;
     @include box-shadow(0  5px 10px 0, rgba($black, .2));
+  }
+  .home.scrolling & {
+    min-height: 134px;
+    padding: 12px 0 12px;
   }
   @media all and (max-width: 1024px) {
     min-height: 70px;
@@ -43,11 +63,19 @@
 .logo {
   overflow: hidden;
   float: left;
-  max-width: 307px;
+  max-width: 316px;
+  //max-width: 158px;
+  //max-width: 307px;
   @include transition($transition-other);
   img {
     max-width: 100%;
     max-height: 100%;
+  }
+  .home & {
+    margin-left: 10px;
+    @media all and (max-width: 1440px) {
+     margin-left: 0;
+    }
   }
   @media all and (max-width: 1024px) {
     max-width: 158px;

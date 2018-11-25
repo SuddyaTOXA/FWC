@@ -37,15 +37,18 @@
 
 .section-hero {
   overflow: hidden;
-  min-height: 994px;
+  min-height: 640px;
   padding: 236px 0 140px;
   color: $white;
-  background-color: $black;
+  background-color: #505050;
   text-align: center;
   @include bg();
-  @media all and (max-width: 1366px) {
-    min-height: 700px;
+  .home & {
+    min-height: 994px;
   }
+  //@media all and (max-width: 1366px) {
+  //  min-height: 700px;
+  //}
   @media all and (max-width: 1024px) {
     padding-top: 140px;
     padding-bottom: 80px;
@@ -53,6 +56,9 @@
   }
   @media all and (max-width: 767px) {
     min-height: 450px;
+  }
+  @media all and (max-width: 480px) {
+    min-height: 380px;
   }
   .container {
     position: relative;
@@ -181,7 +187,7 @@
       position: absolute;
       content: '';
       z-index: 5;
-      top: 47%;
+      top: 50%;
       left: 50%;
       width: 142px;
       height: 142px;
@@ -270,8 +276,53 @@
     @media all and (max-width: 767px) {
       font-size: 30px;
     }
+    &.small {
+      font-size: $size-heading2;
+      font-weight: $normal;
+      letter-spacing: .03em;
+      word-spacing: 0;
+      @media all and (max-width: 767px) {
+        font-size: 35px;
+      }
+    }
+    &.line {
+      position: relative;
+      padding-bottom: 25px;
+      margin-bottom: 35px;
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+        left: 50%;
+        bottom: 0;
+        background-color: #00a3e0;
+      }
+      &:before {
+        width: 99px;
+        height: 2px;
+        @include translate(-50%, 1px);
+      }
+      &:after {
+        width: 8px;
+        height: 8px;
+        @include translate(-50%, 4px);
+      }
+    }
   }
-
+  .section-desc {
+    max-width: 890px;
+    margin: 0 auto 95px;
+    font-size: 20px;
+    font-weight: $normal;
+    letter-spacing: .03em;
+    text-align: center;
+    color: #62666a;
+    opacity: 0.8;
+    @media all and (max-width: 767px) {
+      margin-bottom: 60px;
+      font-size: 18px;
+    }
+  }
 
 .section-build-based {
   position: relative;
@@ -442,6 +493,7 @@
       padding-bottom: 2px;
       font-weight: $medium;
       text-transform: uppercase;
+      text-decoration: none;
       line-height: $line-height-heading;
       color: $color-text8;
       @media all and (max-width: 1024px) {
@@ -457,12 +509,13 @@
         background-color: $color-bg8;
         @include transition($transition-link);
       }
-      &:hover,
-      &:focus {
-        &:after {
-          background-color: transparent;
+      @media all and (min-width: 768px) {
+        &:hover,
+        &:focus {
+          &:after {
+            background-color: transparent;
+          }
         }
-        text-decoration: none;
       }
     }
     .events-list {
@@ -478,6 +531,7 @@
         width: 24%;
         width: -webkit-calc(25% - #{4px});
         width: calc(25% - #{4px});
+        vertical-align: top;
         @media all and (max-width: 1024px) {
           margin-bottom: 60px;
           width: 32%;
@@ -494,15 +548,17 @@
         }
         a {
           display: block;
-          &:hover,
-          &:focus {
-            color: $color-text2;
-            text-decoration: none;
-            img {
-              @include scale(1.1);
-            }
-            .event-location {
-              opacity: 1;
+          text-decoration: none;
+          @media all and (min-width: 768px) {
+            &:hover,
+            &:focus {
+              color: $color-text2;
+              img {
+                @include scale(1.1);
+              }
+              .event-location {
+                opacity: 1;
+              }
             }
           }
         }
@@ -538,7 +594,7 @@
                 bottom: -9999px;
                 margin: auto;
                 opacity: .7;
-                @include css3-prefix('transform-origin', '50% 50%');
+                @include transform-origin();
                 @include transition($transition-link);
               }
               &.wider {

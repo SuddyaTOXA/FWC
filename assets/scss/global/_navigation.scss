@@ -1,15 +1,19 @@
 /*--------------------------------------NAV-----------------------------------------*/
 
 .main-nav {
-  display: inline-block;
-  margin-top: 35px;
-  max-width: -webkit-calc(100% - #{315px});
-  max-width: calc(100% - #{315px});
-  @media all and (max-width: 1366px) {
-    margin-top: 45px;
-  }
+  display: table;
+  width: 100%;
+  height: 94px;
+  max-width: -webkit-calc(100% - #{316px});
+  max-width: calc(100% - #{316px});
+  //@media all and (max-width: 1366px) {
+  //  margin-top: 45px;
+  //}
   > ul {
-    text-align: center;
+    display: table-cell;
+    width: 100%;
+    text-align: right;
+    vertical-align: bottom;
     > li {
       position: relative;
       display: inline-block;
@@ -17,17 +21,18 @@
       a {
         position: relative;
         display: inline-block;
-        padding: 13px 22px;
+        padding: 13px 13px;
         color: $white;
         font-weight: $normal;
-        font-size: $size-big;
+        font-size: $size-smaller;
         line-height: 1;
-        @media all and (max-width: 1500px) {
-          padding: 13px 15px;
-        }
-        @media all and (max-width: 1366px) {
-          font-size: 18px;
-          padding: 10px 5px;
+        text-decoration: none;
+        //@media all and (max-width: 1500px) {
+        //  padding: 13px 15px;
+        //}
+        @media all and (max-width: 1120px) {
+          //font-size: 18px;
+          //padding: 10px 8px;
         }
         &:hover,
         &:focus {
@@ -64,10 +69,10 @@
         }
       }
       &.btn-dealer {
-        margin-left: 32px;
-        @media all and (max-width: 1366px) {
-          margin-left: 0;
-        }
+        margin-left: 16px;
+        //@media all and (max-width: 1120px) {
+        //  margin-left: 8px;
+        //}
       }
 
     }
@@ -77,11 +82,42 @@
       display: none;
     }
   }
-
+  .home & {
+    height: 90px;
+    max-width: -webkit-calc(100% - #{326px});
+    max-width: calc(100% - #{326px});
+    > ul {
+      > li {
+        a {
+          padding: 13px 22px;
+          font-size: $size-big;
+        }
+        &.btn-dealer {
+          margin-left: 27px;
+          @media all and (max-width: 1440px) {
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+    @media all and (max-width: 1440px) {
+      height: 94px;
+      max-width: -webkit-calc(100% - #{316px});
+      max-width: calc(100% - #{316px});
+      > ul {
+        > li {
+          a {
+            padding: 13px 13px;
+            font-size: $size-smaller;
+          }
+        }
+      }
+    }
+  }
 }
 .icon-skiing {
   position: relative;
-  top: 4px;
+  top: 6px;
   display: inline-block;
   margin-right: 4px;
   width: 23px;
@@ -93,13 +129,17 @@
   &.dark {
     background-image: url(../../img/skiing_big_dark.png);
   }
-  @media all and (max-width: 1366px) {
-    top: 0;
+  //@media all and (max-width: 1366px) {
+  //  top: 0;
+  //}
+  .home & {
+    top: 4px;
   }
 }
 
 
 .mobile-menu {
+  padding-top: 20px;
   padding-bottom: 20px;
   > li {
     position: relative;

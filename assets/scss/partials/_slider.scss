@@ -7,6 +7,16 @@
 }
   .swiper-slide {
     max-width: 370px;
+    > a {
+      @media all and (min-width: 768px) {
+        &:hover,
+        &:focus {
+          .slide-box > img {
+            @include scale(1.1);
+          }
+        }
+      }
+    }
   }
     .slide-box {
       overflow: hidden;
@@ -50,6 +60,8 @@
         bottom: -9999px;
         margin: auto;
         opacity: .8;
+        @include transform-origin();
+        @include transition($transition-other);
       }
       &.wider {
         > img {
