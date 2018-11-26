@@ -45,8 +45,6 @@ jQuery(document).ready(function($) {
                 type: 'poly'
             };
 
-            var infowindow =  new google.maps.InfoWindow({});
-
             for (var i = 0; i < beaches.length; i++) {
                 var beach = beaches[i];
                 var marker = new google.maps.Marker({
@@ -57,7 +55,9 @@ jQuery(document).ready(function($) {
                     title: beach[0]
                 });
 
-                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                var infowindow =  new google.maps.InfoWindow({});
+
+                google.maps.event.addListener(marker, 'click', (function (marker, beach) {
                     return function () {
                         infowindow.setContent('<div class="service-marker-box">' +
                         '                           <h2 class="service-marker-title">' + beach[0] + '</h2>' +
@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
                                                 '</div>');
                         infowindow.open(map, marker);
                     }
-                })(marker, i));
+                })(marker, beach));
             }
         }
 
