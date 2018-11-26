@@ -158,7 +158,7 @@
     display: block;
     content: '';
     cursor: pointer;
-    height: 1px;
+    height: 2px;
     width: 30px;
     background-color: $color-bg2;
     @include transition(all $transition-other);

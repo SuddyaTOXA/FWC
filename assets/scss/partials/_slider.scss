@@ -8,7 +8,7 @@
   .swiper-slide {
     max-width: 370px;
     > a {
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 769px) {
         &:hover,
         &:focus {
           .slide-box > img {
@@ -233,7 +233,7 @@
           border: 2px solid #4e4e4e;
           @include css3-prefix('transform', 'translate(0, -50%) rotate(45deg)');
         }
-        @media all and (min-width: 768px) {
+        @media all and (min-width: 769px) {
           &:not(.swiper-button-disabled):hover,
           &:not(.swiper-button-disabled):focus {
             &:before {

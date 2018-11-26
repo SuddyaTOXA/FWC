@@ -239,7 +239,7 @@
         height: 60px;
       }
     }
-    @media all and (min-width: 768px) {
+    @media all and (min-width: 769px) {
       &:hover,
       &:focus {
         &:after {
@@ -556,7 +556,7 @@
         background-color: $color-bg8;
         @include transition($transition-link);
       }
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 769px) {
         &:hover,
         &:focus {
           &:after {
@@ -596,7 +596,7 @@
         a {
           display: block;
           text-decoration: none;
-          @media all and (min-width: 768px) {
+          @media all and (min-width: 769px) {
             &:hover,
             &:focus {
               color: $color-text2;

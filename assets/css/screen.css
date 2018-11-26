@@ -366,7 +366,7 @@ a.btn, .btn {
     a.btn, .btn {
       font-size: 16px;
       padding: 12px 20px; } }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     a.btn:hover, a.btn:focus, .btn:hover, .btn:focus {
       color: #ffc72c;
       background-color: transparent; } }
@@ -374,28 +374,28 @@ a.btn, .btn {
     color: #ffffff;
     border-color: #00a3e0;
     background-color: #00a3e0; }
-    @media all and (min-width: 768px) {
+    @media all and (min-width: 769px) {
       a.btn.blue:hover, a.btn.blue:focus, .btn.blue:hover, .btn.blue:focus {
         color: #00a3e0;
         background-color: transparent; } }
     a.btn.blue.inverse, .btn.blue.inverse {
       color: #62666a;
       background-color: transparent; }
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 769px) {
         a.btn.blue.inverse:hover, a.btn.blue.inverse:focus, .btn.blue.inverse:hover, .btn.blue.inverse:focus {
           color: #ffffff;
           background-color: #00a3e0; } }
   a.btn.white, .btn.white {
     border-color: #ffffff;
     background-color: #ffffff; }
-    @media all and (min-width: 768px) {
+    @media all and (min-width: 769px) {
       a.btn.white:hover, a.btn.white:focus, .btn.white:hover, .btn.white:focus {
         color: #ffffff;
         background-color: transparent; } }
     a.btn.white.inverse, .btn.white.inverse {
       color: #ffffff;
       background-color: transparent; }
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 769px) {
         a.btn.white.inverse:hover, a.btn.white.inverse:focus, .btn.white.inverse:hover, .btn.white.inverse:focus {
           color: #212020;
           background-color: #ffffff; } }
@@ -432,7 +432,7 @@ a.btn, .btn {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px; }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     .main-nav > ul > li.btn-dealer a:focus, .main-nav > ul > li.btn-dealer a:hover,
     .mobile-menu > li.btn-dealer a:focus,
     .mobile-menu > li.btn-dealer a:hover,
@@ -476,7 +476,7 @@ a.btn, .btn {
   background-color: #ffffff;
   z-index: -9999;
   opacity: 0; }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     .btn-jump-to-content:hover {
       color: #ffc72c;
       text-decoration: none; }
@@ -991,7 +991,7 @@ img.mfp-img {
     display: block;
     content: '';
     cursor: pointer;
-    height: 1px;
+    height: 2px;
     width: 30px;
     background-color: #ffc72c;
     -webkit-transition: all 0.35s;
@@ -1149,7 +1149,7 @@ img.mfp-img {
       padding: 5px 0;
       color: #212020;
       text-decoration: none; }
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 769px) {
         .mobile-menu > li a:hover, .mobile-menu > li a:focus {
           color: #ffc72c;
           text-decoration: none; }
@@ -1162,7 +1162,7 @@ img.mfp-img {
           background-image: url(../../img/skiing_big_yellow.png); }
       .scrolling .mobile-menu > li a {
         color: #212020; }
-        @media all and (min-width: 768px) {
+        @media all and (min-width: 769px) {
           .scrolling .mobile-menu > li a:hover, .scrolling .mobile-menu > li a:focus {
             color: #ffc72c;
             text-decoration: none; }
@@ -1176,7 +1176,7 @@ img.mfp-img {
   .mobile-menu > .current-menu-item > a,
   .mobile-menu > li > a:hover {
     text-decoration: none; }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     .mobile-menu:hover:after {
       color: #0097de; } }
   .mobile-menu.open:after {
@@ -1234,7 +1234,7 @@ img.mfp-img {
   display: inline-block;
   font-size: 15px;
   color: #212020; }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     .main-nav .sub-menu a:hover, .main-nav .sub-menu a:focus {
       color: #ffc72c; } }
   .home .main-nav .sub-menu a {
@@ -1255,7 +1255,7 @@ img.mfp-img {
   padding-left: 20px; }
   .mobile-menu .sub-menu a {
     font-size: 16px; }
-    @media all and (min-width: 768px) {
+    @media all and (min-width: 769px) {
       .mobile-menu .sub-menu a:hover {
         text-decoration: none; } }
   .mobile-menu .sub-menu .sub-menu {
@@ -1352,7 +1352,7 @@ a.footer-title,
 
 a.footer-title {
   text-decoration: none; }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     a.footer-title:hover, a.footer-title:focus {
       color: #ffc72c; } }
 
@@ -1372,7 +1372,7 @@ a.footer-link,
 
 a.footer-link {
   text-decoration: none; }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     a.footer-link:hover, a.footer-link:focus {
       color: #ffc72c;
       opacity: 1; } }
@@ -1655,7 +1655,7 @@ a.footer-link {
       .youtube-video:after {
         width: 60px;
         height: 60px; } }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     .youtube-video:hover:after, .youtube-video:focus:after {
       background-color: #ff3f3f; }
     .youtube-video:hover .video-preview:after, .youtube-video:focus .video-preview:after {
@@ -1973,7 +1973,7 @@ a.go-link,
     -ms-transition: 0.25s;
     -o-transition: 0.25s;
     transition: 0.25s; }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     a.go-link:hover:after, a.go-link:focus:after,
     .go-link:hover:after,
     .go-link:focus:after {
@@ -2010,7 +2010,7 @@ a.go-link,
     .events-list > li a {
       display: block;
       text-decoration: none; }
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 769px) {
         .events-list > li a:hover, .events-list > li a:focus {
           color: #ffc72c; }
           .events-list > li a:hover img, .events-list > li a:focus img {
@@ -2122,7 +2122,7 @@ a.go-link,
 
 .swiper-slide {
   max-width: 370px; }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     .swiper-slide > a:hover .slide-box > img, .swiper-slide > a:focus .slide-box > img {
       -webkit-transform: scale(1.1);
       -khtml-transform: scale(1.1);
@@ -2360,7 +2360,7 @@ a.go-link,
     -ms-transform: translate(0, -50%) rotate(45deg);
     -o-transform: translate(0, -50%) rotate(45deg);
     transform: translate(0, -50%) rotate(45deg); }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     .swiper-social-button-prev:not(.swiper-button-disabled):hover:before, .swiper-social-button-prev:not(.swiper-button-disabled):focus:before,
     .swiper-social-button-next:not(.swiper-button-disabled):hover:before,
     .swiper-social-button-next:not(.swiper-button-disabled):focus:before {
@@ -2491,7 +2491,7 @@ a.go-link,
   .service-info-box a {
     color: #00a3e0;
     text-decoration: none; }
-    @media all and (min-width: 768px) {
+    @media all and (min-width: 769px) {
       .service-info-box a:hover, .service-info-box a:focus {
         text-decoration: none;
         color: #ffc72c; } }
@@ -2511,7 +2511,7 @@ a.more-info-btn,
   text-align: center;
   color: #00a3e0;
   text-decoration: none; }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     a.more-info-btn:hover, a.more-info-btn:focus,
     .more-info-btn:hover,
     .more-info-btn:focus {
@@ -2534,7 +2534,7 @@ a.more-info-btn,
       -o-transform: rotate(-135deg);
       transform: rotate(-135deg);
       border-color: #62666a; }
-    @media all and (min-width: 768px) {
+    @media all and (min-width: 769px) {
       a.more-info-btn.open:hover, a.more-info-btn.open:focus,
       .more-info-btn.open:hover,
       .more-info-btn.open:focus {
@@ -2596,6 +2596,7 @@ a.more-info-btn,
   max-width: 240px; }
 
 .service-marker-title {
+  margin-top: 4px;
   margin-bottom: 6px;
   font-family: "CircularStd", Arial, sans-serif;
   font-size: 16px;

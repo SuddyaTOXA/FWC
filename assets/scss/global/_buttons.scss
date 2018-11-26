@@ -20,7 +20,7 @@ a.btn, .btn {
     font-size: 16px;
     padding: 12px 20px;
   }
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     &:hover,
     &:focus {
       color: $color-text2;
@@ -31,7 +31,7 @@ a.btn, .btn {
       color: $white;
       border-color: #00a3e0;
       background-color: #00a3e0;
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 769px) {
         &:hover,
         &:focus {
           color: #00a3e0;
@@ -41,7 +41,7 @@ a.btn, .btn {
       &.inverse {
         color: #62666a;
         background-color: transparent;
-        @media all and (min-width: 768px) {
+        @media all and (min-width: 769px) {
           &:hover,
           &:focus {
             color: $white;
@@ -53,7 +53,7 @@ a.btn, .btn {
   &.white {
     border-color: $white;
     background-color: $white;
-    @media all and (min-width: 768px) {
+    @media all and (min-width: 769px) {
       &:hover,
       &:focus {
         color: $white;
@@ -63,7 +63,7 @@ a.btn, .btn {
     &.inverse {
       color: $white;
       background-color: transparent;
-      @media all and (min-width: 768px) {
+      @media all and (min-width: 769px) {
         &:hover,
         &:focus {
           color: $color-text3;
@@ -102,7 +102,7 @@ a.btn, .btn {
   border: 1px solid $color-bg2;
   background-color: $color-bg2;
   @include border-radius($radius-small);
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     &:focus,
     &:hover {
       color: $color-text2;
@@ -145,7 +145,7 @@ a.btn, .btn {
   background-color: $white;
   z-index: -9999;
   opacity: 0;
-  @media all and (min-width: 768px) {
+  @media all and (min-width: 769px) {
     &:hover {
       color: $color-text2;
       text-decoration: none;
