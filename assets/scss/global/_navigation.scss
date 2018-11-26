@@ -216,7 +216,7 @@
   display: block;
   position: absolute;
   z-index: 10;
-  top: 32px;
+  top: 40px;
   left: 0;
   min-width: 100%;
   padding: 8px 0;
@@ -230,7 +230,7 @@
   .home & {
     top: 48px;
     @media all and (max-width: 1440px) {
-      top: 32px;
+      top: 40px;
     }
   }
 }

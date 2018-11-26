@@ -228,7 +228,7 @@
       @include bg(52% 50%, 49px 54px, no-repeat);
       @include border-radius(50%);
       @include translate();
-      @include transition(opacity $transition-link ease-in);
+      @include transition(background-color $transition-link ease-in);
       @media all and (max-width: 1024px) {
         width: 80px;
         height: 80px;
@@ -416,6 +416,9 @@
     @media all and (max-width: 767px) {
       margin-bottom: 24px;
     }
+    @media all and (max-width: 560px) {
+      text-align: center;
+    }
   }
   .left-box,
   .right-box {
@@ -442,6 +445,7 @@
       display: block;
       width: 100%;
       padding: 0 0 80px;
+      text-align: center;
     }
   }
 }

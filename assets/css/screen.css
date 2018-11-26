@@ -1189,7 +1189,7 @@ img.mfp-img {
   display: block;
   position: absolute;
   z-index: 10;
-  top: 32px;
+  top: 40px;
   left: 0;
   min-width: 100%;
   padding: 8px 0;
@@ -1216,7 +1216,7 @@ img.mfp-img {
     top: 48px; }
     @media all and (max-width: 1440px) {
       .home .main-nav .sub-menu {
-        top: 32px; } }
+        top: 40px; } }
 
 .main-nav ul > li:hover .sub-menu {
   opacity: 1;
@@ -1640,12 +1640,12 @@ a.footer-link {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-transition: opacity 0.25s ease-in;
-    -khtml-transition: opacity 0.25s ease-in;
-    -moz-transition: opacity 0.25s ease-in;
-    -ms-transition: opacity 0.25s ease-in;
-    -o-transition: opacity 0.25s ease-in;
-    transition: opacity 0.25s ease-in; }
+    -webkit-transition: background-color 0.25s ease-in;
+    -khtml-transition: background-color 0.25s ease-in;
+    -moz-transition: background-color 0.25s ease-in;
+    -ms-transition: background-color 0.25s ease-in;
+    -o-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in; }
     @media all and (max-width: 1024px) {
       .youtube-video:after {
         width: 80px;
@@ -1849,6 +1849,9 @@ a.footer-link {
     @media all and (max-width: 767px) {
       .section-build-based .section-title {
         margin-bottom: 24px; } }
+    @media all and (max-width: 560px) {
+      .section-build-based .section-title {
+        text-align: center; } }
   .section-build-based .left-box,
   .section-build-based .right-box {
     position: relative;
@@ -1872,7 +1875,8 @@ a.footer-link {
       .section-build-based .right-box {
         display: block;
         width: 100%;
-        padding: 0 0 80px; } }
+        padding: 0 0 80px;
+        text-align: center; } }
 
 .four-truck-img-wrap {
   position: relative;
