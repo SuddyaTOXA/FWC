@@ -45,6 +45,7 @@ jQuery(document).ready(function($) {
     $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function(){
         $('.mobile-menu-toggle').toggleClass('active');
         $('.mobile-menu-wrap').toggleClass('showing');
+        $('#header').toggleClass('white-bg');
         $(document.body).toggleClass('overflow');
     });
 
@@ -54,6 +55,7 @@ jQuery(document).ready(function($) {
             if ($('.mobile-menu-toggle').hasClass('active')) {
                 $('.mobile-menu-toggle').removeClass('active');
                 $('.mobile-menu-wrap').removeClass('showing');
+                $('#header').removeClass('white-bg');
                 $(document.body).removeClass('overflow');
             }
         }

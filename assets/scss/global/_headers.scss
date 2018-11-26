@@ -20,6 +20,9 @@
   html:not(.js) & {
     opacity: 1;
   }
+  body:not(.scrolling) &.white-bg {
+    background-color: $white;
+  }
   .container {
     position: relative;
     .home & {
@@ -55,11 +58,11 @@
     min-height: 70px !important;
     padding: 8px 0 3px !important;
     text-align: left;
-    background-color: $white;
-    @include box-shadow(0  5px 10px 0, rgba($black, .2));
     .scrolling & {
-      min-height: 70px;
-      padding: 8px 0 3px;
+      //min-height: 70px;
+      //padding: 8px 0 3px;
+      background-color: $white;
+      @include box-shadow(0  5px 10px 0, rgba($black, .2));
     }
   }
 }
@@ -157,8 +160,11 @@
     cursor: pointer;
     height: 1px;
     width: 30px;
-    background-color: $color-bg;
+    background-color: $color-bg2;
     @include transition(all $transition-other);
+    .scrolling & {
+      background-color: $color-bg;
+    }
   }
   span {
     z-index: 999999;

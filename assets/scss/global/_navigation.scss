@@ -219,16 +219,16 @@
   top: 32px;
   left: 0;
   min-width: 100%;
-  padding: 10px 0;
+  padding: 8px 0;
   opacity: 0;
   visibility: hidden;
   text-align: left;
-  background-color: $white;
+  background-color: rgba($white, .9);
   @include box-shadow(0  5px 10px 0, rgba($black, .2));
   @include border-radius($radius-small);
   @include transition($transition-other);
   .home & {
-    top: 40px;
+    top: 48px;
     @media all and (max-width: 1440px) {
       top: 32px;
     }
@@ -288,6 +288,7 @@
   display: block;
   padding-left: 20px;
   a {
+    font-size: 16px;
     @media all and (min-width: 768px) {
       &:hover {
         text-decoration: none;
