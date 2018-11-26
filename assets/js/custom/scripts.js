@@ -56,7 +56,7 @@ jQuery(function($) {
         // prevent();
 
         //initialize swiper when document ready
-        if (typeof $.fn.swiper !== 'undefined') {
+        if (typeof Swiper !== 'undefined') {
             var mySwiper = new Swiper('.social-slider', {
                 slidesPerView: 3,
                 spaceBetween: 30,
