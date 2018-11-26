@@ -175,6 +175,11 @@
             width: 41px;
           }
         }
+        &.pinterest {
+          @media all and (max-width: 767px) {
+            width: 41px;
+          }
+        }
       }
       .slide-title {
         overflow: hidden;

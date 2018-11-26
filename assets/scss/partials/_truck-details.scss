@@ -1,0 +1,17 @@
+.section-select-truck {
+  .container {}
+}
+  .form-select-truck {}
+    .select-truck-list {
+      > li {
+        display: inline-block;
+
+        label {}
+      }
+      &.bed-length {}
+    }
+        .select-truck-box {}
+          .radio-truck {}
+          .select-truck-img-wrap {}
+          .select-truck-name {}
+

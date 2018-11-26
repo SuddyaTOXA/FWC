@@ -149,156 +149,158 @@ img {
   min-height: 50px;
   vertical-align: middle; }
 
-.content * {
-  margin-bottom: 15px;
-  line-height: 1.6; }
-  .content *:last-child {
-    margin-bottom: 0; }
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-  font-weight: 600;
-  line-height: 1; }
-.content h1 {
-  font-size: 55px; }
-.content h2 {
-  font-size: 45px; }
-.content h3 {
-  font-size: 35px; }
-.content h4 {
-  font-size: 25px; }
-.content h5 {
-  font-size: 22px; }
-.content h6 {
-  font-size: 18px; }
-.content a {
-  color: #212020; }
-  .content a:hover {
-    opacity: 0.7;
-    text-decoration: none; }
-.content ul > li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 1px;
-  list-style-position: outside; }
-  .content ul > li:before {
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 4px;
-    content: '';
-    margin-top: 12px;
-    margin-right: 12px;
-    width: 4px;
-    height: 4px;
-    background-color: #3e3e3e;
-    -webkit-border-radius: 10px;
-    -khtml-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border-radius: 10px;
-    vertical-align: top; }
-.content ol {
-  position: relative;
-  counter-reset: myCounter; }
-  .content ol > li {
+.content {
+  font-size: 20px; }
+  .content * {
+    margin-bottom: 15px;
+    line-height: 1.6; }
+    .content *:last-child {
+      margin-bottom: 0; }
+  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    font-weight: 600;
+    line-height: 1; }
+  .content h1 {
+    font-size: 55px; }
+  .content h2 {
+    font-size: 45px; }
+  .content h3 {
+    font-size: 35px; }
+  .content h4 {
+    font-size: 25px; }
+  .content h5 {
+    font-size: 22px; }
+  .content h6 {
+    font-size: 20px; }
+  .content a {
+    color: #212020; }
+    .content a:hover {
+      opacity: 0.7;
+      text-decoration: none; }
+  .content ul > li {
     position: relative;
-    padding-left: 30px;
+    padding-left: 25px;
     margin-bottom: 1px;
     list-style-position: outside; }
-    .content ol > li:before {
+    .content ul > li:before {
       position: absolute;
       display: inline-block;
       top: 0;
-      left: 0;
-      counter-increment: myCounter;
-      content: counter(myCounter) ". ";
-      padding-right: 10px; }
-.content blockquote {
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  text-align: left;
-  border-left: 2px solid #0b0b0b; }
-.content img {
-  max-width: 100%;
-  height: auto; }
-  .content img.alignleft {
-    float: left;
-    margin: 4px 12px 12px 0; }
-  .content img.alignright {
-    float: right;
-    margin: 4px 0 12px 12px; }
-  .content img.aligncenter {
-    display: block;
-    margin: 0 auto 12px;
-    clear: both; }
-.inverse .content {
-  color: #ffffff; }
-  .inverse .content ul > li:before {
-    background-color: #ffffff; }
-.content.big {
-  font-size: 22px; }
-  .content.big h1 {
-    font-size: 66px; }
-  .content.big h2 {
-    font-size: 54px; }
-  .content.big h3 {
-    font-size: 42px; }
-  .content.big h4 {
-    font-size: 30px; }
-  .content.big h5 {
-    font-size: 26.4px; }
-  .content.big h6 {
-    font-size: 21.6px; }
-  .content.big ul > li:before {
-    width: 6px;
-    height: 6px;
-    margin-top: 13px;
-    margin-right: 13px; }
-.content.biggest {
-  font-size: 30px; }
-  .content.biggest h1 {
-    font-size: 88px; }
-  .content.biggest h2 {
-    font-size: 72px; }
-  .content.biggest h3 {
-    font-size: 56px; }
-  .content.biggest h4 {
-    font-size: 40px; }
-  .content.biggest h5 {
-    font-size: 35.2px; }
-  .content.biggest h6 {
-    font-size: 28.8px; }
-  .content.biggest ol > li {
-    padding-left: 40px; }
-  .content.biggest ul > li:before {
-    width: 8px;
-    height: 8px;
-    margin-top: 18px;
-    margin-right: 18px; }
-.content.align-center {
-  text-align: center; }
-  .content.align-center ul > li, .content.align-center ol > li {
-    padding-left: 0; }
-    .content.align-center ul > li:before, .content.align-center ol > li:before {
+      left: 4px;
+      content: '';
+      margin-top: 12px;
+      margin-right: 12px;
+      width: 4px;
+      height: 4px;
+      background-color: #3e3e3e;
+      -webkit-border-radius: 10px;
+      -khtml-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      border-radius: 10px;
+      vertical-align: top; }
+  .content ol {
+    position: relative;
+    counter-reset: myCounter; }
+    .content ol > li {
       position: relative;
-      top: auto;
-      left: auto; }
-@media all and (max-width: 1024px) {
-  .content {
-    font-size: 17px; }
-    .content.big {
-      font-size: 20px; }
-    .content.biggest {
-      font-size: 28px; } }
-@media all and (max-width: 767px) {
-  .content {
-    font-size: 16px; }
-    .content.big {
-      font-size: 18px; }
-    .content.biggest {
-      font-size: 24px; } }
+      padding-left: 30px;
+      margin-bottom: 1px;
+      list-style-position: outside; }
+      .content ol > li:before {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        counter-increment: myCounter;
+        content: counter(myCounter) ". ";
+        padding-right: 10px; }
+  .content blockquote {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    text-align: left;
+    border-left: 2px solid #0b0b0b; }
+  .content img {
+    max-width: 100%;
+    height: auto; }
+    .content img.alignleft {
+      float: left;
+      margin: 4px 12px 12px 0; }
+    .content img.alignright {
+      float: right;
+      margin: 4px 0 12px 12px; }
+    .content img.aligncenter {
+      display: block;
+      margin: 0 auto 12px;
+      clear: both; }
+  .inverse .content {
+    color: #ffffff; }
+    .inverse .content ul > li:before {
+      background-color: #ffffff; }
+  .content.big {
+    font-size: 22px; }
+    .content.big h1 {
+      font-size: 66px; }
+    .content.big h2 {
+      font-size: 54px; }
+    .content.big h3 {
+      font-size: 42px; }
+    .content.big h4 {
+      font-size: 30px; }
+    .content.big h5 {
+      font-size: 26.4px; }
+    .content.big h6 {
+      font-size: 24px; }
+    .content.big ul > li:before {
+      width: 6px;
+      height: 6px;
+      margin-top: 13px;
+      margin-right: 13px; }
+  .content.biggest {
+    font-size: 30px; }
+    .content.biggest h1 {
+      font-size: 88px; }
+    .content.biggest h2 {
+      font-size: 72px; }
+    .content.biggest h3 {
+      font-size: 56px; }
+    .content.biggest h4 {
+      font-size: 40px; }
+    .content.biggest h5 {
+      font-size: 35.2px; }
+    .content.biggest h6 {
+      font-size: 32px; }
+    .content.biggest ol > li {
+      padding-left: 40px; }
+    .content.biggest ul > li:before {
+      width: 8px;
+      height: 8px;
+      margin-top: 18px;
+      margin-right: 18px; }
+  .align-center .content {
+    text-align: center; }
+    .align-center .content ul > li, .align-center .content ol > li {
+      padding-left: 0; }
+      .align-center .content ul > li:before, .align-center .content ol > li:before {
+        position: relative;
+        top: auto;
+        left: auto; }
+  @media all and (max-width: 1024px) {
+    .content {
+      font-size: 17px; }
+      .content.big {
+        font-size: 20px; }
+      .content.biggest {
+        font-size: 28px; } }
+  @media all and (max-width: 767px) {
+    .content {
+      font-size: 16px; }
+      .content.big {
+        font-size: 18px; }
+      .content.biggest {
+        font-size: 24px; } }
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
@@ -1533,6 +1535,10 @@ a.footer-link {
   line-height: 1.1; }
   .home .hero-title {
     text-align: center; }
+  .hero-title.small {
+    font-size: 60px; }
+  .hero-title.smaller {
+    font-size: 40px; }
   @media all and (max-width: 1366px) {
     .hero-title {
       font-size: 75px; } }
@@ -2286,6 +2292,9 @@ a.go-link,
   @media all and (max-width: 767px) {
     .slide-icon.instagram {
       width: 41px; } }
+  @media all and (max-width: 767px) {
+    .slide-icon.pinterest {
+      width: 41px; } }
 
 .slide-title {
   overflow: hidden;
@@ -2646,5 +2655,8 @@ a.more-info-btn,
     @media all and (max-width: 580px) {
       .map-contact-info .right-box {
         text-align: left; } }
+
+.select-truck-list > li {
+  display: inline-block; }
 
 /*# sourceMappingURL=screen.css.map */

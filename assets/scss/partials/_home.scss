@@ -100,6 +100,12 @@
       .home & {
         text-align: center;
       }
+      &.small {
+        font-size: 60px;
+      }
+      &.smaller {
+        font-size: 40px;
+      }
       @media all and (max-width: 1366px) {
         font-size: 75px;
       }
