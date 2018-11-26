@@ -47,6 +47,18 @@ jQuery(document).ready(function($) {
         $('.mobile-menu-wrap').toggleClass('showing');
         $(document.body).toggleClass('overflow');
     });
+
+    $(window).on('resize', function() {
+        var windowWidth = $(window).width();
+        if (windowWidth > 1024) {
+            if ($('.mobile-menu-toggle').hasClass('active')) {
+                $('.mobile-menu-toggle').removeClass('active');
+                $('.mobile-menu-wrap').removeClass('showing');
+                $(document.body).removeClass('overflow');
+            }
+        }
+    });
+
         // for empty link
         // prevent();
 

@@ -20,45 +20,55 @@ a.btn, .btn {
     font-size: 16px;
     padding: 12px 20px;
   }
-  &:hover,
-  &:focus {
-    color: $color-text2;
-    background-color: transparent;
-  }
-  &.blue {
-    color: $white;
-    border-color: #00a3e0;
-    background-color: #00a3e0;
+  @media all and (min-width: 768px) {
     &:hover,
     &:focus {
-      color: #00a3e0;
+      color: $color-text2;
       background-color: transparent;
-    }
-    &.inverse {
-      color: #62666a;
-      background-color: transparent;
-      &:hover,
-      &:focus {
-        color: $white;
-        background-color: #00a3e0;
-      }
     }
   }
+    &.blue {
+      color: $white;
+      border-color: #00a3e0;
+      background-color: #00a3e0;
+      @media all and (min-width: 768px) {
+        &:hover,
+        &:focus {
+          color: #00a3e0;
+          background-color: transparent;
+        }
+      }
+      &.inverse {
+        color: #62666a;
+        background-color: transparent;
+        @media all and (min-width: 768px) {
+          &:hover,
+          &:focus {
+            color: $white;
+            background-color: #00a3e0;
+          }
+        }
+      }
+    }
   &.white {
     border-color: $white;
     background-color: $white;
-    &:hover,
-    &:focus {
-      color: $white;
-      background-color: transparent;
+    @media all and (min-width: 768px) {
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: transparent;
+      }
     }
     &.inverse {
       color: $white;
       background-color: transparent;
-      &:hover,
-      &:focus {
-        color: $color-text3;
-        background-color: $white;
+      @media all and (min-width: 768px) {
+        &:hover,
+        &:focus {
+          color: $color-text3;
+          background-color: $white;
+        }
       }
     }
   }
@@ -92,10 +102,12 @@ a.btn, .btn {
   border: 1px solid $color-bg2;
   background-color: $color-bg2;
   @include border-radius($radius-small);
-  &:focus,
-  &:hover {
-    color: $color-text2;
-    background-color: transparent;
+  @media all and (min-width: 768px) {
+    &:focus,
+    &:hover {
+      color: $color-text2;
+      background-color: transparent;
+    }
   }
   @media all and (max-width: 1280px) {}
   .home & {
@@ -133,13 +145,15 @@ a.btn, .btn {
   background-color: $white;
   z-index: -9999;
   opacity: 0;
-  &:hover {
-    color: $color-text2;
-    text-decoration: none;
-  }
-  &:focus {
-    opacity: 1;
-    text-decoration: none;
-    z-index: 9999;
+  @media all and (min-width: 768px) {
+    &:hover {
+      color: $color-text2;
+      text-decoration: none;
+    }
+    &:focus {
+      opacity: 1;
+      text-decoration: none;
+      z-index: 9999;
+    }
   }
 }

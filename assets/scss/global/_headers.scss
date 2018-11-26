@@ -12,6 +12,9 @@
   //padding-bottom: 29px;
   text-align: right;
   opacity: 0;
+  -webkit-transition: 0.35s;
+  -moz-transition: 0.35s;
+  transition: 0.35s;
   &.show,
   .no-js &,
   html:not(.js) & {
@@ -22,12 +25,15 @@
     .home & {
       max-width: 1832px;
       @media all and (max-width: 1440px) {
-        padding-top: 11px;
-        padding-bottom: 11px;
-        min-height: 132px;
         max-width: 1210px;
       }
     }
+  }
+  @media all and (max-width: 1440px) {
+    //padding-top: 11px;
+    //padding-bottom: 11px;
+    //min-height: 132px;
+    //max-width: 1210px;
   }
   .admin-bar & {
     top: 32px;
@@ -38,8 +44,6 @@
     padding-bottom: 28px;
   }
   .scrolling & {
-    //min-height: 137px;
-    //padding: 15px 0;
     background-color: $white;
     @include box-shadow(0  5px 10px 0, rgba($black, .2));
   }
@@ -48,8 +52,8 @@
     padding: 12px 0 12px;
   }
   @media all and (max-width: 1024px) {
-    min-height: 70px;
-    padding: 8px 0 3px;
+    min-height: 70px !important;
+    padding: 8px 0 3px !important;
     text-align: left;
     background-color: $white;
     @include box-shadow(0  5px 10px 0, rgba($black, .2));
