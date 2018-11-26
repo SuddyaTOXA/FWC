@@ -9,7 +9,7 @@
 
 	//header background on scroll
 	var body = $('body');
-	$(window).on('scroll', function() {
+	$(window).on('load resize scroll', function() {
 	   var st2 = $(this).scrollTop();
 
 	   if (st2 > 0) {
