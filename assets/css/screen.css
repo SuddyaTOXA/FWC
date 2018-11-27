@@ -1511,8 +1511,6 @@ a.footer-link {
     position: relative;
     z-index: 10;
     max-width: 1220px; }
-    .section-hero .container > :last-child {
-      margin-bottom: 0; }
   .home .section-hero:before {
     position: absolute;
     content: '';
@@ -1720,7 +1718,6 @@ a.footer-link {
 
 .section-title {
   max-width: 890px;
-  margin-bottom: 96px;
   margin: 0 auto 96px;
   font-size: 70px;
   font-weight: 500;
