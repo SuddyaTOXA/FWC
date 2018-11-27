@@ -120,7 +120,7 @@ jQuery(document).ready(function($) {
     if ($('.section-select-truck').length && $('.select-truck-list').length) {
         var truckList = $('.select-truck-list:not(.bed-length)'),
             inputs = truckList.find('input');
-        
+
         inputs.on('change', function () {
             var type = $(this).data('truckType'),
                 currentlist = $('.select-truck-list.bed-length[data-truck-group="'+type+'"]'),
@@ -132,7 +132,7 @@ jQuery(document).ready(function($) {
 
         })
 
-        
+
         // console.log(type);
 
     }
