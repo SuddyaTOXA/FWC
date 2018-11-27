@@ -4,10 +4,10 @@ a.btn, .btn {
   max-width: 100%;
   min-width: 170px;
   margin: 0;
-  padding: 15px 25px;
-  font-size: $size-main;
+  padding: 11px 18px;
+  font-size: $size-smaller;
   font-weight: $normal;
-  line-height: 1;
+  line-height: 1.4;
   letter-spacing: $letter-spacing-20;
   color: $color-text3;
   text-align: center;
@@ -73,12 +73,12 @@ a.btn, .btn {
     }
   }
   &.big {
-    padding: 19px 32px;
+    padding: 15px 32px;
     font-size: 20px;
     font-weight: $normal;
     @media all and (max-width: 767px) {
       font-size: 18px;
-      padding: 15px 25px;
+      padding: 13px 25px;
     }
   }
 }

@@ -115,6 +115,27 @@ jQuery(document).ready(function($) {
                }
             });
         }
+
+        //for select truck
+    if ($('.section-select-truck').length && $('.select-truck-list').length) {
+        var truckList = $('.select-truck-list:not(.bed-length)'),
+            inputs = truckList.find('input');
+        
+        inputs.on('change', function () {
+            var type = $(this).data('truckType'),
+                currentlist = $('.select-truck-list.bed-length[data-truck-group="'+type+'"]'),
+                truckLengthList = $('.select-truck-list.bed-length');
+
+            truckLengthList.find('input').prop('checked', false);
+            truckLengthList.fadeOut(350);
+            currentlist.fadeIn(350);
+
+        })
+
+        
+        // console.log(type);
+
+    }
 });
 
 

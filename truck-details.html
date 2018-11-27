@@ -76,22 +76,24 @@
         </header>
 
         <main id="main-content">
-            <section class="section section-hero inverse" style="background-image: url(img/truk_details_hero_bg.jpg)">
+            <section class="section section-hero inverse" style="background-image: url(img/truck_details_hero_bg.jpg)">
                 <div class="container">
-                    <h1 class="hero-title small">Find your perfect camper</h1>
-                    <div class="hero-desc content biggest ">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed
-                            do eiusmod tempor incididunt ut labore et dolo magna aliqua.</p>
-                    </div>
-                    <div class="hero-btn-box">
-                        <a href="#" title="" class="btn blue">Start Search</a>
+                    <div class="hero-box">
+                        <h1 class="hero-title">Find your perfect camper</h1>
+                        <div class="hero-desc content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed
+                                do eiusmod tempor incididunt ut labore et dolo magna aliqua.</p>
+                        </div>
+                        <div class="hero-btn-box">
+                            <a href="#" title="" class="btn blue">Start Search</a>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section class="section section-select-truck">
                 <div class="container">
-                    <form action="" method="post" class="form-select-truck">
+                    <form action="" method="get" class="form-select-truck">
                         <h2 class="section-title smaller line">Select Your Truck</h2>
                         <div class="section-desc content">
                             <p>There are many variations of passages of Lorem Ipsum available,
@@ -100,10 +102,10 @@
                         <ul class="select-truck-list">
                             <li>
                                 <div class="select-truck-box">
-                                    <input type="radio" id="truck-1" name="your-truck" class="radio-truck" data-truck-type="full-size">
+                                    <input type="radio" id="truck-1" name="your-truck" checked class="radio-truck" data-truck-type="full-size" value="full-size">
                                     <label for="truck-1">
                                         <div class="select-truck-img-wrap">
-                                            <img src="img/truck_1.png" alt="Full Size Truck">
+                                            <img src="img/truck_4.png" alt="Full Size Truck">
                                         </div>
                                         <h3 class="select-truck-name">Full Size Truck</h3>
                                     </label>
@@ -111,10 +113,10 @@
                             </li>
                             <li>
                                 <div class="select-truck-box">
-                                    <input type="radio" id="truck-2" name="your-truck" class="radio-truck" data-truck-type="mid-size">
+                                    <input type="radio" id="truck-2" name="your-truck" class="radio-truck" data-truck-type="mid-size" value="mid-size">
                                     <label for="truck-2">
                                         <div class="select-truck-img-wrap">
-                                            <img src="img/truck_2.png" alt="Mid Size Truck">
+                                            <img src="img/truck_5.png" alt="Mid Size Truck">
                                         </div>
                                         <h3 class="select-truck-name">Mid Size Truck</h3>
                                     </label>
@@ -122,10 +124,10 @@
                             </li>
                             <li>
                                 <div class="select-truck-box">
-                                    <input type="radio" id="truck-3" name="your-truck" class="radio-truck" data-truck-type="flat-bed">
+                                    <input type="radio" id="truck-3" name="your-truck" class="radio-truck" data-truck-type="flat-bed" value="flat-bed">
                                     <label for="truck-3">
                                         <div class="select-truck-img-wrap">
-                                            <img src="img/truck_3.png" alt="Flat Bed Truck">
+                                            <img src="img/truck_6.png" alt="Flat Bed Truck">
                                         </div>
                                         <h3 class="select-truck-name">Flat Bed Truck</h3>
                                     </label>
@@ -142,10 +144,10 @@
                         <ul class="select-truck-list bed-length" data-truck-group="full-size">
                                 <li>
                                     <div class="select-truck-box">
-                                        <input type="radio" id="bed-length-1" name="your-bed-length" class="radio-truck">
+                                        <input type="radio" id="bed-length-1" name="your-bed-length" class="radio-truck" value="full-size-short">
                                         <label for="bed-length-1">
                                             <div class="select-truck-img-wrap">
-                                                <img src="img/truck_4.png" alt="5'8'' Short Bed ">
+                                                <img src="img/truck_3.png" alt="5'8'' Short Bed ">
                                             </div>
                                             <h3 class="select-truck-name">5'8'' Short Bed </h3>
                                         </label>
@@ -153,10 +155,10 @@
                                 </li>
                                 <li>
                                     <div class="select-truck-box">
-                                        <input type="radio" id="bed-length-2" name="your-bed-length" class="radio-truck">
+                                        <input type="radio" id="bed-length-2" name="your-bed-length" class="radio-truck" value="full-size-standard">
                                         <label for="bed-length-2">
                                             <div class="select-truck-img-wrap">
-                                                <img src="img/truck_5.png" alt="6'5'' Standard Bed">
+                                                <img src="img/truck_1.png" alt="6'5'' Standard Bed">
                                             </div>
                                             <h3 class="select-truck-name">6'5'' Standard Bed</h3>
                                         </label>
@@ -164,16 +166,68 @@
                                 </li>
                                 <li>
                                     <div class="select-truck-box">
-                                        <input type="radio" id="bed-length-3" name="your-bed-length" class="radio-truck">
+                                        <input type="radio" id="bed-length-3" name="your-bed-length" class="radio-truck" value="full-size-long">
                                         <label for="bed-length-3">
                                             <div class="select-truck-img-wrap">
-                                                <img src="img/truck_6.png" alt="Flat Bed Truck">
+                                                <img src="img/truck_2.png" alt="Flat Bed Truck">
                                             </div>
                                             <h3 class="select-truck-name">8' Long Bed</h3>
                                         </label>
                                     </div>
                                 </li>
                             </ul>
+
+                        <ul class="select-truck-list bed-length" style="display: none" data-truck-group="mid-size">
+                                <li>
+                                    <div class="select-truck-box">
+                                        <input type="radio" id="mid-bed-length-1" name="your-bed-length" class="radio-truck" value="mid-size-short">
+                                        <label for="mid-bed-length-1">
+                                            <div class="select-truck-img-wrap">
+                                                <img src="img/truck_3.png" alt="5'8'' Short Bed ">
+                                            </div>
+                                            <h3 class="select-truck-name">5'8'' Short Bed </h3>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="select-truck-box">
+                                        <input type="radio" id="mid-bed-length-2" name="your-bed-length" class="radio-truck" value="mid-size-standard">
+                                        <label for="mid-bed-length-2">
+                                            <div class="select-truck-img-wrap">
+                                                <img src="img/truck_1.png" alt="6'5'' Standard Bed">
+                                            </div>
+                                            <h3 class="select-truck-name">6'5'' Standard Bed</h3>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        <ul class="select-truck-list bed-length" style="display: none" data-truck-group="flat-bed">
+
+                                <li>
+                                    <div class="select-truck-box">
+                                        <input type="radio" id="flat-bed-length-2" name="your-bed-length" class="radio-truck" value="flat-standard">
+                                        <label for="flat-bed-length-2">
+                                            <div class="select-truck-img-wrap">
+                                                <img src="img/truck_1.png" alt="6'5'' Standard Bed">
+                                            </div>
+                                            <h3 class="select-truck-name">6'5'' Standard Bed</h3>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="select-truck-box">
+                                        <input type="radio" id="flat-bed-length-3" name="your-bed-length" class="radio-truck" value="flat-long">
+                                        <label for="flat-bed-length-3">
+                                            <div class="select-truck-img-wrap">
+                                                <img src="img/truck_2.png" alt="Flat Bed Truck">
+                                            </div>
+                                            <h3 class="select-truck-name">8' Long Bed</h3>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+
 
                         <div class="select-truck-btn-box">
                             <button type="submit" class="btn blue">Find my Camper</button>
@@ -265,6 +319,6 @@
 	<script src="assets/js/smooth-scroll.min.js"></script>
 	<script src="assets/js/magnific.js"></script>
 	<script src="assets/js/custom/scripts.js"></script>
-	<script src="assets/js/custom/map.js"></script>
+
 </body>
 </html>

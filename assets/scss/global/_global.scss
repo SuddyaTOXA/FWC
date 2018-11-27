@@ -84,9 +84,9 @@ img {
 
 .content {
   font-size: 20px;
+  line-height: $line-height;
   * {
     margin-bottom: 15px;
-    line-height: $line-height;
     &:last-child {
       margin-bottom: 0;
     }
@@ -245,21 +245,21 @@ img {
     }
   }
   @media all and (max-width: 1024px) {
-    font-size: 17px;
+    font-size: 19px;
+    &.big {
+      font-size: 21px;
+    }
+    &.biggest {
+      font-size: 24px;
+    }
+  }
+  @media all and (max-width: 767px) {
+    font-size: 18px;
     &.big {
       font-size: 20px;
     }
     &.biggest {
-      font-size: 28px;
-    }
-  }
-  @media all and (max-width: 767px) {
-    font-size: 16px;
-    &.big {
-      font-size: 18px;
-    }
-    &.biggest {
-      font-size: 24px;
+      font-size: 22px;
     }
   }
 }
