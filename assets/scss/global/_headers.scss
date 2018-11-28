@@ -47,23 +47,23 @@
 #header-scrolling {
   position: fixed;
   z-index: 1010;
-  top: -90px;
+  top: -92px;
   min-height: 82px;
   padding-top: 11px;
   padding-bottom: 11px;
   background-color: $white;
   @include box-shadow(0 5px 10px 0, rgba($black, .2));
   @media all and (max-width: 1024px) {
-    top: -78px;
+    top: -80px;
     min-height: 70px;
   }
   .direction-up & {
     top: 0;
   }
   .direction-down & {
-    top: -90px;
+    top: -92px;
     @media all and (max-width: 1024px) {
-      top: -78px
+      top: -80px
     }
   }
   .home.overflow.direction-down &,
