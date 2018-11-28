@@ -1,5 +1,5 @@
-#header {
-  position: fixed;
+.header {
+  position: absolute;
   z-index: 1000;
   top: 0;
   left: 0;
@@ -7,20 +7,15 @@
   padding-top: 11px;
   padding-bottom: 11px;
   min-height: 132px;
-  //min-height: 165px;
-  //padding-top: 29px;
-  //padding-bottom: 29px;
   text-align: right;
   opacity: 0;
-  -webkit-transition: 0.35s;
-  -moz-transition: 0.35s;
-  transition: 0.35s;
+  @include transition($transition-other);
   &.show,
   .no-js &,
   html:not(.js) & {
     opacity: 1;
   }
-  body:not(.scrolling) &.white-bg {
+  &.white-bg {
     background-color: $white;
   }
   .container {
@@ -32,51 +27,85 @@
       }
     }
   }
-  @media all and (max-width: 1440px) {
-    //padding-top: 11px;
-    //padding-bottom: 11px;
-    //min-height: 132px;
-    //max-width: 1210px;
-  }
-  .admin-bar & {
-    top: 32px;
-  }
+  //.admin-bar & {
+  //  top: 32px;
+  //}
   .home & {
     min-height: 166px;
     padding-top: 28px;
     padding-bottom: 28px;
   }
-  .scrolling & {
-    background-color: $white;
-    @include box-shadow(0  5px 10px 0, rgba($black, .2));
-  }
-  .home.scrolling & {
-    min-height: 134px;
-    padding: 12px 0 12px;
-  }
   @media all and (max-width: 1024px) {
     min-height: 70px !important;
     padding: 8px 0 3px !important;
     text-align: left;
-    .scrolling & {
-      //min-height: 70px;
-      //padding: 8px 0 3px;
-      background-color: $white;
-      @include box-shadow(0  5px 10px 0, rgba($black, .2));
-    }
   }
 }
+
+#header-main {}
+
+#header-scrolling {
+  position: fixed;
+  z-index: 1010;
+  top: -82px;
+  min-height: 82px;
+  background-color: $white;
+  @include box-shadow(0 5px 10px 0, rgba($black, .2));
+  .direction-up & {
+    top: 0;
+  }
+  .direction-down & {
+    top: -82px;
+    @media all and (max-width: 1024px) {
+      top: -70px
+    }
+  }
+  @media all and (max-width: 1024px) {
+    top: -70px
+  }
+  .home & {
+    min-height: 116px;
+    top: -116px;
+    @media all and (max-width: 1440px) {
+      top: -82px;
+      min-height: 82px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+    @media all and (max-width: 1024px) {
+      top: -70px
+    }
+  }
+  .home.direction-up & {
+    top: 0;
+  }
+  .home.direction-down & {
+    top: -116px;
+    @media all and (max-width: 1440px) {
+      top: -82px;
+    }
+    @media all and (max-width: 1024px) {
+      top: -70px
+    }
+  }
+  .home.overflow.direction-down &,
+  .overflow.direction-down & {
+    top: 0;
+  }
+}
+
 
 .logo {
   overflow: hidden;
   float: left;
   max-width: 316px;
-  //max-width: 158px;
-  //max-width: 307px;
   @include transition($transition-other);
   img {
     max-width: 100%;
     max-height: 100%;
+  }
+  #header-scrolling & {
+    max-width: 158px;
   }
   .home & {
     margin-left: 10px;
@@ -88,6 +117,13 @@
     max-width: 158px;
   }
 }
+
+.home #header-scrolling {
+  .logo {
+    margin-left: 0;
+  }
+}
+
 
 .mobile-menu-wrap,
 .mobile-menu-toggle {

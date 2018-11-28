@@ -6,9 +6,6 @@
   height: 94px;
   max-width: -webkit-calc(100% - #{316px});
   max-width: calc(100% - #{316px});
-  //@media all and (max-width: 1366px) {
-  //  margin-top: 45px;
-  //}
   > ul {
     display: table-cell;
     width: 100%;
@@ -27,13 +24,6 @@
         font-size: $size-smaller;
         line-height: 1;
         text-decoration: none;
-        //@media all and (max-width: 1500px) {
-        //  padding: 13px 15px;
-        //}
-        @media all and (max-width: 1120px) {
-          //font-size: 18px;
-          //padding: 10px 8px;
-        }
         &:hover,
         &:focus {
           color: $color-text2;
@@ -49,7 +39,8 @@
             background-image: url(../../img/skiing_big_yellow.png);
           }
         }
-        .scrolling & {
+        .white-bg &,
+        #header-scrolling & {
           color: $color-text3;
           &:hover,
           &:focus {
@@ -70,9 +61,6 @@
       }
       &.btn-dealer {
         margin-left: 16px;
-        //@media all and (max-width: 1120px) {
-        //  margin-left: 8px;
-        //}
       }
 
     }
@@ -114,6 +102,19 @@
       }
     }
   }
+  #header-scrolling & {
+    max-width: -webkit-calc(100% - #{158px});
+    max-width: calc(100% - #{158px});
+    height: 60px;
+    > ul {
+      vertical-align: middle;
+      > li {
+        a {
+          padding: 12px 13px;
+        }
+      }
+    }
+  }
 }
 
 .icon-skiing {
@@ -126,13 +127,10 @@
   background-image: url(../../img/skiing_big_light.png);
   @include transition($transition-link);
   @include bg();
-  .scrolling &,
+  #header-scrolling &,
   &.dark {
     background-image: url(../../img/skiing_big_dark.png);
   }
-  //@media all and (max-width: 1366px) {
-  //  top: 0;
-  //}
   .home & {
     top: 4px;
   }

@@ -29,23 +29,23 @@ a.btn, .btn {
   }
     &.blue {
       color: $white;
-      border-color: #00a3e0;
-      background-color: #00a3e0;
+      border-color: $color-bg12;
+      background-color: $color-bg12;
       @media all and (min-width: 769px) {
         &:hover,
         &:focus {
-          color: #00a3e0;
+          color: $color-text12;
           background-color: transparent;
         }
       }
       &.inverse {
-        color: #62666a;
+        color: $color-text11;
         background-color: transparent;
         @media all and (min-width: 769px) {
           &:hover,
           &:focus {
             color: $white;
-            background-color: #00a3e0;
+            background-color: $color-bg12;
           }
         }
       }

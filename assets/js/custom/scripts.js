@@ -2,40 +2,28 @@
 
     // header fade
     $(function () {
-        var header = $('#header');
+        var header = $('#header-main');
         setTimeout(function () {
             header.addClass('show');
         }, 800);
     });
 
-
-    //header background on scroll
-    var body = $('body');
-    $(window).on('load resize scroll', function () {
-        var st2 = $(this).scrollTop();
-
-        if (st2 > 0) {
-            // console.log(st2);
-            body.addClass('scrolling');
-        } else {
-            body.removeClass('scrolling');
-        }
-    });
-
-
     $(document).ready(function() {
         // for placeholder link
-        // function prevent(){
-        //     $('.prevent, .btn-modal, a[href=#]').on('click touch', function(event){
-        //         event.preventDefault();
-        //     });
-        // }
+        function prevent(){
+            $('.prevent, .btn-modal, a[href="#"]').on('click touch', function(event){
+                event.preventDefault();
+            });
+        }
+
+        // for empty link
+        prevent();
 
         // for burger menu
         $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function () {
             $('.mobile-menu-toggle').toggleClass('active');
             $('.mobile-menu-wrap').toggleClass('showing');
-            $('#header').toggleClass('white-bg');
+            $('#header-main').toggleClass('white-bg');
             $('body').toggleClass('overflow');
         });
 
@@ -46,36 +34,26 @@
                 if ($('.mobile-menu-toggle').hasClass('active')) {
                     $('.mobile-menu-toggle').removeClass('active');
                     $('.mobile-menu-wrap').removeClass('showing');
-                    $('#header').removeClass('white-bg');
+                    $('#header-main').removeClass('white-bg');
                     $(document.body).removeClass('overflow');
                 }
             }
         });
 
-        // for empty link
-        // prevent();
 
         //initialize swiper when document ready
         if (typeof Swiper !== 'undefined') {
             var mySwiper = new Swiper('.social-slider', {
                 slidesPerView: 3,
                 spaceBetween: 30,
-                // loop: true,
                 navigation: {
                     nextEl: '.swiper-social-button-next',
                     prevEl: '.swiper-social-button-prev',
                 },
                 breakpoints: {
-                    // when window width is <= 320px
-                    // 320: {
-                    //     slidesPerView: 1,
-                    //     spaceBetween: 10
-                    // },
-                    // when window width is <= 480px
                     540: {
                         slidesPerView: 1
                     },
-                    // when window width is <= 640px
                     767: {
                         slidesPerView: 2
                     }
@@ -127,6 +105,158 @@
 
             })
         }
+
+        function scrollEffects() {
+            var $window = $(window),
+                html = $('html'),
+                body = $('body'),
+                header = $('#header-main'),
+                breadcrumbsBar = $('.breadcrumbs-bar'),
+                anchorNav = $('.page-nav.sticky-nav'),
+                lastScrollTop = 0,
+                triggerPlus = 0;
+
+            setTimeout(function () {
+                if ($window.width() < 1025) {
+                    if (breadcrumbsBar.length) {
+                        header.addClass('fixed');
+                        breadcrumbsBar.css('opacity', '1');
+                    }
+                }
+            }, 5000);
+
+            $window.on('load resize', function () {
+                body.removeClass('direction-up direction-down');
+                header.removeClass('fixed');
+
+                setTimeout(function () {
+                    var windowWidth = $window.width(),
+                        headerOffset = header.offset().top,
+                        headerHeight = header.outerHeight();
+
+                    if (anchorNav.length) {
+                        var anchorNavOffset = anchorNav.offset().top;
+                    }
+
+                    if (windowWidth < 1025) {
+                        // for mobile & tablet
+                        var headerTrigger = headerOffset + headerHeight + triggerPlus;
+
+                        if (breadcrumbsBar.length) {
+                            header.addClass('fixed');
+                            breadcrumbsBar.css('opacity', '1');
+                        }
+
+                        $window.unbind('scroll');
+                        $window.on('scroll', function () {
+                            var top = $window.scrollTop();
+
+                            if (lastScrollTop > top) {
+                                // scroll UP
+                                if (breadcrumbsBar.length) {
+                                    if (!(body.hasClass('direction-up'))) {
+                                        body.removeClass('direction-down').addClass('direction-up');
+                                    }
+                                } else {
+                                    if (top == 0 && top < 2 * headerTrigger) {
+                                        if (body.hasClass('direction-up')) {
+                                            body.removeClass('direction-up');
+                                            header.removeClass('fixed');
+                                        }
+                                    } else if (top != 0 && top > 2 * headerTrigger) {
+                                        if (!(body.hasClass('direction-up'))) {
+                                            body.removeClass('direction-down').addClass('direction-up');
+                                        }
+                                    }
+                                }
+                            } else {
+                                // scroll DOWN
+                                if (breadcrumbsBar.length) {
+                                    if (!(body.hasClass('direction-down'))) {
+                                        body.removeClass('direction-up').addClass('direction-down');
+                                    }
+                                } else {
+                                    if (top > 2 * headerTrigger) {
+                                        if (!(body.hasClass('direction-down'))) {
+                                            body.removeClass('direction-up').addClass('direction-down');
+                                            setTimeout(function () {
+                                                header.addClass('fixed');
+                                            },400);
+                                        }
+                                    }
+                                }
+                            }
+
+                            lastScrollTop = top;
+                        });
+                    } else {
+                        //for desktop
+                        var headerTrigger = headerOffset + headerHeight + triggerPlus;
+
+                        if (breadcrumbsBar.length) {
+                            header.removeClass('fixed');
+                        }
+
+                        $window.unbind('scroll');
+                        $window.on('scroll', function () {
+                            var top = $window.scrollTop();
+
+                            if (lastScrollTop > top) {
+                                // scroll UP
+                                //for main nav
+                                if (top == 0 && top < 2 * headerTrigger) {
+                                    if (body.hasClass('direction-up')) {
+                                        body.removeClass('direction-up');
+                                        header.removeClass('fixed');
+                                    }
+                                } else if (top != 0 && top > 2 * headerTrigger) {
+                                    if (!(body.hasClass('direction-up'))) {
+                                        body.removeClass('direction-down').addClass('direction-up');
+                                    }
+                                }
+
+                                //for anchor nav
+                                if (anchorNav.length) {
+                                    var anchorNavTrigger = anchorNavOffset - headerOffset - headerHeight;
+
+                                    if (top < anchorNavTrigger) {
+                                        if (anchorNav.hasClass('affix')) {
+                                            anchorNav.removeClass('affix');
+                                        }
+                                    }
+                                }
+                            } else {
+                                // scroll DOWN
+                                //for main nav
+                                if (top > 2 * headerTrigger) {
+                                    if (!(body.hasClass('direction-down'))) {
+                                        body.removeClass('direction-up').addClass('direction-down');
+                                        setTimeout(function () {
+                                            header.addClass('fixed');
+                                        },350);
+                                    }
+                                }
+
+                                //for anchor nav
+                                if (anchorNav.length) {
+                                    var anchorNavTrigger = anchorNavOffset;
+
+                                    if (top > anchorNavTrigger) {
+                                        if (!(anchorNav.hasClass('affix'))) {
+                                            anchorNav.addClass('affix');
+                                        }
+                                    }
+                                }
+                            }
+
+                            lastScrollTop = top;
+                        });
+                    }
+                }, 50);
+            });
+        }
+
+        scrollEffects();
 
     });
 

@@ -28,12 +28,6 @@
         label {
           display: block;
           cursor: pointer;
-          //@media all and (min-width: 769px) {
-          //  &:hover,
-          //  &:focus {
-          //    color: $color-text2;
-          //  }
-          //}
         }
       }
       &.bed-length {
@@ -66,14 +60,13 @@
             &:checked {
               & + label {
                 .select-truck-img-wrap {
-                  border-color: #00a3e0;
+                  border-color: $color-bg12;
                   &:after {
                     opacity: 1;
-                    //visibility: visible;
                   }
                 }
                 .select-truck-name {
-                  color: #00a3e0;
+                  color: $color-text12;
                 }
               }
             }
@@ -96,15 +89,12 @@
             margin-bottom: 30px;
             padding-bottom: 100%;
             background-color: $white;
-            //background-color: red;
             border: 1px solid rgb(98, 102, 106);
             border-color: rgba(98, 102, 106, .2);
             @include transition($transition-other);
             img {
                 position: absolute;
                 z-index: 3;
-                //min-height: 100%;
-                //min-width: 100%;
                 max-height: 100%;
                 max-width: 100%;
                 width: auto;
@@ -118,14 +108,6 @@
                 @include transform-origin();
                 @include transition($transition-other);
               }
-            //&.above {
-            //  img {
-            //    //min-width: auto;
-            //    //max-width: 100%;
-            //    //max-width: 100%;
-            //    //max-height: none;
-            //  }
-            //}
               &:after {
                 position: absolute;
                 content: '';
@@ -134,7 +116,7 @@
                 right: 22px;
                 width: 40px;
                 height: 40px;
-                background-color: #00a3e0;
+                background-color: $color-bg12;
                 @include border-radius(50%);
                 background-image: url(../../img/icon_check.png);
                 @include bg(center, 21px 18px, no-repeat);
@@ -157,7 +139,7 @@
             font-size: 22px;
             font-weight: $normal;
             line-height: 1.2;
-            color: #62666a;
+            color: $color-text11;
             letter-spacing: .03em;
             @include transition($transition-other);
             @media all and (max-width: 767px) {

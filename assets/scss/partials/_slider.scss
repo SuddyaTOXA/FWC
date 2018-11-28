@@ -93,22 +93,6 @@
         }
       }
     }
-    .swiper-wrapper {
-      > *:nth-child(even) {
-        .slide-box {
-          background-color: $color-bg10;
-          &:before {
-            @include background-gradient(bottom, #00c7de);
-          }
-          &:after {
-            @include background-gradient(top, #51b5c9);
-          }
-          > img {
-            opacity: .7;
-          }
-        }
-      }
-    }
 
       .slide-inner-box {
         overflow: hidden;
@@ -120,7 +104,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 44px 38px 48px;
         padding: 44px 38px 22px;
         @media all and (max-width: 1024px) {
           padding: 30px 15px 20px;
@@ -144,7 +127,6 @@
           }
             .slide-desc {
               overflow: hidden;
-              //max-height: 140px;
               height: 110px;
               @media all and (max-width: 1366px) {
                 max-height: 115px;
@@ -158,25 +140,21 @@
 
       .slide-icon {
         margin-bottom: 7px;
-        @media all and (max-width: 1024px) {
-          margin-bottom: 4px;
-        }
         .without-title & {
           margin-top: 18px;
           margin-bottom: 0;
         }
-        &.facebook {
-          @media all and (max-width: 767px) {
+        @media all and (max-width: 1024px) {
+          margin-bottom: 4px;
+        }
+        @media all and (max-width: 767px) {
+          &.facebook {
             width: 22px;
           }
-        }
-        &.instagram {
-          @media all and (max-width: 767px) {
+          &.instagram {
             width: 41px;
           }
-        }
-        &.pinterest {
-          @media all and (max-width: 767px) {
+          &.pinterest {
             width: 41px;
           }
         }
@@ -199,6 +177,7 @@
         }
       }
       .slide-desc {}
+
     .social-nav-box {
       margin-top: 61px;
       text-align: center;
