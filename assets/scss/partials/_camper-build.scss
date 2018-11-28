@@ -1,14 +1,164 @@
 .section-build-my-camper {
+  padding: 150px 0 120px;
   .container {}
 }
-    .anchor-nav-box {}
+    .anchor-nav-box {
+      height: 140px;
+      background-color: #fafafa;
+      border: 1px solid $color-bg11;
+      border-color: rgba($color-bg11, .2);
+      > * {
+        display: none;
+      }
+    }
       a.back-link,
       .back-link {}
       .anchor-box-title {}
       .anchor-nav {
         > li {
           a {
-            
+            @media all and (min-width: 769px) {
+              &:hover,
+              &:focus {
+              }
+            }
           }
         }
       }
+      .total-camper-box {
+        .price {}
+        .weight {}
+      }
+    .camper-customizer-box {}
+      .customizer-form {}
+        .group-box {
+          .left-box,
+          .right-box {}
+          .left-box {}
+          .right-box {}
+        }
+          .group-header {}
+            .group-title {
+              position: relative;
+              margin-bottom: 10px;
+              padding-bottom: 10px;
+              font-size: 30px;
+              font-weight: $normal;
+              line-height: $line-height-heading;
+              letter-spacing: $letter-spacing-20;
+              &:after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 125px;
+                max-width: 100%;
+                background-color: $color-bg12;
+              }
+            }
+            .group-img-wrap {
+              img {}
+            }
+            .box-title {
+              display: block;
+              margin-bottom: 20px;
+              padding-bottom: 20px;
+              font-size: 20px;
+              font-weight: $normal;
+              line-height: $line-height-heading;
+              letter-spacing: $letter-spacing-20;
+              border-bottom: 1px solid $color-bg11;
+            }
+            .color-list {
+              margin: 0 -15px -30px;
+              > li {
+                display: inline-block;
+                width: 100px;
+                padding: 0 15px;
+                margin-bottom: 30px;
+              }
+            }
+                .color-box {
+                  position: relative;
+                  input {
+                    position: absolute;
+                    z-index: 1;
+                    left: 50%;
+                    top: 50%;
+                    @include translate();
+                    opacity: 0;
+                    &:checked + label:after {
+                      opacity: 1;
+                    }
+                  }
+                  label {
+                    position: relative;
+                    z-index: 5;
+                    display: block;
+                    width: 70px;
+                    height: 70px;
+                    @include border-radius($radius-main);
+                    background-color: $color-bg;
+                    cursor: pointer;
+                    &:after {
+                      position: absolute;
+                      z-index: 7;
+                      content: '';
+                      right: -5px;
+                      bottom: -5px;
+                      width: 28px;
+                      height: 28px;
+                      background-color: $color-bg12;
+                      background-image: url(../../img/icon_check.png);
+                      @include bg(center, 15px 13px, no-repeat);
+                      @include border-radius(50%);
+                      @include transition($transition-other);
+                      opacity: 0;
+                    }
+                  }
+                  &.color-gainsboro label {
+                    background-color: #dcdcdc;
+                  }
+                  &.color-pink label {
+                    background-color: #fad0d5;
+                  }
+                  &.color-creamy label {
+                    background-color: #fed9a1;
+                  }
+                  &.color-aquamarine label {
+                    background-color: #5ce5aa;
+                  }
+                  &.color-coral label {
+                    background-color: #f9e7c7;
+                  }
+                  &.color-dusty-grey label {
+                    background-color: #9f8e8e;
+                  }
+                }
+            .item-list {
+              > li {
+                label {}
+              }
+            }
+              .item-box {
+                a.more-info-btn,
+                .more-info-btn {}
+              }
+                .radio-item {}
+                .check-item {}
+                .item-img-wrap {
+                  img {}
+                }
+                .item-info-box {
+                  &.more {
+                    display: none;
+                  }
+                }
+                  .item-title-box {}
+                    .item-icon-wrap {
+                      img {}
+                    }
+                    .item-title {}
+                  .item-price-weight-box {}
+                    .item-price {}
+                    .item-weight {}

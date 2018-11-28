@@ -2838,4 +2838,122 @@ a.more-info-btn,
     padding-top: 16px;
     padding-bottom: 16px; }
 
+.section-build-my-camper {
+  padding: 150px 0 120px; }
+
+.anchor-nav-box {
+  height: 140px;
+  background-color: #fafafa;
+  border: 1px solid #62666a;
+  border-color: rgba(98, 102, 106, 0.2); }
+  .anchor-nav-box > * {
+    display: none; }
+
+.group-title {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.02em; }
+  .group-title:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 125px;
+    max-width: 100%;
+    background-color: #00a3e0; }
+
+.box-title {
+  display: block;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid #62666a; }
+
+.color-list {
+  margin: 0 -15px -30px; }
+  .color-list > li {
+    display: inline-block;
+    width: 100px;
+    padding: 0 15px;
+    margin-bottom: 30px; }
+
+.color-box {
+  position: relative; }
+  .color-box input {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -khtml-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0; }
+    .color-box input:checked + label:after {
+      opacity: 1; }
+  .color-box label {
+    position: relative;
+    z-index: 5;
+    display: block;
+    width: 70px;
+    height: 70px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #3e3e3e;
+    cursor: pointer; }
+    .color-box label:after {
+      position: absolute;
+      z-index: 7;
+      content: '';
+      right: -5px;
+      bottom: -5px;
+      width: 28px;
+      height: 28px;
+      background-color: #00a3e0;
+      background-image: url(../../img/icon_check.png);
+      background-position: center;
+      background-size: 15px 13px;
+      background-repeat: no-repeat;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: 0.35s;
+      -khtml-transition: 0.35s;
+      -moz-transition: 0.35s;
+      -ms-transition: 0.35s;
+      -o-transition: 0.35s;
+      transition: 0.35s;
+      opacity: 0; }
+  .color-box.color-gainsboro label {
+    background-color: #dcdcdc; }
+  .color-box.color-pink label {
+    background-color: #fad0d5; }
+  .color-box.color-creamy label {
+    background-color: #fed9a1; }
+  .color-box.color-aquamarine label {
+    background-color: #5ce5aa; }
+  .color-box.color-coral label {
+    background-color: #f9e7c7; }
+  .color-box.color-dusty-grey label {
+    background-color: #9f8e8e; }
+
+.item-info-box.more {
+  display: none; }
+
 /*# sourceMappingURL=screen.css.map */
