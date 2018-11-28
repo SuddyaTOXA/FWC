@@ -47,45 +47,23 @@
 #header-scrolling {
   position: fixed;
   z-index: 1010;
-  top: -82px;
+  top: -90px;
   min-height: 82px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   background-color: $white;
   @include box-shadow(0 5px 10px 0, rgba($black, .2));
+  @media all and (max-width: 1024px) {
+    top: -78px;
+    min-height: 70px;
+  }
   .direction-up & {
     top: 0;
   }
   .direction-down & {
-    top: -82px;
+    top: -90px;
     @media all and (max-width: 1024px) {
-      top: -70px
-    }
-  }
-  @media all and (max-width: 1024px) {
-    top: -70px
-  }
-  .home & {
-    min-height: 116px;
-    top: -116px;
-    @media all and (max-width: 1440px) {
-      top: -82px;
-      min-height: 82px;
-      padding-top: 11px;
-      padding-bottom: 11px;
-    }
-    @media all and (max-width: 1024px) {
-      top: -70px
-    }
-  }
-  .home.direction-up & {
-    top: 0;
-  }
-  .home.direction-down & {
-    top: -116px;
-    @media all and (max-width: 1440px) {
-      top: -82px;
-    }
-    @media all and (max-width: 1024px) {
-      top: -70px
+      top: -78px
     }
   }
   .home.overflow.direction-down &,

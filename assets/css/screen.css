@@ -874,44 +874,25 @@ img.mfp-img {
 #header-scrolling {
   position: fixed;
   z-index: 1010;
-  top: -82px;
+  top: -90px;
   min-height: 82px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2); }
+  @media all and (max-width: 1024px) {
+    #header-scrolling {
+      top: -78px;
+      min-height: 70px; } }
   .direction-up #header-scrolling {
     top: 0; }
   .direction-down #header-scrolling {
-    top: -82px; }
+    top: -90px; }
     @media all and (max-width: 1024px) {
       .direction-down #header-scrolling {
-        top: -70px; } }
-  @media all and (max-width: 1024px) {
-    #header-scrolling {
-      top: -70px; } }
-  .home #header-scrolling {
-    min-height: 116px;
-    top: -116px; }
-    @media all and (max-width: 1440px) {
-      .home #header-scrolling {
-        top: -82px;
-        min-height: 82px;
-        padding-top: 11px;
-        padding-bottom: 11px; } }
-    @media all and (max-width: 1024px) {
-      .home #header-scrolling {
-        top: -70px; } }
-  .home.direction-up #header-scrolling {
-    top: 0; }
-  .home.direction-down #header-scrolling {
-    top: -116px; }
-    @media all and (max-width: 1440px) {
-      .home.direction-down #header-scrolling {
-        top: -82px; } }
-    @media all and (max-width: 1024px) {
-      .home.direction-down #header-scrolling {
-        top: -70px; } }
+        top: -78px; } }
   .home.overflow.direction-down #header-scrolling, .overflow.direction-down #header-scrolling {
     top: 0; }
 
@@ -1150,13 +1131,14 @@ img.mfp-img {
           padding: 13px 13px;
           font-size: 16px; } }
   #header-scrolling .main-nav {
+    height: 60px;
     max-width: -webkit-calc(100% - 158px);
-    max-width: calc(100% - 158px);
-    height: 60px; }
+    max-width: calc(100% - 158px); }
     #header-scrolling .main-nav > ul {
       vertical-align: middle; }
       #header-scrolling .main-nav > ul > li a {
-        padding: 12px 13px; }
+        padding: 12px 13px;
+        font-size: 16px; }
 
 .icon-skiing {
   position: relative;

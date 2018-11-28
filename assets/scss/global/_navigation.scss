@@ -103,14 +103,16 @@
     }
   }
   #header-scrolling & {
+    height: 60px;
     max-width: -webkit-calc(100% - #{158px});
     max-width: calc(100% - #{158px});
-    height: 60px;
     > ul {
       vertical-align: middle;
       > li {
         a {
           padding: 12px 13px;
+          font-size: $size-smaller;
+
         }
       }
     }
