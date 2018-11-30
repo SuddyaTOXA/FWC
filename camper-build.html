@@ -110,11 +110,12 @@
             <section class="section-build-my-camper">
                 <div class="anchor-nav-box">
                     <div class="container">
-                        <a href="#" class="back-link">Back to Models</a>
-                        <h1 class="anchor-box-title">Build My Camper</h1>
-                        <ul class="anchor-nav">
+                        <div class="left-box">
+                            <a href="#" class="back-link">&#171; Back to Models</a>
+                            <h1 class="anchor-box-title">Build My Camper</h1>
+                            <ul class="anchor-nav">
                             <li>
-                                <a href="#exterior" title="Exterior">Exterior</a>
+                                <a href="#exterior" class="active" title="Exterior">Exterior</a>
                             </li>
                             <li>
                                 <a href="#fabric" title="Fabric">Fabric</a>
@@ -141,9 +142,12 @@
                                 <a href="#other" title="Other">Other</a>
                             </li>
                         </ul>
-                        <div class="total-camper-box">
+                        </div>
+                        <div class="right-box">
+                            <div class="total-camper-box">
                             <span class="price">$17,995.00</span>
-                            <span class="weight">975lbs</span>
+                            <span class="weight">Weight: 975lbs</span>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -151,455 +155,592 @@
                 <div class="camper-customizer-box">
                     <div class="container">
                         <form action="" class="customizer-form">
-                        <div id="exterior" class="group-box">
-                            <div class="group-header">
-                                <h2 class="group-title">Exterior Color</h2>
-                            </div>
-                            <div class="left-box">
-                                <div class="group-img-wrap">
-                                    <img src="img/exterior_color.jpg" alt="Exterior">
+                            <div id="exterior" class="group-box">
+                                <div class="group-header">
+                                    <h2 class="group-title">Exterior Color</h2>
+                                </div>
+                                <div class="left-box">
+                                    <div class="group-img-wrap wider">
+                                        <img src="img/exterior_color.jpg" alt="Exterior">
+                                    </div>
+                                </div>
+                                <div class="right-box">
+                                    <h3 class="box-title">Exterior Color</h3>
+                                    <ul class="color-list">
+                                        <li>
+                                            <div class="color-box color-gainsboro">
+                                                <input type="radio" name="exterior_color" id="exterior_color_1" value="color_1" checked>
+                                                <label for="exterior_color_1"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box color-pink">
+                                                <input type="radio" name="exterior_color" id="exterior_color_2" value="color_2">
+                                                <label for="exterior_color_2"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box color-creamy">
+                                                <input type="radio" name="exterior_color" id="exterior_color_3" value="color_3">
+                                                <label for="exterior_color_3"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box color-aquamarine">
+                                                <input type="radio" name="exterior_color" id="exterior_color_4" value="color_4">
+                                                <label for="exterior_color_4"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box color-coral">
+                                                <input type="radio" name="exterior_color" id="exterior_color_5" value="color_5">
+                                                <label for="exterior_color_5"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box color-dusty-grey">
+                                                <input type="radio" name="exterior_color" id="exterior_color_6" value="color_6">
+                                                <label for="exterior_color_6"></label>
+                                            </div>
+                                        </li>
+
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="right-box">
-                                <h3 class="box-title"></h3>
-                                <ul class="color-list">
-                                    <li>
-                                        <div class="color-box color-gainsboro">
-                                            <input type="radio" name="exterior_color" id="exterior_color_1" value="color_1" checked>
-                                            <label for="exterior_color_1"></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="color-box color-pink">
-                                            <input type="radio" name="exterior_color" id="exterior_color_2" value="color_2">
-                                            <label for="exterior_color_2"></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="color-box color-creamy">
-                                            <input type="radio" name="exterior_color" id="exterior_color_3" value="color_3">
-                                            <label for="exterior_color_3"></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="color-box color-aquamarine">
-                                            <input type="radio" name="exterior_color" id="exterior_color_4" value="color_4">
-                                            <label for="exterior_color_4"></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="color-box color-coral">
-                                            <input type="radio" name="exterior_color" id="exterior_color_5" value="color_5">
-                                            <label for="exterior_color_5"></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="color-box color-dusty-grey">
-                                            <input type="radio" name="exterior_color" id="exterior_color_6" value="color_6">
-                                            <label for="exterior_color_6"></label>
-                                        </div>
-                                    </li>
 
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div id="fabric" class="group-box">
-                            <div class="group-header">
-                                <h2 class="group-title">Interior Fabric</h2>
-                            </div>
-                            <div class="left-box">
-                                <div class="group-img-wrap">
-                                    <img src="img/interior_fabric.jpg" alt="Fabric">
+                            <div id="fabric" class="group-box">
+                                <div class="group-header">
+                                    <h2 class="group-title">Interior Fabric</h2>
+                                </div>
+                                <div class="left-box">
+                                    <div class="group-img-wrap wider">
+                                        <img src="img/interior_fabric.jpg" alt="Fabric">
+                                    </div>
+                                </div>
+                                <div class="right-box">
+                                    <h3 class="box-title">Interior Fabric</h3>
+                                    <ul class="color-list">
+                                        <li>
+                                            <div class="color-box color-gainsboro">
+                                                <input type="radio" name="fabric_color" id="fabric_color_1" value="color_1" checked>
+                                                <label for="fabric_color_1"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box color-pink">
+                                                <input type="radio" name="fabric_color" id="fabric_color_2" value="color_2">
+                                                <label for="fabric_color_2"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box color-creamy">
+                                                <input type="radio" name="fabric_color" id="fabric_color_3" value="color_3">
+                                                <label for="fabric_color_3"></label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="color-box color-aquamarine">
+                                                <input type="radio" name="fabric_color" id="fabric_color_4" value="color_4">
+                                                <label for="fabric_color_4"></label>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="right-box">
-                                <h3 class="box-title"></h3>
-                                <ul class="color-list">
+
+                            <div id="awning" class="group-box">
+                                <div class="group-header">
+                                    <h2 class="group-title">Awning</h2>
+                                </div>
+                                <ul class="item-list">
                                     <li>
-                                        <div class="color-box color-gainsboro">
-                                            <input type="radio" name="fabric_color" id="fabric_color_1" value="color_1" checked>
-                                            <label for="fabric_color_1"></label>
+                                        <div class="item-box">
+                                            <input id="awning_1" type="radio" name="awning" class="radio-item" value="awning_1">
+                                            <label for="awning_1">
+                                                <div class="item-img-wrap wider">
+                                                    <img src="img/awning_1.jpg" alt="8' Side Awning w/ Light">
+                                                </div>
+                                                <div class="item-info-box">
+                                                    <div class="item-title-box">
+                                                        <!--<div class="item-icon-wrap">-->
+                                                            <!--<img src="img/icon_battery.png" alt="Battery">-->
+                                                        <!--</div>-->
+                                                        <h3 class="item-title">8' Side Awning w/ Light</h3>
+                                                    </div>
+                                                    <div class="item-price-weight-box">
+                                                        <span class="item-price">Price - $1,195.00</span>
+                                                        <span class="item-weight"></span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="more-info-btn">More Info <span class="arrow-down"></span></a>
+                                                <div class="item-info-box content small more">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
+                                                        Sed sed feugiat eros.</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
+                                                    <ul>
+                                                        <li>In a metus nibh. Cras gravida diam dui.</li>
+                                                        <li>Sed finibus ipsum dignissim non.</li>
+                                                        <li>Sed sed feugiat eros.</li>
+                                                    </ul>
+                                                </div>
+                                            </label>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="color-box color-pink">
-                                            <input type="radio" name="fabric_color" id="fabric_color_2" value="color_2">
-                                            <label for="fabric_color_2"></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="color-box color-creamy">
-                                            <input type="radio" name="fabric_color" id="fabric_color_3" value="color_3">
-                                            <label for="fabric_color_3"></label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="color-box color-aquamarine">
-                                            <input type="radio" name="fabric_color" id="fabric_color_4" value="color_4">
-                                            <label for="fabric_color_4"></label>
+                                        <div class="item-box">
+                                            <input id="awning_2" type="radio" name="awning" class="radio-item" value="awning_1">
+                                            <label for="awning_2">
+                                                <div class="item-img-wrap wider">
+                                                    <img src="img/awning_2.jpg" alt="Bat 270 Degree Wraparound">
+                                                </div>
+                                                <div class="item-info-box">
+                                                    <div class="item-title-box">
+                                                        <!--<div class="item-icon-wrap">-->
+                                                            <!--<img src="img/icon_battery.png" alt="Battery">-->
+                                                        <!--</div>-->
+                                                        <h3 class="item-title">Bat 270 Degree Wraparound</h3>
+                                                    </div>
+                                                    <div class="item-price-weight-box">
+                                                        <span class="item-price">Price - $1,750.00</span>
+                                                        <span class="item-weight"></span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="more-info-btn">More Info <span class="arrow-down"></span></a>
+                                                <div class="item-info-box content small more">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
+                                                        Sed sed feugiat eros.</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
+                                                    <ul>
+                                                        <li>In a metus nibh. Cras gravida diam dui.</li>
+                                                        <li>Sed finibus ipsum dignissim non.</li>
+                                                        <li>Sed sed feugiat eros.</li>
+                                                    </ul>
+                                                </div>
+                                            </label>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
 
-                        <div id="awning" class="group-box">
-                            <div class="group-header">
-                                <h2 class="group-title">Awning</h2>
-                            </div>
-                            <ul class="item-list">
-                                <li>
-                                    <div class="item-box">
-                                        <input id="awning_1" type="radio" name="awning" class="radio-item" value="awning_1">
-                                        <label for="awning_1">
-                                            <div class="item-img-wrap">
-                                                <img src="img/awning_1.jpg" alt="8' Side Awning w/ Light">
-                                            </div>
-                                            <div class="item-info-box">
-                                                <div class="item-title-box">
-                                                    <!--<div class="item-icon-wrap">-->
-                                                        <!--<img src="img/icon_battery.png" alt="Battery">-->
-                                                    <!--</div>-->
-                                                    <h3 class="item-title">8' Side Awning w/ Light</h3>
-                                                </div>
-                                                <div class="item-price-weight-box">
-                                                    <span class="item-price">Price - $1,195.00</span>
-                                                    <span class="item-weight"></span>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="more-info-btn">More Info</a>
-                                            <div class="item-info-box content small more">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
-                                                    Sed sed feugiat eros.</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
-                                                <ul>
-                                                    <li>In a metus nibh. Cras gravida diam dui.</li>
-                                                    <li>Sed finibus ipsum dignissim non.</li>
-                                                    <li>Sed sed feugiat eros.</li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-box">
-                                        <input id="awning_2" type="radio" name="awning" class="radio-item" value="awning_1">
-                                        <label for="awning_2">
-                                            <div class="item-img-wrap">
-                                                <img src="img/awning_2.jpg" alt="Bat 270 Degree Wraparound">
-                                            </div>
-                                            <div class="item-info-box">
-                                                <div class="item-title-box">
-                                                    <!--<div class="item-icon-wrap">-->
-                                                        <!--<img src="img/icon_battery.png" alt="Battery">-->
-                                                    <!--</div>-->
-                                                    <h3 class="item-title">Bat 270 Degree Wraparound</h3>
-                                                </div>
-                                                <div class="item-price-weight-box">
-                                                    <span class="item-price">Price - $1,750.00</span>
-                                                    <span class="item-weight"></span>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="more-info-btn">More Info</a>
-                                            <div class="item-info-box content small more">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
-                                                    Sed sed feugiat eros.</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
-                                                <ul>
-                                                    <li>In a metus nibh. Cras gravida diam dui.</li>
-                                                    <li>Sed finibus ipsum dignissim non.</li>
-                                                    <li>Sed sed feugiat eros.</li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div id="batteries" class="group-box">
-                            <div class="group-header">
-                                <h2 class="group-title">Batteries</h2>
-                            </div>
-                            <ul class="item-list">
-                                <li>
-                                    <div class="item-box">
-                                        <input id="batteries_1" type="radio" name="batteries" class="radio-item" value="batteries_1">
-                                        <label for="batteries_1">
-                                            <div class="item-info-box">
-                                                <div class="item-title-box">
-                                                    <div class="item-icon-wrap">
-                                                        <img src="img/icon_battery.png" alt="Battery">
+                            <div id="batteries" class="group-box">
+                                <div class="group-header">
+                                    <h2 class="group-title">Batteries</h2>
+                                </div>
+                                <ul class="item-list">
+                                    <li>
+                                        <div class="item-box without-image">
+                                            <input id="batteries_1" type="checkbox" name="batteries" class="check-item" value="batteries_1">
+                                            <label for="batteries_1">
+                                                <div class="item-info-box">
+                                                    <div class="item-title-box">
+                                                        <div class="item-icon-wrap">
+                                                            <img src="img/icon_battery.png" alt="Battery">
+                                                        </div>
+                                                        <h3 class="item-title">Dual 6 Volt Battery Upgrade</h3>
                                                     </div>
-                                                    <h3 class="item-title">Dual 6 Volt Battery Upgrade</h3>
-                                                </div>
-                                                <div class="item-price-weight-box">
-                                                    <span class="item-price">Price - $600.00</span>
-                                                    <span class="item-weight"></span>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="more-info-btn">More Info</a>
-                                            <div class="item-info-box content small more">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
-                                                    Sed sed feugiat eros.</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
-                                                <ul>
-                                                    <li>In a metus nibh. Cras gravida diam dui.</li>
-                                                    <li>Sed finibus ipsum dignissim non.</li>
-                                                    <li>Sed sed feugiat eros.</li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-box">
-                                        <input id="batteries_2" type="radio" name="batteries" class="radio-item" value="batteries_2">
-                                        <label for="batteries_2">
-                                            <div class="item-info-box">
-                                                <div class="item-title-box">
-                                                    <div class="item-icon-wrap">
-                                                        <img src="img/icon_battery.png" alt="Battery">
+                                                    <div class="item-price-weight-box">
+                                                        <span class="item-price">Price - $600.00</span>
+                                                        <span class="item-weight"></span>
                                                     </div>
-                                                    <h3 class="item-title">2nd deep cycle battery (dual battery setup)</h3>
                                                 </div>
-                                                <div class="item-price-weight-box">
-                                                    <span class="item-price">Price - $395.00</span>
-                                                    <span class="item-weight"></span>
+                                                <a href="#" class="more-info-btn">More Info  <span class="arrow-down"></span></a>
+                                                <div class="item-info-box content small more">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
+                                                        Sed sed feugiat eros.</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
+                                                    <ul>
+                                                        <li>In a metus nibh. Cras gravida diam dui.</li>
+                                                        <li>Sed finibus ipsum dignissim non.</li>
+                                                        <li>Sed sed feugiat eros.</li>
+                                                    </ul>
                                                 </div>
-                                            </div>
-                                            <a href="#" class="more-info-btn">More Info</a>
-                                            <div class="item-info-box content small more">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
-                                                    Sed sed feugiat eros.</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
-                                                <ul>
-                                                    <li>In a metus nibh. Cras gravida diam dui.</li>
-                                                    <li>Sed finibus ipsum dignissim non.</li>
-                                                    <li>Sed sed feugiat eros.</li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div id="dinettes" class="group-box">
-                            <div class="group-header">
-                                <h2 class="group-title">Dinettes</h2>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-box without-image">
+                                            <input id="batteries_2" type="checkbox" name="batteries" class="check-item" value="batteries_2">
+                                            <label for="batteries_2">
+                                                <div class="item-info-box">
+                                                    <div class="item-title-box">
+                                                        <div class="item-icon-wrap">
+                                                            <img src="img/icon_battery.png" alt="Battery">
+                                                        </div>
+                                                        <h3 class="item-title">2nd deep cycle battery (dual battery setup)</h3>
+                                                    </div>
+                                                    <div class="item-price-weight-box">
+                                                        <span class="item-price">Price - $395.00</span>
+                                                        <span class="item-weight"></span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="more-info-btn">More Info  <span class="arrow-down"></span></a>
+                                                <div class="item-info-box content small more">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
+                                                        Sed sed feugiat eros.</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
+                                                    <ul>
+                                                        <li>In a metus nibh. Cras gravida diam dui.</li>
+                                                        <li>Sed finibus ipsum dignissim non.</li>
+                                                        <li>Sed sed feugiat eros.</li>
+                                                    </ul>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul class="item-list">
-                                <li>
-                                    <div class="item-box">
-                                        <input id="dinettes_1" type="radio" name="dinettes" class="radio-item" value="dinettes_1">
-                                        <label for="dinettes_1">
-                                            <div class="item-img-wrap">
-                                                <img src="img/dinettes_1.jpg" alt="">
-                                            </div>
-                                            <div class="item-info-box">
-                                                <div class="item-title-box">
-                                                    <!--<div class="item-icon-wrap">-->
-                                                    <!--<img src="img/icon_battery.png" alt="Battery">-->
-                                                    <!--</div>-->
-                                                    <h3 class="item-title">Side Dinette Seating w/ Swivel Table</h3>
-                                                </div>
-                                                <div class="item-price-weight-box">
-                                                    <span class="item-price">Price - $550.00</span>
-                                                    <span class="item-weight">Weight - 25lbs</span>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="more-info-btn">More Info</a>
-                                            <div class="item-info-box content small more">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
-                                                    Sed sed feugiat eros.</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
-                                                <ul>
-                                                    <li>In a metus nibh. Cras gravida diam dui.</li>
-                                                    <li>Sed finibus ipsum dignissim non.</li>
-                                                    <li>Sed sed feugiat eros.</li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-box">
-                                        <input id="dinettes_2" type="radio" name="dinettes" class="radio-item" value="dinettes_2">
-                                        <label for="dinettes_2">
-                                            <div class="item-img-wrap">
-                                                <img src="img/dinettes_2.jpg" alt="">
-                                            </div>
-                                            <div class="item-info-box">
-                                                <div class="item-title-box">
-                                                    <!--<div class="item-icon-wrap">-->
-                                                    <!--<img src="img/icon_battery.png" alt="Battery">-->
-                                                    <!--</div>-->
-                                                    <h3 class="item-title">Front Dinette Seating w/ Swivel Table</h3>
-                                                </div>
-                                                <div class="item-price-weight-box">
-                                                    <span class="item-price">Price - $1,500.00</span>
-                                                    <span class="item-weight">Weight - 25lbs</span>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="more-info-btn">More Info</a>
-                                            <div class="item-info-box content small more">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
-                                                    Sed sed feugiat eros.</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
-                                                <ul>
-                                                    <li>In a metus nibh. Cras gravida diam dui.</li>
-                                                    <li>Sed finibus ipsum dignissim non.</li>
-                                                    <li>Sed sed feugiat eros.</li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-box">
-                                        <input id="dinettes_3" type="radio" name="dinettes" class="radio-item" value="dinettes_3">
-                                        <label for="dinettes_3">
-                                            <div class="item-img-wrap">
-                                                <img src="img/dinettes_3.jpg" alt="">
-                                            </div>
-                                            <div class="item-info-box">
-                                                <div class="item-title-box">
-                                                    <!--<div class="item-icon-wrap">-->
-                                                    <!--<img src="img/icon_battery.png" alt="Battery">-->
-                                                    <!--</div>-->
-                                                    <h3 class="item-title">Front Dinette w/ Table & Cassette Toilet Only (No Shower)</h3>
-                                                </div>
-                                                <div class="item-price-weight-box">
-                                                    <span class="item-price">Price - $2,800.00</span>
-                                                    <span class="item-weight">Weight - 65lbs</span>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="more-info-btn">More Info</a>
-                                            <div class="item-info-box content small more">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
-                                                    Sed sed feugiat eros.</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
-                                                <ul>
-                                                    <li>In a metus nibh. Cras gravida diam dui.</li>
-                                                    <li>Sed finibus ipsum dignissim non.</li>
-                                                    <li>Sed sed feugiat eros.</li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-box">
-                                        <input id="dinettes_4" type="radio" name="dinettes" class="radio-item" value="dinettes_4">
-                                        <label for="dinettes_4">
-                                            <div class="item-img-wrap">
-                                                <img src="img/dinettes_4.jpg" alt="">
-                                            </div>
-                                            <div class="item-info-box">
-                                                <div class="item-title-box">
-                                                    <!--<div class="item-icon-wrap">-->
-                                                    <!--<img src="img/icon_battery.png" alt="Battery">-->
-                                                    <!--</div>-->
-                                                    <h3 class="item-title">Front Dinette w/ Inside & Outside Shower Only (No Cassette)</h3>
-                                                </div>
-                                                <div class="item-price-weight-box">
-                                                    <span class="item-price">Price - $3,000.00</span>
-                                                    <span class="item-weight">Weight - 30lbs</span>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="more-info-btn">More Info</a>
-                                            <div class="item-info-box content small more">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
-                                                    Sed sed feugiat eros.</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
-                                                <ul>
-                                                    <li>In a metus nibh. Cras gravida diam dui.</li>
-                                                    <li>Sed finibus ipsum dignissim non.</li>
-                                                    <li>Sed sed feugiat eros.</li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-box">
-                                        <input id="dinettes_5" type="radio" name="dinettes" class="radio-item" value="dinettes_5">
-                                        <label for="dinettes_5">
-                                            <div class="item-img-wrap">
-                                                <img src="img/dinettes_5.jpg" alt="">
-                                            </div>
-                                            <div class="item-info-box">
-                                                <div class="item-title-box">
-                                                    <!--<div class="item-icon-wrap">-->
-                                                    <!--<img src="img/icon_battery.png" alt="Battery">-->
-                                                    <!--</div>-->
-                                                    <h3 class="item-title">Front Dinette Self-Contained (inside cassette toilet & shower)</h3>
-                                                </div>
-                                                <div class="item-price-weight-box">
-                                                    <span class="item-price">Front Dinette Self-Contained (inside cassette toilet & shower)</span>
-                                                    <span class="item-weight">Weight - 45lbs</span>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="more-info-btn">More Info</a>
-                                            <div class="item-info-box content small more">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
-                                                    Sed sed feugiat eros.</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
-                                                <ul>
-                                                    <li>In a metus nibh. Cras gravida diam dui.</li>
-                                                    <li>Sed finibus ipsum dignissim non.</li>
-                                                    <li>Sed sed feugiat eros.</li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
 
-                        <!--<div id="dry-closets" class="group-box">-->
-                            <!--<div class="group-header">-->
-                                <!--<h2 class="group-title">Exterior Color</h2>-->
-                            <!--</div>-->
-                        <!--</div>-->
-
-                        <!--<div id="freezers" class="group-box">-->
-                            <!--<div class="group-header">-->
-                                <!--<h2 class="group-title">Exterior Color</h2>-->
-                            <!--</div>-->
-                        <!--</div>-->
-
-                        <!--<div id="roof_racks" class="group-box">-->
-                            <!--<div class="group-header">-->
-                                <!--<h2 class="group-title">Exterior Color</h2>-->
-                            <!--</div>-->
-                        <!--</div>-->
-
-                        <!--<div id="other" class="group-box">-->
-
-                        <!--</div>-->
-                    </form>
+                            <div id="dinettes" class="group-box">
+                                <div class="group-header">
+                                    <h2 class="group-title">Dinettes</h2>
+                                </div>
+                                <ul class="item-list">
+                                    <li>
+                                        <div class="item-box">
+                                            <input id="dinettes_1" type="radio" name="dinettes" class="radio-item" value="dinettes_1">
+                                            <label for="dinettes_1">
+                                                <div class="item-img-wrap">
+                                                    <img src="img/dinettes_1.jpg" alt="">
+                                                </div>
+                                                <div class="item-info-box">
+                                                    <div class="item-title-box">
+                                                        <!--<div class="item-icon-wrap">-->
+                                                        <!--<img src="img/icon_battery.png" alt="Battery">-->
+                                                        <!--</div>-->
+                                                        <h3 class="item-title">Side Dinette Seating w/ Swivel Table</h3>
+                                                    </div>
+                                                    <div class="item-price-weight-box">
+                                                        <span class="item-price">Price - $550.00</span>
+                                                        <span class="item-weight">Weight - 25lbs</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="more-info-btn">More Info <span class="arrow-down"></span></a>
+                                                <div class="item-info-box content small more">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
+                                                        Sed sed feugiat eros.</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
+                                                    <ul>
+                                                        <li>In a metus nibh. Cras gravida diam dui.</li>
+                                                        <li>Sed finibus ipsum dignissim non.</li>
+                                                        <li>Sed sed feugiat eros.</li>
+                                                    </ul>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-box">
+                                            <input id="dinettes_2" type="radio" name="dinettes" class="radio-item" value="dinettes_2">
+                                            <label for="dinettes_2">
+                                                <div class="item-img-wrap">
+                                                    <img src="img/dinettes_2.jpg" alt="">
+                                                </div>
+                                                <div class="item-info-box">
+                                                    <div class="item-title-box">
+                                                        <!--<div class="item-icon-wrap">-->
+                                                        <!--<img src="img/icon_battery.png" alt="Battery">-->
+                                                        <!--</div>-->
+                                                        <h3 class="item-title">Front Dinette Seating w/ Swivel Table</h3>
+                                                    </div>
+                                                    <div class="item-price-weight-box">
+                                                        <span class="item-price">Price - $1,500.00</span>
+                                                        <span class="item-weight">Weight - 25lbs</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="more-info-btn">More Info <span class="arrow-down"></span></a>
+                                                <div class="item-info-box content small more">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
+                                                        Sed sed feugiat eros.</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
+                                                    <ul>
+                                                        <li>In a metus nibh. Cras gravida diam dui.</li>
+                                                        <li>Sed finibus ipsum dignissim non.</li>
+                                                        <li>Sed sed feugiat eros.</li>
+                                                    </ul>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-box">
+                                            <input id="dinettes_3" type="radio" name="dinettes" class="radio-item" value="dinettes_3">
+                                            <label for="dinettes_3">
+                                                <div class="item-img-wrap">
+                                                    <img src="img/dinettes_3.jpg" alt="">
+                                                </div>
+                                                <div class="item-info-box">
+                                                    <div class="item-title-box">
+                                                        <!--<div class="item-icon-wrap">-->
+                                                        <!--<img src="img/icon_battery.png" alt="Battery">-->
+                                                        <!--</div>-->
+                                                        <h3 class="item-title">Front Dinette w/ Table & Cassette Toilet Only (No Shower)</h3>
+                                                    </div>
+                                                    <div class="item-price-weight-box">
+                                                        <span class="item-price">Price - $2,800.00</span>
+                                                        <span class="item-weight">Weight - 65lbs</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="more-info-btn">More Info <span class="arrow-down"></span></a>
+                                                <div class="item-info-box content small more">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
+                                                        Sed sed feugiat eros.</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
+                                                    <ul>
+                                                        <li>In a metus nibh. Cras gravida diam dui.</li>
+                                                        <li>Sed finibus ipsum dignissim non.</li>
+                                                        <li>Sed sed feugiat eros.</li>
+                                                    </ul>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-box">
+                                            <input id="dinettes_4" type="radio" name="dinettes" class="radio-item" value="dinettes_4">
+                                            <label for="dinettes_4">
+                                                <div class="item-img-wrap">
+                                                    <img src="img/dinettes_4.jpg" alt="">
+                                                </div>
+                                                <div class="item-info-box">
+                                                    <div class="item-title-box">
+                                                        <!--<div class="item-icon-wrap">-->
+                                                        <!--<img src="img/icon_battery.png" alt="Battery">-->
+                                                        <!--</div>-->
+                                                        <h3 class="item-title">Front Dinette w/ Inside & Outside Shower Only (No Cassette)</h3>
+                                                    </div>
+                                                    <div class="item-price-weight-box">
+                                                        <span class="item-price">Price - $3,000.00</span>
+                                                        <span class="item-weight">Weight - 30lbs</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="more-info-btn">More Info <span class="arrow-down"></span></a>
+                                                <div class="item-info-box content small more">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
+                                                        Sed sed feugiat eros.</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
+                                                    <ul>
+                                                        <li>In a metus nibh. Cras gravida diam dui.</li>
+                                                        <li>Sed finibus ipsum dignissim non.</li>
+                                                        <li>Sed sed feugiat eros.</li>
+                                                    </ul>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-box">
+                                            <input id="dinettes_5" type="radio" name="dinettes" class="radio-item" value="dinettes_5">
+                                            <label for="dinettes_5">
+                                                <div class="item-img-wrap">
+                                                    <img src="img/dinettes_5.jpg" alt="">
+                                                </div>
+                                                <div class="item-info-box">
+                                                    <div class="item-title-box">
+                                                        <!--<div class="item-icon-wrap">-->
+                                                        <!--<img src="img/icon_battery.png" alt="Battery">-->
+                                                        <!--</div>-->
+                                                        <h3 class="item-title">Front Dinette Self-Contained (inside cassette toilet & shower)</h3>
+                                                    </div>
+                                                    <div class="item-price-weight-box">
+                                                        <span class="item-price">Price - $4,800.00</span>
+                                                        <span class="item-weight">Weight - 45lbs</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="more-info-btn">More Info <span class="arrow-down"></span></a>
+                                                <div class="item-info-box content small more">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        In a metus nibh. Cras gravida diam dui, sed finibus ipsum dignissim non.
+                                                        Sed sed feugiat eros.</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <p>
+                                                    <ul>
+                                                        <li>In a metus nibh. Cras gravida diam dui.</li>
+                                                        <li>Sed finibus ipsum dignissim non.</li>
+                                                        <li>Sed sed feugiat eros.</li>
+                                                    </ul>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
                 <div id="summary" class="camper-summary-box">
                     <div class="container">
-                        <div class="left-box"></div>
-                        <div class="right-box"></div>
+                        <div class="group-header">
+                            <h2 class="group-title">Summary</h2>
+                        </div>
+                        <div class="camper-summary-top-box">
+                            <div class="left-box">
+                                <h3 class="box-title">My Customized Camper</h3>
+                                <ul class="my-customized-view-list">
+                                    <li>
+                                        <a href="#" title="Exterior Color">
+                                            <div class="my-customized-view-img-wrap centered-img wider">
+                                                <img src="img/exterior_color.jpg" alt="Exterior Color">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Interior Fabric">
+                                            <div class="my-customized-view-img-wrap centered-img wider">
+                                                <img src="img/interior_fabric.jpg" alt="Interior Fabric">
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="right-box">
+                                <div class="total-price-box">
+                                    <div class="total-price-row">
+                                        <span class="box-title small">Total Camper Price</span>
+                                        <span class="value">$17,995.00</span>
+                                    </div>
+                                    <a href="#" class="btn blue inverse" title="Print Summary">Print Summary</a>
+                                    <a href="#" class="btn blue inverse" title="Save as PDF">Save as PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="camper-summary-bottom-box">
+                            <div class="left-box">
+                                <ul class="resume-list">
+                                    <li>
+                                        <div class="resume-group">
+                                            <h4 class="resume-title">Exterior Color<a href="#" title="">Edit &raquo;</a></h4>
+                                            <ul class="resume-group-list">
+                                                <li>
+                                                    <div class="resume-group-item">
+                                                        <span class="name">White Diamond Exterior Super Color</span>
+                                                        <span class="value">$0</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="resume-group-item">
+                                                        <span class="name">Ebony Interior Fabric</span>
+                                                        <span class="value">$0</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="resume-group-item">
+                                                        <span class="name">Standard 18-in Pewter Gray Machine-Finished Wheels</span>
+                                                        <span class="value">$0</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="resume-group">
+                                            <h4 class="resume-title">Exterior Color<a href="#" title="">Edit &raquo;</a></h4>
+                                            <ul class="resume-group-list">
+                                                <li>
+                                                    <div class="resume-group-item">
+                                                        <span class="name">White Diamond Exterior Super Color</span>
+                                                        <span class="value">$0</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="resume-group-item">
+                                                        <span class="name">Ebony Interior Fabric</span>
+                                                        <span class="value">$0</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="resume-group">
+                                            <h4 class="resume-title">Exterior Color<a href="#" title="">Edit &raquo;</a></h4>
+                                            <ul class="resume-group-list">
+                                                <li>
+                                                    <div class="resume-group-item">
+                                                        <span class="name">White Diamond Exterior Super Color</span>
+                                                        <span class="value">$0</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="resume-group">
+                                            <h4 class="resume-title">Exterior Color<a href="#" title="">Edit &raquo;</a></h4>
+                                            <ul class="resume-group-list">
+                                                <li>
+                                                    <div class="resume-group-item">
+                                                        <span class="name">White Diamond Exterior Super Color</span>
+                                                        <span class="value">$0</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="subtotal">
+                                        <div class="resume-group">
+                                            <ul class="resume-group-list">
+                                                <li>
+                                                    <div class="resume-group-item">
+                                                        <span class="name">Subtotal</span>
+                                                        <span class="value">$17,995.00</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="resume-group-item">
+                                                        <span class="name">Placement Charge</span>
+                                                        <span class="value">$995</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="total">
+                                        <div class="resume-group">
+                                            <ul class="resume-group-list">
+                                                <li>
+                                                    <div class="resume-group-item">
+                                                        <span class="name">Total Price</span>
+                                                        <span class="value">$17,000</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="right-box">
+                                <h4 class="group-title small">Request A Quote</h4>
+                                <form action="" class="form-quote">
+                                    <ul class="form-quote-list">
+                                        <li>
+                                            <input name="your-name" type="text" class="input-style" placeholder="Name">
+                                        </li>
+                                        <li>
+                                            <input name="your-email" type="email" class="input-style" placeholder="Email">
+                                        </li>
+                                        <li>
+                                            <input name="subject" type="text" class="input-style" placeholder="Subject">
+                                        </li>
+                                        <li>
+                                            <textarea name="massege" class="input-style" placeholder="Massege"></textarea>
+                                        </li>
+                                    </ul>
+                                    <div class="form-quote-btn-box">
+                                        <input type="submit" value="Submit" class="btn blue">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </section>
         </main>
 

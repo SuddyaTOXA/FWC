@@ -129,6 +129,7 @@
   background-image: url(../../img/skiing_big_light.png);
   @include transition($transition-link);
   @include bg();
+  .white-bg &,
   #header-scrolling &,
   &.dark {
     background-image: url(../../img/skiing_big_dark.png);
