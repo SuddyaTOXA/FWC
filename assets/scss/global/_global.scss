@@ -59,6 +59,8 @@ img {
   -o-user-select: none;
   -khtml-user-select: none;
   user-select: none;
+  max-width: 100%;
+  height: auto;
 }
 .container {
   max-width: 1210px;
@@ -82,17 +84,21 @@ img {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $normal;
+}
+
 .content {
   font-size: 20px;
   line-height: $line-height;
   * {
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
     &:last-child {
       margin-bottom: 0;
     }
   }
   h1, h2, h3, h4, h5, h6 {
-    font-weight: $bold;
+    font-weight: $normal;
     line-height: $line-height-heading;
   }
   h1 { font-size: 55px; }

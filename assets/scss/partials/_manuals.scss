@@ -1,0 +1,16 @@
+.section-manuals {
+  @extend .content-wrapper; 
+
+  
+  .content ul > li {
+  	list-style: none;
+  	margin-bottom: 40px;
+
+  	&:before {
+  		display: none;
+  	}
+  }
+  a {
+  	color: $light-blue;
+  }
+}

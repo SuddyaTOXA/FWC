@@ -1,18 +1,5 @@
 .section-select-truck {
-  padding: 129px 0 130px;
-  .container {}
-  .content {
-    line-height: 1.4;
-  }
-  .section-desc {
-    margin-bottom: 75px;
-  }
-  @media all and (max-width: 767px) {
-    padding: 80px 0;
-    .section-desc {
-      margin-bottom: 45px;
-    }
-  }
+  @extend .content-wrapper;
 }
   .form-select-truck {}
     .select-truck-list {

@@ -55,8 +55,9 @@ $color-bg9: #f7f9fb;
 $color-bg10: #00f0dc;
 $color-bg11: #62666a;
 $color-bg12: #00a3e0;
+$light-blue: $color-bg12;
 //$color-bg3: #1d4d94;
-//$color-bg4: #d5d5d5;
+$color-bg14: #d5d5d5;
 
 /*transition*/
 $transition-link: .25s;
@@ -65,3 +66,59 @@ $transition-other: .35s;
 /*border-radius*/
 $radius-main: 10px;
 $radius-small: 5px;
+
+
+//grid columns
+// Extra small screen / phone
+$screen-xs:                  1px;
+$screen-xs-min:              $screen-xs;
+$screen-phone:               $screen-xs-min;
+
+//Additional breakpoint at 480;
+
+$screen-tn:					 480px !default;
+$screen-tn-min:              $screen-tn;
+
+// Small screen / tablet
+
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm;
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / normal desktop
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg;
+$screen-lg-desktop:          $screen-lg-min;
+
+// XLarge screen / wide desktop
+$screen-xl:                  1440px;
+$screen-xl-min:              $screen-xl;
+$screen-xl-desktop:          $screen-xl-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-tn-less:             ($screen-tn-min - 1) !default;
+$screen-xs-max:              ($screen-tn-min - 1) !default;
+$screen-tn-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-lg-max:				 ($screen-xl-min - 1);
+$screen-xl-max:				 1599px;
+
+$tn-max:              ($screen-tn - 1) !default;
+$xs-max:              ($screen-sm-min - 1) !default;
+$sm-max:              ($screen-md-min - 1) !default;
+$md-max:              ($screen-lg-min - 1) !default;
+$lg-max:              ($screen-xl-min - 1);
+$xl-max:				 1599px;
+
+
+
+//columns - grid - for custom layouts  
+$col: 8.333333333%; 
+$gutter: 10px;
