@@ -3299,6 +3299,8 @@ a.back-link,
     width: 33.33%;
     margin-bottom: 30px;
     padding: 0 15px; }
+    .item-list > li:nth-child(3n + 1) {
+      clear: both; }
 
 .item-box {
   position: relative; }
@@ -3319,6 +3321,14 @@ a.back-link,
     -o-border-radius: 5px;
     border-radius: 5px;
     cursor: pointer; }
+    @media all and (min-width: 769px) {
+      .item-box label:hover .item-img-wrap img, .item-box label:focus .item-img-wrap img {
+        -webkit-transform: scale(1.1);
+        -khtml-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1); } }
   .item-box.without-image {
     min-height: 195px; }
     .item-box.without-image input:checked + label:after {
@@ -3440,12 +3450,12 @@ a.back-link,
     -ms-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-    -webkit-transition: 0.25s;
-    -khtml-transition: 0.25s;
-    -moz-transition: 0.25s;
-    -ms-transition: 0.25s;
-    -o-transition: 0.25s;
-    transition: 0.25s; }
+    -webkit-transition: 0.35s;
+    -khtml-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -ms-transition: 0.35s;
+    -o-transition: 0.35s;
+    transition: 0.35s; }
   .item-img-wrap.wider img {
     max-height: 100%;
     max-width: none; }
@@ -3489,12 +3499,16 @@ a.back-link,
 
 .item-price-weight-box {
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: #62666a;
   opacity: .8; }
   .item-price-weight-box > :not(:first-child) {
     margin-left: 12px; }
+
+.item-price,
+.item-weight {
+  display: inline-block; }
 
 .camper-summary-box {
   padding: 118px 0 40px; }

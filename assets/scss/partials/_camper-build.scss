@@ -341,6 +341,9 @@
                 width: 33.33%;
                 margin-bottom: 30px;
                 padding: 0 15px;
+                &:nth-child(3n + 1) {
+                  clear: both;
+                }
               }
             }
               .item-box {
@@ -369,21 +372,16 @@
                   border: 1px solid #eaeaea;
                   @include border-radius($radius-small);
                   cursor: pointer;
-                  //&:after {
-                  //  position: absolute;
-                  //  z-index: 10;
-                  //  content: '';
-                  //  top: 25px;
-                  //  right: 20px;
-                  //  width: 32px;
-                  //  height: 32px;
-                  //  background-color: $color-bg12;
-                  //  background-image: url(../../img/icon_check.png);
-                  //  @include bg(center, 15px 13px, no-repeat);
-                  //  @include border-radius(50%);
-                  //  @include transition($transition-other);
-                  //  opacity: 0;
-                  //}
+                  @media all and (min-width: 769px) {
+                    &:hover,
+                    &:focus {
+                      .item-img-wrap {
+                        img {
+                          @include scale(1.1)
+                        }
+                      }
+                    }
+                  }
                 }
                 &.without-image {
                   min-height: 195px;
@@ -483,7 +481,7 @@
                     bottom: -9999px;
                     margin: auto;
                     @include transform-origin();
-                    @include transition($transition-link);
+                    @include transition($transition-other);
                   }
                   &.wider {
                     img {
@@ -536,7 +534,7 @@
                   .item-price-weight-box {
                     //margin-bottom: 4px;
                     font-size: $size-smaller;
-                    line-height: $line-height-heading;
+                    line-height: 1.2;
                     letter-spacing: $letter-spacing-20;
                     color: $color-text11;
                     opacity: .8;
@@ -545,8 +543,10 @@
 
                     }
                   }
-                    .item-price {}
-                    .item-weight {}
+                    .item-price,
+                    .item-weight {
+                      display: inline-block;
+                    }
 
     .camper-summary-box {
       padding: 118px 0 40px;
