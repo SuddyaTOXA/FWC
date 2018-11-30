@@ -3508,7 +3508,8 @@ a.back-link,
 
 .item-price,
 .item-weight {
-  display: inline-block; }
+  display: inline-block;
+  line-height: 1.4; }
 
 .camper-summary-box {
   padding: 118px 0 40px; }
