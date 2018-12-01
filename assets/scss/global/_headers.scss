@@ -15,7 +15,7 @@
   html:not(.js) & {
     opacity: 1;
   }
-  &.white-bg {
+  .white-header-bg & {
     background-color: $white;
   }
   .container {

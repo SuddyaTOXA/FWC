@@ -39,7 +39,7 @@
             background-image: url(../../img/skiing_big_yellow.png);
           }
         }
-        .white-bg &,
+        .white-header-bg &,
         #header-scrolling & {
           color: $color-text3;
           &:hover,
@@ -129,7 +129,7 @@
   background-image: url(../../img/skiing_big_light.png);
   @include transition($transition-link);
   @include bg();
-  .white-bg &,
+  .white-header-bg &,
   #header-scrolling &,
   &.dark {
     background-image: url(../../img/skiing_big_dark.png);
