@@ -338,17 +338,17 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   position: relative; }
 
-.content-wrapper, .section-service-location, .section-select-truck, .section-truck-preparation, .section-faq, .section-manuals, .section-how-videos, .section-camper-details {
+.content-wrapper, .section-camper-details {
   padding: 129px 0 130px; }
   @media all and (max-width: 767px) {
-    .content-wrapper, .section-service-location, .section-select-truck, .section-truck-preparation, .section-faq, .section-manuals, .section-how-videos, .section-camper-details {
+    .content-wrapper, .section-camper-details {
       padding: 80px 0; } }
-  .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc, .section-camper-details .section-desc {
+  .content-wrapper .section-desc, .section-camper-details .section-desc {
     line-height: 1.4; }
-  .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc, .section-camper-details .section-desc {
+  .content-wrapper .section-desc, .section-camper-details .section-desc {
     margin-bottom: 75px; }
   @media all and (max-width: 767px) {
-    .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc, .section-camper-details .section-desc {
+    .content-wrapper .section-desc, .section-camper-details .section-desc {
       margin-bottom: 45px; } }
 
 /* CircularStd @font-face kit */
@@ -451,9 +451,7 @@ a.btn, .btn {
         font-size: 18px;
         padding: 13px 25px; } }
 
-.main-nav > ul > li.btn-dealer a,
-.mobile-menu > li.btn-dealer a,
-.btn-dealer a {
+.main-nav > ul > li.btn-dealer a, .mobile-menu > li.btn-dealer a, .btn-dealer a {
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -483,17 +481,17 @@ a.btn, .btn {
     .btn-dealer a:hover {
       color: #ffc72c;
       background-color: transparent; } }
-  .home .main-nav > ul > li.btn-dealer a, .home
-  .mobile-menu > li.btn-dealer a, .home
-  .btn-dealer a {
+  .home .main-nav > ul > li.btn-dealer a,
+  .home .mobile-menu > li.btn-dealer a,
+  .home .btn-dealer a {
     min-width: 170px;
     padding: 14px 20px;
     font-size: 16px;
     font-weight: 800; }
     @media all and (max-width: 1440px) {
-      .home .main-nav > ul > li.btn-dealer a, .home
-      .mobile-menu > li.btn-dealer a, .home
-      .btn-dealer a {
+      .home .main-nav > ul > li.btn-dealer a,
+      .home .mobile-menu > li.btn-dealer a,
+      .home .btn-dealer a {
         padding: 13px 15px;
         min-width: 130px;
         font-size: 16px;
@@ -699,7 +697,7 @@ button::-moz-focus-inner {
   padding: 0;
   width: 90px;
   height: 110px;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
   .mfp-arrow:active {
     margin-top: -54px; }
   .mfp-arrow:hover, .mfp-arrow:focus {
@@ -1186,9 +1184,7 @@ textarea:-moz-placeholder {
   vertical-align: middle;
   cursor: pointer;
   font-size: 26px; }
-  .mobile-menu-toggle span:before,
-  .mobile-menu-toggle span:after,
-  .mobile-menu-toggle span {
+  .mobile-menu-toggle span:before, .mobile-menu-toggle span:after, .mobile-menu-toggle span {
     position: absolute;
     display: block;
     content: '';
@@ -1202,9 +1198,9 @@ textarea:-moz-placeholder {
     -ms-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s; }
-    .scrolling .mobile-menu-toggle span:before, .scrolling
-    .mobile-menu-toggle span:after, .scrolling
-    .mobile-menu-toggle span {
+    .scrolling .mobile-menu-toggle span:before,
+    .scrolling .mobile-menu-toggle span:after,
+    .scrolling .mobile-menu-toggle span {
       background-color: #3e3e3e; }
   .mobile-menu-toggle span {
     z-index: 999999;
@@ -1778,9 +1774,9 @@ a.footer-link {
     left: 0;
     width: 100%;
     height: 300px;
-    background: -moz-linear-gradient(top, black 0%, transparent 100%);
-    background: -webkit-linear-gradient(top, black 0%, transparent 100%);
-    background: linear-gradient(to bottom, black 0%, transparent 100%);
+    background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(top, black 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF000000', endColorstr='#00000000',GradientType=0 );
     opacity: .8; }
 
@@ -2425,15 +2421,15 @@ a.go-link,
     opacity: .5; }
   .slide-box:before {
     top: 0;
-    background: -moz-linear-gradient(top, black 0%, transparent 100%);
-    background: -webkit-linear-gradient(top, black 0%, transparent 100%);
-    background: linear-gradient(to bottom, black 0%, transparent 100%);
+    background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(top, black 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF000000', endColorstr='#00000000',GradientType=0 ); }
   .slide-box:after {
     bottom: 0;
-    background: -moz-linear-gradient(top, transparent 0%, black 100%);
-    background: -webkit-linear-gradient(top, transparent 0%, black 100%);
-    background: linear-gradient(to bottom, transparent 0%, black 100%);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, black 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#FF000000',GradientType=0 ); }
   .slide-box > img {
     position: absolute;
