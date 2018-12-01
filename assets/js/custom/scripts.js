@@ -162,7 +162,8 @@
                         var currLink = $(this);
                         var refElement = $(currLink.attr("href"));
                         if (refElement && refElement.length) {
-                            var currSection = (refElement.position().top <= (scrollPos + 150)) && (refElement.position().top + refElement.height()) > (scrollPos+150);
+                            var currSection = (refElement.position().top <= (scrollPos)) && (refElement.position().top + refElement.outerHeight()) > (scrollPos);
+                            // console.log(refElement.position().top +'<='+ scrollPos +' && '+ refElement.position().top + '>' + refElement.position().top);
                             if (currSection) {
                                 stickyNavLinks.removeClass("active");
                                 currLink.addClass("active");
@@ -189,16 +190,30 @@
                 lastScrollTop = 0;
 
             $window.on('load resize', function () {
+                var currentPos = $window.scrollTop();
+
                 body.removeClass('direction-up direction-down');
                 header.removeClass('fixed');
 
                 setTimeout(function () {
                     var windowWidth = $window.width(),
                         headerOffset = header.offset().top,
-                        headerHeight = header.outerHeight();
+                        headerHeight = header.outerHeight(),
+                        anchorNavHeight = anchorNav.outerHeight();
 
                     if (anchorNav.length) {
                         var anchorNavOffset = anchorNav.offset().top;
+                    }
+
+                    if (currentPos > headerHeight) {
+                        // console.log(currentPos + '>' +headerHeight);
+                        // if (!(body.hasClass('direction-down'))) {
+                        //     body.removeClass('direction-up').addClass('direction-down');
+                        // }
+                        if (!(anchorNav.hasClass('affix'))) {
+                            anchorNav.addClass('affix');
+                            anchorNav.next().css('margin-top', anchorNavHeight);
+                        }
                     }
 
                     if (windowWidth < 1025) {
@@ -224,11 +239,12 @@
 
                                 //for anchor nav
                                 if (anchorNav.length) {
-                                    var anchorNavTrigger = headerHeight - 70;
+                                    var anchorNavTrigger = headerHeight - 65;
 
                                     if (top < anchorNavTrigger) {
                                         if (anchorNav.hasClass('affix')) {
                                             anchorNav.removeClass('affix');
+                                            anchorNav.next().css('margin-top', '0');
                                         }
                                     }
                                 }
@@ -237,9 +253,9 @@
                                 if (top > 2 * headerTrigger) {
                                     if (!(body.hasClass('direction-down'))) {
                                         body.removeClass('direction-up').addClass('direction-down');
-                                        setTimeout(function () {
-                                            header.addClass('fixed');
-                                        },400);
+                                        // setTimeout(function () {
+                                        //     header.addClass('fixed');
+                                        // },400);
                                     }
                                 }
                             }
@@ -251,6 +267,7 @@
                                 if (top > anchorNavTrigger) {
                                     if (!(anchorNav.hasClass('affix'))) {
                                         anchorNav.addClass('affix');
+                                        anchorNav.next().css('margin-top', anchorNavHeight);
                                     }
                                 }
                             }
@@ -281,11 +298,12 @@
 
                                 //for anchor nav
                                 if (anchorNav.length) {
-                                    var anchorNavTrigger = headerHeight - 82;
+                                    var anchorNavTrigger = headerHeight;
 
                                     if (top < anchorNavTrigger) {
                                         if (anchorNav.hasClass('affix')) {
                                             anchorNav.removeClass('affix');
+                                            anchorNav.next().css('margin-top', '0');
                                         }
                                     }
                                 }
@@ -295,9 +313,9 @@
                                 if (top > 2 * headerTrigger) {
                                     if (!(body.hasClass('direction-down'))) {
                                         body.removeClass('direction-up').addClass('direction-down');
-                                        setTimeout(function () {
-                                            header.addClass('fixed');
-                                        },350);
+                                        // setTimeout(function () {
+                                        //     header.addClass('fixed');
+                                        // },350);
                                     }
                                 }
 
@@ -308,6 +326,7 @@
                                     if (top > anchorNavTrigger) {
                                         if (!(anchorNav.hasClass('affix'))) {
                                             anchorNav.addClass('affix');
+                                            anchorNav.next().css('margin-top', anchorNavHeight);
                                         }
                                     }
                                 }
