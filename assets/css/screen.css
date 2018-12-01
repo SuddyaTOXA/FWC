@@ -313,17 +313,17 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   position: relative; }
 
-.content-wrapper, .section-service-location, .section-select-truck, .section-truck-preparation, .section-faq, .section-manuals {
+.content-wrapper, .section-service-location, .section-select-truck, .section-truck-preparation, .section-faq, .section-manuals, .section-how-videos {
   padding: 129px 0 130px; }
   @media all and (max-width: 767px) {
-    .content-wrapper, .section-service-location, .section-select-truck, .section-truck-preparation, .section-faq, .section-manuals {
+    .content-wrapper, .section-service-location, .section-select-truck, .section-truck-preparation, .section-faq, .section-manuals, .section-how-videos {
       padding: 80px 0; } }
-  .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc {
+  .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc {
     line-height: 1.4; }
-  .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc {
+  .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc {
     margin-bottom: 75px; }
   @media all and (max-width: 767px) {
-    .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc {
+    .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc {
       margin-bottom: 45px; } }
 
 /* CircularStd @font-face kit */
@@ -432,8 +432,8 @@ a.btn, .btn {
   max-width: 100%;
   margin: 0;
   padding: 13px 15px;
-  min-width: 130px;
-  font-size: 17px;
+  min-width: 112px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
   color: #212020;
@@ -461,7 +461,7 @@ a.btn, .btn {
   .home .btn-dealer a {
     min-width: 170px;
     padding: 14px 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800; }
     @media all and (max-width: 1440px) {
       .home .main-nav > ul > li.btn-dealer a,
@@ -469,7 +469,7 @@ a.btn, .btn {
       .home .btn-dealer a {
         padding: 13px 15px;
         min-width: 130px;
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 500; } }
 
 .mobile-menu > li.btn-dealer a {
@@ -1235,7 +1235,7 @@ textarea:-moz-placeholder {
         padding: 13px 13px;
         color: #ffffff;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1;
         text-decoration: none; }
         .main-nav > ul > li a:hover, .main-nav > ul > li a:focus {
@@ -1293,7 +1293,7 @@ textarea:-moz-placeholder {
       vertical-align: middle; }
       #header-scrolling .main-nav > ul > li a {
         padding: 12px 13px;
-        font-size: 16px; }
+        font-size: 18px; }
 
 .icon-skiing {
   position: relative;
@@ -1649,6 +1649,17 @@ a.footer-link {
   background-color: white;
   display: none;
   overflow: hidden; }
+  .panel ul > li {
+    list-style: none;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: solid 1px #ccc; }
+    .panel ul > li:last-child {
+      border-bottom: none; }
+    .panel ul > li:before {
+      display: none; }
+  .panel a {
+    color: #00a3e0; }
 
 /* styles used throughout site */
 .section {
@@ -3065,14 +3076,6 @@ a.more-info-btn,
   padding-top: 60px;
   border-top: solid 3px #d5d5d5; }
 
-.section-manuals .content ul > li {
-  list-style: none;
-  margin-bottom: 40px; }
-  .section-manuals .content ul > li:before {
-    display: none; }
-.section-manuals a {
-  color: #00a3e0; }
-
 .section-build-my-camper {
   padding: 123px 0 75px; }
 
@@ -3836,5 +3839,61 @@ a.back-link,
     min-width: 140px;
     padding-top: 13px;
     padding-bottom: 13px; }
+
+.section-how-videos .list-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 50px; }
+  .section-how-videos .list-item > div {
+    display: block; }
+.section-how-videos .image {
+  position: relative; }
+  .section-how-videos .image img {
+    width: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin-bottom: 0; }
+  .section-how-videos .image .fas {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: #3e3e3e;
+    border-radius: 50%;
+    padding: 0; }
+    .section-how-videos .image .fas:before {
+      z-index: 2;
+      position: relative; }
+    .section-how-videos .image .fas:after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 50%;
+      z-index: 0;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+  @media (min-width: 768px) {
+    .section-how-videos .image {
+      width: 50%; } }
+  .section-how-videos .image:hover .fas:before {
+    color: #00a3e0; }
+.section-how-videos .text {
+  padding-left: 50px; }
+  @media (min-width: 768px) {
+    .section-how-videos .text {
+      width: 50%; } }
+.section-how-videos .btn {
+  margin-top: 25px; }
 
 /*# sourceMappingURL=screen.css.map */

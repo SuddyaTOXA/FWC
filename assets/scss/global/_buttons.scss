@@ -91,8 +91,8 @@ a.btn, .btn {
   max-width: 100%;
   margin: 0;
   padding: 13px 15px;
-  min-width: 130px;
-  font-size: $size-small;
+  min-width: 112px;
+  font-size: $size-smaller;
   font-weight: $medium;
   line-height: 1;
   color: $color-text3;
@@ -113,12 +113,12 @@ a.btn, .btn {
   .home & {
     min-width: 170px;
     padding: 14px 20px;
-    font-size: $size-main;
+    font-size: $size-smaller;
     font-weight: $black-weight;
     @media all and (max-width: 1440px) {
       padding: 13px 15px;
       min-width: 130px;
-      font-size: $size-small;
+      font-size: $size-smaller; 
       font-weight: $medium;
     }
   }

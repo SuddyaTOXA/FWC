@@ -21,7 +21,7 @@
         padding: 13px 13px;
         color: $white;
         font-weight: $normal;
-        font-size: $size-smaller;
+        font-size: $size-main;
         line-height: 1;
         text-decoration: none;
         &:hover,
@@ -111,7 +111,7 @@
       > li {
         a {
           padding: 12px 13px;
-          font-size: $size-smaller;
+          font-size: $size-main;
 
         }
       }

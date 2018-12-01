@@ -49,5 +49,21 @@
     &:last-child {
         // border-bottom: 2px solid #eee;
     }
+    ul > li {
+      list-style: none;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: solid 1px #ccc;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:before {
+            display: none;
+      }
+    }
+    a {
+        color: $light-blue;
+    }
 
 }
+
