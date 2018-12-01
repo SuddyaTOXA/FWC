@@ -244,6 +244,31 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff; }
     .inverse .content ul > li:before {
       background-color: #ffffff; }
+  .content.small {
+    font-size: 16px; }
+    .content.small * {
+      margin-bottom: 10px; }
+    .content.small h1 {
+      font-size: 44px; }
+    .content.small h2 {
+      font-size: 36px; }
+    .content.small h3 {
+      font-size: 28px; }
+    .content.small h4 {
+      font-size: 20px; }
+    .content.small h5 {
+      font-size: 17.6px; }
+    .content.small h6 {
+      font-size: 16px; }
+    .content.small ul > li {
+      padding-left: 20px; }
+      .content.small ul > li:before {
+        width: 4px;
+        height: 4px;
+        margin-top: 9px;
+        margin-right: 9px; }
+    .content.small ol > li {
+      padding-left: 25px; }
   .content.big {
     font-size: 22px; }
     .content.big h1 {
@@ -313,17 +338,17 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   position: relative; }
 
-.content-wrapper, .section-service-location, .section-select-truck, .section-truck-preparation, .section-faq, .section-manuals, .section-how-videos {
+.content-wrapper, .section-service-location, .section-select-truck, .section-truck-preparation, .section-faq, .section-manuals, .section-how-videos, .section-camper-details {
   padding: 129px 0 130px; }
   @media all and (max-width: 767px) {
-    .content-wrapper, .section-service-location, .section-select-truck, .section-truck-preparation, .section-faq, .section-manuals, .section-how-videos {
+    .content-wrapper, .section-service-location, .section-select-truck, .section-truck-preparation, .section-faq, .section-manuals, .section-how-videos, .section-camper-details {
       padding: 80px 0; } }
-  .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc {
+  .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc, .section-camper-details .section-desc {
     line-height: 1.4; }
-  .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc {
+  .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc, .section-camper-details .section-desc {
     margin-bottom: 75px; }
   @media all and (max-width: 767px) {
-    .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc {
+    .content-wrapper .section-desc, .section-service-location .section-desc, .section-select-truck .section-desc, .section-truck-preparation .section-desc, .section-faq .section-desc, .section-manuals .section-desc, .section-how-videos .section-desc, .section-camper-details .section-desc {
       margin-bottom: 45px; } }
 
 /* CircularStd @font-face kit */
@@ -3393,43 +3418,9 @@ a.back-link,
     max-height: 100%;
     max-width: none; }
 
-.group-img-wrap {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  padding-bottom: 61.5%;
-  background-color: #dcdcdc; }
-  .group-img-wrap img {
-    position: absolute;
-    z-index: 3;
-    min-height: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    top: -9999px;
-    left: -9999px;
-    right: -9999px;
-    bottom: -9999px;
-    margin: auto;
-    -webkit-transform-origin: 50% 50%;
-    -khtml-transform-origin: 50% 50%;
-    -moz-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -webkit-transition: 0.25s;
-    -khtml-transition: 0.25s;
-    -moz-transition: 0.25s;
-    -ms-transition: 0.25s;
-    -o-transition: 0.25s;
-    transition: 0.25s; }
-  .group-img-wrap.wider img {
-    max-height: 100%;
-    max-width: none; }
-  @media all and (max-width: 767px) {
-    .group-img-wrap {
-      margin-bottom: 40px; } }
+@media all and (max-width: 767px) {
+  .group-img-wrap {
+    margin-bottom: 40px; } }
 
 .group-box .box-title {
   display: block;
@@ -3632,12 +3623,8 @@ a.back-link,
   border-radius: 0; }
 
 .item-img-wrap {
-  overflow: hidden;
   z-index: 5;
-  position: relative;
-  width: 100%;
-  padding-bottom: 72.6%;
-  background-color: #dcdcdc; }
+  padding-bottom: 72.6%; }
   .item-img-wrap:after {
     position: absolute;
     z-index: 10;
@@ -3680,39 +3667,18 @@ a.back-link,
     -o-transition: 0.35s;
     transition: 0.35s;
     opacity: 0; }
-  .item-img-wrap img {
-    position: absolute;
-    z-index: 3;
-    min-height: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    top: -9999px;
-    left: -9999px;
-    right: -9999px;
-    bottom: -9999px;
-    margin: auto;
-    -webkit-transform-origin: 50% 50%;
-    -khtml-transform-origin: 50% 50%;
-    -moz-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -webkit-transition: 0.35s;
-    -khtml-transition: 0.35s;
-    -moz-transition: 0.35s;
-    -ms-transition: 0.35s;
-    -o-transition: 0.35s;
-    transition: 0.35s; }
-  .item-img-wrap.wider img {
-    max-height: 100%;
-    max-width: none; }
 
 .item-info-box {
-  padding: 27px 21px 24px; }
+  padding: 27px 21px 24px;
+  border-top: 1px solid transparent; }
   .item-info-box.more {
-    display: none; }
+    display: none;
+    margin: 0 21px;
+    padding-left: 0;
+    padding-right: 0;
+    border-top-color: #62666a;
+    border-top-color: rgba(98, 102, 106, 0.2);
+    opacity: .7; }
     #dinettes .item-info-box.more {
       text-align: left; }
   #dinettes .item-info-box {

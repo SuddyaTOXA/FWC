@@ -346,38 +346,40 @@
                 }
               }
             }
+
             .group-img-wrap {
-              overflow: hidden;
-              position: relative;
-              width: 100%;
-              padding-bottom: 61.5%;
-              background-color: #dcdcdc;
-              img {
-                position: absolute;
-                z-index: 3;
-                min-height: 100%;
-                min-width: 100%;
-                max-width: 100%;
-                width: auto;
-                height: auto;
-                top: -9999px;
-                left: -9999px;
-                right: -9999px;
-                bottom: -9999px;
-                margin: auto;
-                @include transform-origin();
-                @include transition($transition-link);
-              }
-              &.wider {
-                img {
-                  max-height: 100%;
-                  max-width: none;
-                }
-              }
+              //overflow: hidden;
+              //position: relative;
+              //width: 100%;
+              //padding-bottom: 61.5%;
+              //background-color: #dcdcdc;
+              //img {
+              //  position: absolute;
+              //  z-index: 3;
+              //  min-height: 100%;
+              //  min-width: 100%;
+              //  max-width: 100%;
+              //  width: auto;
+              //  height: auto;
+              //  top: -9999px;
+              //  left: -9999px;
+              //  right: -9999px;
+              //  bottom: -9999px;
+              //  margin: auto;
+              //  @include transform-origin();
+              //  @include transition($transition-link);
+              //}
+              //&.wider {
+              //  img {
+              //    max-height: 100%;
+              //    max-width: none;
+              //  }
+              //}
               @media all and (max-width: 767px) {
                 margin-bottom: 40px;
               }
             }
+
             .group-box .box-title {
               display: block;
               max-width: 425px;
@@ -577,12 +579,12 @@
                   }
                 }
                 .item-img-wrap {
-                  overflow: hidden;
+                  //overflow: hidden;
+                  //position: relative;
+                  //width: 100%;
+                  //background-color: #dcdcdc;
                   z-index: 5;
-                  position: relative;
-                  width: 100%;
                   padding-bottom: 72.6%;
-                  background-color: #dcdcdc;
                   &:after {
                     position: absolute;
                     z-index: 10;
@@ -610,33 +612,40 @@
                     @include transition($transition-other);
                     opacity: 0;
                   }
-                  img {
-                    position: absolute;
-                    z-index: 3;
-                    min-height: 100%;
-                    min-width: 100%;
-                    max-width: 100%;
-                    width: auto;
-                    height: auto;
-                    top: -9999px;
-                    left: -9999px;
-                    right: -9999px;
-                    bottom: -9999px;
-                    margin: auto;
-                    @include transform-origin();
-                    @include transition($transition-other);
-                  }
-                  &.wider {
-                    img {
-                      max-height: 100%;
-                      max-width: none;
-                    }
-                  }
+                  //img {
+                  //  position: absolute;
+                  //  z-index: 3;
+                  //  min-height: 100%;
+                  //  min-width: 100%;
+                  //  max-width: 100%;
+                  //  width: auto;
+                  //  height: auto;
+                  //  top: -9999px;
+                  //  left: -9999px;
+                  //  right: -9999px;
+                  //  bottom: -9999px;
+                  //  margin: auto;
+                  //  @include transform-origin();
+                  //  @include transition($transition-other);
+                  //}
+                  //&.wider {
+                  //  img {
+                  //    max-height: 100%;
+                  //    max-width: none;
+                  //  }
+                  //}
                 }
                 .item-info-box {
                   padding: 27px 21px 24px;
+                  border-top: 1px solid transparent;
                   &.more {
                     display: none;
+                    margin: 0 21px;
+                    padding-left: 0;
+                    padding-right: 0;
+                    border-top-color: #62666a;
+                    border-top-color: rgba(98, 102, 106, 0.2);
+                    opacity: .7;
                     #dinettes & {
                       text-align: left;
                     }

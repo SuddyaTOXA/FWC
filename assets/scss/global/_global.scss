@@ -190,6 +190,34 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
+  &.small {
+    * {
+      margin-bottom: 10px;
+    }
+    font-size: 16px;
+    h1 { font-size: (55px) * 0.8; }
+    h2 { font-size: (45px) * 0.8; }
+    h3 { font-size: (35px) * 0.8; }
+    h4 { font-size: (25px) * 0.8; }
+    h5 { font-size: (22px) * 0.8; }
+    h6 { font-size: (20px) * 0.8; }
+    ul {
+      > li {
+        padding-left: 20px;
+        &:before {
+          width: 4px;
+          height: 4px;
+          margin-top: 9px;
+          margin-right: 9px;
+        }
+      }
+    }
+    ol {
+      > li {
+        padding-left: 25px;
+      }
+    }
+  }
   &.big {
     font-size: 22px;
     h1 { font-size: (55px) * 1.2; }

@@ -77,14 +77,14 @@
 
 
         //for More Info btn
-        if ($('.service-box').length && $('.more-info-btn').length) {
+        if (($('.service-box').length || $('.item-box').length) && $('.more-info-btn').length) {
             $('.more-info-btn').on('click', function (e) {
                 e.preventDefault();
 
                 if ($(this).hasClass('open')) {
-                    $(this).removeClass('open').next('.service-info-box.more').slideUp(350);
+                    $(this).removeClass('open').next('.more').slideUp(350);
                 } else {
-                    $(this).addClass('open').next('.service-info-box.more').slideDown(350);
+                    $(this).addClass('open').next('.more').slideDown(350);
                 }
             });
         }
