@@ -3115,7 +3115,7 @@ a.more-info-btn,
 .anchor-nav-box {
   padding-top: 30px;
   background-color: #fafafa;
-  borde-bottomr: 1px solid #62666a;
+  border-bottomr: 1px solid #62666a;
   border-color: rgba(98, 102, 106, 0.2);
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -4058,5 +4058,33 @@ a.back-link,
       width: 50%; } }
 .section-how-videos .btn {
   margin-top: 25px; }
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.swiper-slide {
+  height: 400px;
+  background-size: cover;
+  background-position: center; }
+
+.gallery-top {
+  height: 80%;
+  width: 100%; }
+
+.gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0; }
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  opacity: 0.4;
+  height: 100px; }
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1; }
 
 /*# sourceMappingURL=screen.css.map */
