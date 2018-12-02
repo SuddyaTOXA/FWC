@@ -234,26 +234,16 @@
         }
 
         //for tooltip
-        var tip = tippy('.color-box label', {
-            delay: 100,
-            arrow: true,
-            arrowType: 'round',
-            size: 'large',
-            duration: 500,
-            animation: 'scale'
-        });
-
-        // $(window).on('load resize', function () {
-            // setTimeout(function () {
-            //     var windowWidth = $(window).width();
-            //
-            //     if (windowWidth > 1024) {
-            //         tip.enable();
-            //     } else {
-            //         tip.disable();
-            //     }
-            // }, 50);
-        // });
+        if ($('.color-box label').length) {
+            var tip = tippy('.color-box label', {
+                delay: 100,
+                arrow: true,
+                arrowType: 'round',
+                size: 'large',
+                duration: 500,
+                animation: 'scale'
+            });
+        }
 
         // for anchor nav
         var stickyNav = $('.anchor-nav-box');

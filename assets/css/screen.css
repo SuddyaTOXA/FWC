@@ -1797,6 +1797,9 @@ a.footer-link {
     min-width: 130px; }
   .hero-box > :last-child {
     margin-bottom: 0; }
+  .home .hero-box {
+    max-width: 1200px;
+    margin: 0 auto; }
 
 .hero-title {
   position: relative;
