@@ -27,7 +27,6 @@
             $('body').toggleClass('overflow');
         });
 
-
         $(window).on('resize', function () {
             var windowWidth = $(window).width();
             if (windowWidth > 1024) {
@@ -40,6 +39,61 @@
             }
         });
 
+        //for smooth-scroll
+        // if (typeof smoothScroll !== 'undefined') {
+            var scroll = new SmoothScroll('a[href*="#"]', {
+
+                // Selectors
+                ignore: '[data-scroll-ignore]', // Selector for links to ignore (must be a valid CSS selector)
+                header: null, // Selector for fixed headers (must be a valid CSS selector)
+                topOnEmptyHash: true, // Scroll to the top of the page for links with href="#"
+
+                // Speed & Duration
+                speed: 500, // Integer. Amount of time in milliseconds it should take to scroll 1000px
+                speedAsDuration: false, // If true, use speed as the total duration of the scroll animation
+                durationMax: null, // Integer. The maximum amount of time the scroll animation should take
+                durationMin: null, // Integer. The minimum amount of time the scroll animation should take
+                clip: true, // If true, adjust scroll distance to prevent abrupt stops near the bottom of the page
+                offset: function (anchor, toggle) {
+
+                    var myOffset = 15,
+                        currentPos =  $(window).scrollTop(),
+                        headerHeight = $('#header-scrolling').outerHeight() + myOffset,
+                        anchorNavHeight = $('.anchor-nav-box').outerHeight() + myOffset;
+
+                    if (currentPos > anchor.offsetTop) {
+                        //up
+                        return anchorNavHeight + headerHeight;
+                    } else {
+                        //down
+                        return anchorNavHeight;
+                    }
+
+                },
+
+                // Easing
+                easing: 'easeInOutCubic', // Easing pattern to use
+                // customEasing: function (time) {
+                //
+                //     // Function. Custom easing pattern
+                //     // If this is set to anything other than null, will override the easing option above
+                //
+                //     // return <your formulate with time as a multiplier>
+                //
+                //     // Example: easeInOut Quad
+                //     return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
+                //
+                // },
+
+                // History
+                updateURL: false, // Update the URL on scroll
+                popstate: true, // Animate scrolling with the forward/backward browser buttons (requires updateURL to be true)
+
+                // Custom Events
+                emitEvents: true // Emit custom events
+
+            });
+        // }
 
         //initialize swiper when document ready
         if (typeof Swiper !== 'undefined') {
@@ -115,7 +169,25 @@
                 fixedBgPos: true
             });
         }
-
+        if ($('.my-customized-view-list img').length) {
+            $('.my-customized-view-list').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                },
+                image: {
+                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                    titleSrc: function (item) {
+                        return item.el.attr('title');
+                    }
+                }
+            });
+        }
 
         //for More Info btn
         if (($('.service-box').length || $('.item-box').length) && $('.more-info-btn').length) {
@@ -147,6 +219,42 @@
             })
         }
 
+        //for change color
+        if ($('.color-box input').length) {
+            $('.color-box input').on('change', function () {
+                var parentBox = $(this).parents('.color-selector-box'),
+                    color = $(this).data('color'),
+                    images = parentBox.find('.group-img-wrap img'),
+                    currentImg = parentBox.find('img[data-truck-color="'+color+'"]');
+
+                images.removeClass('active');
+                currentImg.addClass('active');
+            })
+
+        }
+
+        //for tooltip
+        var tip = tippy('.color-box label', {
+            delay: 100,
+            arrow: true,
+            arrowType: 'round',
+            size: 'large',
+            duration: 500,
+            animation: 'scale'
+        });
+
+        // $(window).on('load resize', function () {
+            // setTimeout(function () {
+            //     var windowWidth = $(window).width();
+            //
+            //     if (windowWidth > 1024) {
+            //         tip.enable();
+            //     } else {
+            //         tip.disable();
+            //     }
+            // }, 50);
+        // });
+
         // for anchor nav
         var stickyNav = $('.anchor-nav-box');
 
@@ -160,9 +268,21 @@
                     var scrollPos = $(document).scrollTop();
                     stickyNav.find('a[href^="#"]').each(function () {
                         var currLink = $(this);
-                        var refElement = $(currLink.attr("href"));
+                        var refElement = $(currLink.attr("href")),
+                            header = $('#header-main'),
+                            anchorNav = $('.anchor-nav-box'),
+                            headerHeight = header.outerHeight(),
+                            anchorNavHeight = anchorNav.outerHeight(),
+                            offset = 0;
+
                         if (refElement && refElement.length) {
-                            var currSection = (refElement.position().top <= (scrollPos)) && (refElement.position().top + refElement.outerHeight()) > (scrollPos);
+                            if ($('body').hasClass('direction-up')) {
+                                offset = anchorNavHeight + headerHeight;
+                            } else {
+                                offset =  anchorNavHeight + 50;
+                            }
+
+                            var currSection = (refElement.position().top <= (scrollPos + offset)) && (refElement.position().top + refElement.outerHeight(true)) > (scrollPos + offset);
                             // console.log(refElement.position().top +'<='+ scrollPos +' && '+ refElement.position().top + '>' + refElement.position().top);
                             if (currSection) {
                                 stickyNavLinks.removeClass("active");
@@ -206,14 +326,16 @@
                     }
 
                     if (currentPos > headerHeight) {
-                        // console.log(currentPos + '>' +headerHeight);
-                        // if (!(body.hasClass('direction-down'))) {
-                        //     body.removeClass('direction-up').addClass('direction-down');
-                        // }
-                        if (!(anchorNav.hasClass('affix'))) {
-                            anchorNav.addClass('affix');
-                            anchorNav.next().css('margin-top', anchorNavHeight);
-                        }
+                        setTimeout(function () {
+                            // console.log(currentPos + '>' +headerHeight);
+                            // if (!(body.hasClass('direction-down'))) {
+                            //     body.removeClass('direction-up').addClass('direction-down');
+                            // }
+                            if (!(anchorNav.hasClass('affix'))) {
+                                anchorNav.addClass('affix');
+                                anchorNav.next().css('margin-top', anchorNavHeight);
+                            }
+                        }, 500);
                     }
 
                     if (windowWidth < 1025) {

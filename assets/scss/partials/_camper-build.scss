@@ -265,16 +265,16 @@
       }
 
     .camper-customizer-box {
-      padding: 118px 0 118px;
+      padding: 118px 0 1px;
       background-color: #fafafa;
-      @media all and (max-width: 767px) {
-        padding-bottom: 88px;
-      }
+      //@media all and (max-width: 767px) {
+      //  padding-bottom: 88px;
+      //}
     }
       .customizer-form {
-        > :last-child {
-          margin-bottom: 0;
-        }
+        //> :last-child {
+        //  margin-bottom: 0;
+        //}
       }
 
         .group-box {
@@ -392,6 +392,13 @@
               //    max-width: none;
               //  }
               //}
+              img {
+                display: none;
+                &.active {
+                  display: block;
+                }
+              }
+
               @media all and (max-width: 767px) {
                 margin-bottom: 40px;
               }
@@ -437,60 +444,78 @@
                     top: 50%;
                     @include translate();
                     opacity: 0;
-                    &:checked + label:after {
+                    &:checked + label .color:after {
                       opacity: 1;
                     }
                   }
                   label {
-                    position: relative;
-                    z-index: 5;
-                    display: block;
-                    width: 70px;
-                    height: 70px;
-                    @include border-radius($radius-main);
-                    background-color: $color-bg;
-                    cursor: pointer;
-                    &:after {
-                      position: absolute;
-                      z-index: 7;
-                      content: '';
-                      right: -5px;
-                      bottom: -5px;
-                      width: 28px;
-                      height: 28px;
-                      background-color: $color-bg12;
-                      background-image: url(../../img/icon_check.png);
-                      @include bg(center, 15px 13px, no-repeat);
-                      @include border-radius(50%);
-                      @include transition($transition-other);
-                      opacity: 0;
+                    .color {
+                      position: relative;
+                      z-index: 5;
+                      display: block;
+                      width: 70px;
+                      height: 70px;
+                      @include border-radius($radius-main);
+                      background-color: $color-bg;
+                      cursor: pointer;
+                      text-align: center;
+                      &:after {
+                        position: absolute;
+                        z-index: 7;
+                        content: '';
+                        right: -5px;
+                        bottom: -5px;
+                        width: 28px;
+                        height: 28px;
+                        background-color: $color-bg12;
+                        background-image: url(../../img/icon_check.png);
+                        @include bg(center, 15px 13px, no-repeat);
+                        @include border-radius(50%);
+                        @include transition($transition-other);
+                        opacity: 0;
+                      }
+                      &.gainsboro {
+                        background-color: #dcdcdc;
+                      }
+                      &.pink {
+                        background-color: #fad0d5;
+                      }
+                      &.creamy {
+                        background-color: #fed9a1;
+                      }
+                      &.aquamarine {
+                        background-color: #5ce5aa;
+                      }
+                      &.coral {
+                        background-color: #f9e7c7;
+                      }
+                      &.dusty-grey {
+                        background-color: #9f8e8e;
+                      }
+                    }
+                    .color-name {
+                      display: none;
+                      margin-top: 5px;
+                      font-size: 14px;
+                      line-height: 1.2;
+                      text-align: center;
+                      word-break: break-all;
+                      @media all and (max-width: 767px) {
+                        display: block;
+                      }
                     }
                   }
-                  &.color-gainsboro label {
-                    background-color: #dcdcdc;
-                  }
-                  &.color-pink label {
-                    background-color: #fad0d5;
-                  }
-                  &.color-creamy label {
-                    background-color: #fed9a1;
-                  }
-                  &.color-aquamarine label {
-                    background-color: #5ce5aa;
-                  }
-                  &.color-coral label {
-                    background-color: #f9e7c7;
-                  }
-                  &.color-dusty-grey label {
-                    background-color: #9f8e8e;
-                  }
+
                   @media all and (max-width: 991px) {
                     label {
-                      width: 60px;
-                      height: 60px;
+                      .color {
+                        width: 60px;
+                        height: 60px;
+                      }
                     }
                   }
                 }
+
             .item-list {
               overflow: hidden;
               margin: 0 -15px -30px;

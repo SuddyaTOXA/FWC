@@ -80,52 +80,57 @@
                 <div class="camper-customizer-box">
                     <div class="container">
                         <form action="" class="customizer-form">
-                            <div id="exterior" class="group-box">
+                            <div id="exterior" class="group-box color-selector-box">
                                 <div class="group-header">
                                     <h2 class="group-title">Exterior Color</h2>
                                 </div>
                                 <div class="left-box">
                                     <div class="group-img-wrap centered-img wider">
-                                        <img src="img/exterior_color.jpg" alt="Exterior">
+                                        <img src="img/exterior_color.jpg" class="active" alt="Exterior" data-truck-color="#dcdcdc">
+                                        <img src="img/interior_fabric.jpg" alt="Exterior" data-truck-color="#fad0d5">
+                                        <img src="img/exterior_color.jpg" alt="Exterior" data-truck-color="#fed9a1">
+                                        <img src="img/interior_fabric.jpg" alt="Exterior" data-truck-color="#5ce5aa">
+                                        <img src="img/exterior_color.jpg" alt="Exterior" data-truck-color="#f9e7c7">
+                                        <img src="img/interior_fabric.jpg" alt="Exterior" data-truck-color="#9f8e8e">
                                     </div>
                                 </div>
                                 <div class="right-box">
                                     <h3 class="box-title">Exterior Color</h3>
                                     <ul class="color-list">
                                         <li>
-                                            <div class="color-box color-gainsboro">
-                                                <input type="radio" name="exterior_color" id="exterior_color_1" value="color_1" checked>
-                                                <label for="exterior_color_1"></label>
+                                            <div class="color-box">
+                                                <input type="radio" name="exterior_color" id="exterior_color_1" value="gainsboro" checked  data-color="#dcdcdc">
+                                                <label for="exterior_color_1" data-tippy-content="Gainsboro"><span class="color gainsboro"></span><span class="color-name">Gainsboro</span></label>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="color-box color-pink">
-                                                <input type="radio" name="exterior_color" id="exterior_color_2" value="color_2">
-                                                <label for="exterior_color_2"></label>
+                                            <div class="color-box">
+                                                <input type="radio" name="exterior_color" id="exterior_color_2" value="pink"  data-color="#fad0d5">
+                                                <label for="exterior_color_2" data-tippy-content="Pink"><span class="color pink"></span><span class="color-name">Pink</span></label>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="color-box color-creamy">
-                                                <input type="radio" name="exterior_color" id="exterior_color_3" value="color_3">
-                                                <label for="exterior_color_3"></label>
+                                            <div class="color-box">
+                                                <input type="radio" name="exterior_color" id="exterior_color_3" value="creamy"  data-color="#fed9a1">
+                                                <label for="exterior_color_3" data-tippy-content="Creamy"><span class="color creamy"></span><span class="color-name">Creamy</span></label>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="color-box color-aquamarine">
-                                                <input type="radio" name="exterior_color" id="exterior_color_4" value="color_4">
-                                                <label for="exterior_color_4"></label>
+                                            <div class="color-box">
+                                                <input type="radio" name="exterior_color" id="exterior_color_4" value="aquamarine"  data-color="#5ce5aa">
+                                                <label for="exterior_color_4" data-tippy-content="Aquamarine"><span class="color aquamarine"></span><span class="color-name">Aquamarine</span></label>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="color-box color-coral">
-                                                <input type="radio" name="exterior_color" id="exterior_color_5" value="color_5">
-                                                <label for="exterior_color_5"></label>
+                                            <div class="color-box">
+                                                <input type="radio" name="exterior_color" id="exterior_color_5" value="coral" data-color="#f9e7c7">
+                                                <label for="exterior_color_5" data-tippy-content="Coral"><span class="color coral"></span><span class="color-name">Coral</span></label>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="color-box color-dusty-grey">
-                                                <input type="radio" name="exterior_color" id="exterior_color_6" value="color_6">
-                                                <label for="exterior_color_6"></label>
+                                            <div class="color-box">
+                                                <input type="radio" name="exterior_color" id="exterior_color_6" value="dusty-grey"  data-color="#9f8e8e">
+                                                <label for="exterior_color_6" data-tippy-content="Gusty Grey"><span class="color dusty-grey"></span><span class="color-name">Gusty Grey</span></label>
                                             </div>
                                         </li>
 
@@ -133,13 +138,16 @@
                                 </div>
                             </div>
 
-                            <div id="fabric" class="group-box">
+                            <div id="fabric" class="group-box color-selector-box">
                                 <div class="group-header">
                                     <h2 class="group-title">Interior Fabric</h2>
                                 </div>
                                 <div class="left-box">
                                     <div class="group-img-wrap centered-img wider">
-                                        <img src="img/interior_fabric.jpg" alt="Fabric">
+                                        <img src="img/exterior_color.jpg" class="active" alt="Exterior" data-truck-color="#dcdcdc">
+                                        <img src="img/interior_fabric.jpg" alt="Exterior" data-truck-color="#fad0d5">
+                                        <img src="img/exterior_color.jpg" alt="Exterior" data-truck-color="#fed9a1">
+                                        <img src="img/interior_fabric.jpg" alt="Exterior" data-truck-color="#5ce5aa">
                                     </div>
                                 </div>
                                 <div class="right-box">
@@ -147,26 +155,26 @@
                                     <ul class="color-list">
                                         <li>
                                             <div class="color-box color-gainsboro">
-                                                <input type="radio" name="fabric_color" id="fabric_color_1" value="color_1" checked>
-                                                <label for="fabric_color_1"></label>
+                                                <input class="color-selector" type="radio" name="fabric_color" id="fabric_color_1" value="gainsboro" checked data-color="#dcdcdc">
+                                                <label for="fabric_color_1" data-tippy-content="Gainsboro"><span class="color gainsboro"></span><span class="color-name">Gainsboro</span></label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="color-box color-pink">
-                                                <input type="radio" name="fabric_color" id="fabric_color_2" value="color_2">
-                                                <label for="fabric_color_2"></label>
+                                                <input class="color-selector" type="radio" name="fabric_color" id="fabric_color_2" value="pink" data-color="#fad0d5">
+                                                <label for="fabric_color_2" data-tippy-content="Pink"><span class="color pink"></span><span class="color-name">Pink</span></label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="color-box color-creamy">
-                                                <input type="radio" name="fabric_color" id="fabric_color_3" value="color_3">
-                                                <label for="fabric_color_3"></label>
+                                                <input class="color-selector" type="radio" name="fabric_color" id="fabric_color_3" value="creamy" data-color="#fed9a1">
+                                                <label for="fabric_color_3" data-tippy-content="Creamy"><span class="color creamy"></span><span class="color-name">Creamy</span></label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="color-box color-aquamarine">
-                                                <input type="radio" name="fabric_color" id="fabric_color_4" value="color_4">
-                                                <label for="fabric_color_4"></label>
+                                                <input class="color-selector" type="radio" name="fabric_color" id="fabric_color_4" value="aquamarine" data-color="#5ce5aa">
+                                                <label for="fabric_color_4" data-tippy-content="Aquamarine"><span class="color aquamarine"></span><span class="color-name">Aquamarine</span></label>
                                             </div>
                                         </li>
                                     </ul>
@@ -510,14 +518,14 @@
                                 <h3 class="box-title">My Customized Camper</h3>
                                 <ul class="my-customized-view-list">
                                     <li>
-                                        <a href="#" title="Exterior Color">
+                                        <a href="img/exterior_color.jpg" title="Exterior Color">
                                             <div class="my-customized-view-img-wrap centered-img wider">
                                                 <img src="img/exterior_color.jpg" alt="Exterior Color">
                                             </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" title="Interior Fabric">
+                                        <a href="img/interior_fabric.jpg" title="Interior Fabric">
                                             <div class="my-customized-view-img-wrap centered-img wider">
                                                 <img src="img/interior_fabric.jpg" alt="Interior Fabric">
                                             </div>
@@ -674,8 +682,9 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
-	<script src="assets/js/custom/header-footer.js"></script>
-    <script src="assets/js/smooth-scroll.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/smooth-scroll/15.1.0/smooth-scroll.polyfills.min.js"></script>
+    <script src="//unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
+    <script src="assets/js/custom/header-footer.js"></script>
 	<script src="assets/js/magnific.js"></script>
 	<script src="assets/js/custom/scripts.js"></script>
 
