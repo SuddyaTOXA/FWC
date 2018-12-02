@@ -32,6 +32,7 @@ a.btn, .btn {
       border-color: $color-bg12;
       background-color: $color-bg12;
       @media all and (min-width: 769px) {
+        &.hover,
         &:hover,
         &:focus {
           color: $color-text12;
@@ -42,6 +43,7 @@ a.btn, .btn {
         color: $color-text11;
         background-color: transparent;
         @media all and (min-width: 769px) {
+          &.hover,
           &:hover,
           &:focus {
             color: $white;
@@ -64,6 +66,7 @@ a.btn, .btn {
       color: $white;
       background-color: transparent;
       @media all and (min-width: 769px) {
+        &.hover,
         &:hover,
         &:focus {
           color: $color-text3;
@@ -80,6 +83,11 @@ a.btn, .btn {
       font-size: 18px;
       padding: 13px 25px;
     }
+  }
+  &.small {
+    padding: 9px 15px;
+    // font-size: 20px;
+    min-width: auto;
   }
 }
 

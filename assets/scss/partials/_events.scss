@@ -1,4 +1,4 @@
-.section-how-videos  { 
+.section-events  { 
    
   .categories {
 	margin-bottom: 80px;
@@ -29,12 +29,16 @@
 	flex-wrap: wrap;
 	align-items: center;
 	margin-bottom: 50px;
+	
+	border: solid 1px $color-bg14;
+	padding: 30px 30px 20px 30px;
 
 	> div {
 		display: block;
 	}
 
 	&:hover {
+		border-color: $light-blue;
 		.fas {
 			&:before {
 				color: $light-blue;
@@ -47,38 +51,15 @@
   }
   .image {
 	position: relative;
+	margin-bottom: 0;
+
 	img {
 		width: 100%;
-		border-radius: 4px;
-		-webkit-border-radius: 4px;
+		// border-radius: 4px;
+		// -webkit-border-radius: 4px;
 		margin-bottom: 0;
 	}
-	.fas {
-		position: absolute;
-		@include center-align-absolute();
-
-		font-size: 80px;
-		color: $color-bg;
-		// background: white;
-		border-radius: 50%;
-		padding: 0;
-		&:before {
-			z-index: 2;
-			position: relative;
-			@include animate();
-		}
-		&:after {
-			content: "";
-			display: block;
-			
-			width: 50%;
-			height: 50%;
-			
-			z-index: 0;
-			background-color: white;
-			@include center-align-absolute();
-		}
-	}
+	
 	@media (min-width: $screen-sm-min) {
 		width: 50%;
 	}
@@ -90,6 +71,20 @@
 	h3 {
 		color: $color-text;
 	}
+	li {
+		padding: 0;
+		color: $color-text11;
+
+		&:before {
+			display: none;
+		}
+	}
+	.fas,
+	.far {
+		color: $light-blue;
+		margin-right: 8px;
+	}
+	
 	@media (min-width: $screen-sm-min) {
 		width: 50%;
 		padding-left: 50px;
@@ -103,12 +98,3 @@
   
 }
 
-
-// Video Details Page
-.section-how-video-details {
-	@extend .section-how-videos;
-
-	.section-desc {
-		text-align: left;
-	}
-}
