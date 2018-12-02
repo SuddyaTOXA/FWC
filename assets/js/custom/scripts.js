@@ -44,16 +44,16 @@
             var scroll = new SmoothScroll('a[href*="#"]', {
 
                 // Selectors
-                ignore: '[data-scroll-ignore]', // Selector for links to ignore (must be a valid CSS selector)
-                header: null, // Selector for fixed headers (must be a valid CSS selector)
-                topOnEmptyHash: true, // Scroll to the top of the page for links with href="#"
+                ignore: '[data-scroll-ignore]',
+                header: null,
+                topOnEmptyHash: true,
 
                 // Speed & Duration
-                speed: 500, // Integer. Amount of time in milliseconds it should take to scroll 1000px
-                speedAsDuration: false, // If true, use speed as the total duration of the scroll animation
-                durationMax: null, // Integer. The maximum amount of time the scroll animation should take
-                durationMin: null, // Integer. The minimum amount of time the scroll animation should take
-                clip: true, // If true, adjust scroll distance to prevent abrupt stops near the bottom of the page
+                speed: 500,
+                speedAsDuration: false,
+                durationMax: null,
+                durationMin: null,
+                clip: true,
                 offset: function (anchor, toggle) {
 
                     var myOffset = 15,
@@ -72,27 +72,21 @@
                 },
 
                 // Easing
-                easing: 'easeInOutCubic', // Easing pattern to use
-                // customEasing: function (time) {
-                //
-                //     // Function. Custom easing pattern
-                //     // If this is set to anything other than null, will override the easing option above
-                //
-                //     // return <your formulate with time as a multiplier>
-                //
-                //     // Example: easeInOut Quad
-                //     return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
-                //
-                // },
+                easing: 'easeInOutCubic',
 
                 // History
-                updateURL: false, // Update the URL on scroll
-                popstate: true, // Animate scrolling with the forward/backward browser buttons (requires updateURL to be true)
+                updateURL: false,
+                popstate: true,
 
                 // Custom Events
-                emitEvents: true // Emit custom events
+                emitEvents: true
 
             });
+        // }
+
+        //for nicescroll
+        // if ($('.anchor-nav > ul').length) {
+        //     $('.anchor-nav > ul').niceScroll({cursorcolor:"#00F"});
         // }
 
         //initialize swiper when document ready
@@ -113,47 +107,48 @@
                     }
                 }
             });
+/*
+            var galleryThumbs = new Swiper('.gallery-thumbs', {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+            });
+            var galleryTop = new Swiper('.gallery-top', {
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: galleryThumbs
+                }
+            });
 
-            // var galleryThumbs = new Swiper('.gallery-thumbs', {
-            //     spaceBetween: 10,
-            //     slidesPerView: 4,
-            //     freeMode: true,
-            //     watchSlidesVisibility: true,
-            //     watchSlidesProgress: true,
-            // });
-            // var galleryTop = new Swiper('.gallery-top', {
-            //     spaceBetween: 10,
-            //     navigation: {
-            //         nextEl: '.swiper-button-next',
-            //         prevEl: '.swiper-button-prev',
-            //     },
-            //     thumbs: {
-            //         swiper: galleryThumbs
-            //     }
-            // });
-
-            //loop
-            // var galleryThumbs = new Swiper('.gallery-thumbs', {
-            //     spaceBetween: 10,
-            //     slidesPerView: 4,
-            //     loop: true,
-            //     freeMode: true,
-            //     loopedSlides: 5, //looped slides should be the same
-            //     watchSlidesVisibility: true,
-            //     watchSlidesProgress: true,
-            // });
-            // var galleryTop = new Swiper('.gallery-top', {
-            //     spaceBetween: 10,
-            //     loop:true,
-            //     loopedSlides: 5, //looped slides should be the same
-            //     navigation: {
-            //         nextEl: '.swiper-button-next',
-            //         prevEl: '.swiper-button-prev',
-            //     },
-            //     thumbs: {
-            //         swiper: galleryThumbs,
-            //     },
-            // });
+            // loop
+            var galleryThumbs = new Swiper('.gallery-thumbs', {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                loop: true,
+                freeMode: true,
+                loopedSlides: 5, //looped slides should be the same
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+            });
+            var galleryTop = new Swiper('.gallery-top', {
+                spaceBetween: 10,
+                loop:true,
+                loopedSlides: 5, //looped slides should be the same
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: galleryThumbs,
+                },
+            });
+            */
         }
 
 
@@ -246,7 +241,7 @@
         }
 
         // for anchor nav
-        var stickyNav = $('.anchor-nav-box');
+        var stickyNav = $('.anchor-nav-box.build');
 
         if (stickyNav && stickyNav.length) {
             var offset = stickyNav.offset().top,
@@ -273,7 +268,6 @@
                             }
 
                             var currSection = (refElement.position().top <= (scrollPos + offset)) && (refElement.position().top + refElement.outerHeight(true)) > (scrollPos + offset);
-                            // console.log(refElement.position().top +'<='+ scrollPos +' && '+ refElement.position().top + '>' + refElement.position().top);
                             if (currSection) {
                                 stickyNavLinks.removeClass("active");
                                 currLink.addClass("active");
@@ -296,7 +290,7 @@
                 html = $('html'),
                 body = $('body'),
                 header = $('#header-main'),
-                anchorNav = $('.anchor-nav-box'),
+                anchorNav = $('.anchor-nav-box.build'),
                 lastScrollTop = 0;
 
             $window.on('load resize', function () {
@@ -317,10 +311,6 @@
 
                     if (currentPos > headerHeight) {
                         setTimeout(function () {
-                            // console.log(currentPos + '>' +headerHeight);
-                            // if (!(body.hasClass('direction-down'))) {
-                            //     body.removeClass('direction-up').addClass('direction-down');
-                            // }
                             if (!(anchorNav.hasClass('affix'))) {
                                 anchorNav.addClass('affix');
                                 anchorNav.next().css('margin-top', anchorNavHeight);
@@ -365,9 +355,6 @@
                                 if (top > 2 * headerTrigger) {
                                     if (!(body.hasClass('direction-down'))) {
                                         body.removeClass('direction-up').addClass('direction-down');
-                                        // setTimeout(function () {
-                                        //     header.addClass('fixed');
-                                        // },400);
                                     }
                                 }
                             }
@@ -425,9 +412,6 @@
                                 if (top > 2 * headerTrigger) {
                                     if (!(body.hasClass('direction-down'))) {
                                         body.removeClass('direction-up').addClass('direction-down');
-                                        // setTimeout(function () {
-                                        //     header.addClass('fixed');
-                                        // },350);
                                     }
                                 }
 

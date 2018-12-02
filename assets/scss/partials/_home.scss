@@ -95,7 +95,7 @@
   }
 }
   .hero-box {
-    max-width: 500px;
+    max-width: 510px;
     a.btn,
     .btn-hero {
       min-width: 130px;
@@ -157,8 +157,18 @@
           }
         }
       }
+      &.big {
+        font-size: 80px;
+      }
     }
 
+    .hero-subtitle {
+      margin-top: -20px;
+      margin-bottom: 30px;
+      font-size: 30px;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
     .hero-desc {
       margin-bottom: 34px;
       .home & {
