@@ -1,4 +1,6 @@
-.slider-hero {
+.section-hero.slider-hero {
+  min-height: auto;
+  padding: 0;
   .swiper-slide {
     overflow: hidden;
     min-height: 640px;
