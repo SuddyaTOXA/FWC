@@ -1,0 +1,62 @@
+.slider-hero {
+  .swiper-slide {
+    overflow: hidden;
+    min-height: 640px;
+    padding: 210px 0 104px;
+    background-color: #969696;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media all and (max-width: 1024px) {
+      padding-top: 140px;
+      padding-bottom: 80px;
+      min-height: 600px;
+    }
+    @media all and (max-width: 767px) {
+      padding-top: 120px;
+      min-height: 450px;
+    }
+    @media all and (max-width: 480px) {
+      min-height: 380px;
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background-color: $white;
+    opacity: .3;
+    cursor: pointer;
+    &.swiper-pagination-bullet-active {
+      background-color: $light-blue;
+      opacity: 1;
+    }
+  }
+  .home & {
+    min-height: auto;
+    padding: 0;
+    .swiper-slide {
+      min-height: 994px;
+      padding-top: 236px;
+      @media all and (max-width: 1024px) {
+        padding-top: 140px;
+        padding-bottom: 80px;
+        min-height: 600px;
+      }
+      @media all and (max-width: 767px) {
+        padding-top: 120px;
+        min-height: 450px;
+      }
+      @media all and (max-width: 480px) {
+        min-height: 380px;
+      }
+    }
+  }
+  @media all and (max-width: 1024px) {}
+}
+
+.section.slider-hero.vertical-line:after {
+  z-index: 5;
+  height: 12px;
+}
+
+

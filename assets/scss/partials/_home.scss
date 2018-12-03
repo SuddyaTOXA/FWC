@@ -190,6 +190,7 @@
       margin: auto;
     }
 
+@import "../sliders/slider_hero";
 
 .section-meet-popup {
   padding: 144px 0 290px;
@@ -215,7 +216,15 @@
       }
     }
   }
+  &.slider-mode {
+    .container {
+      &:before {
+        bottom: 38px;
+      }
+    }
+  }
 }
+
   .youtube-video {
     position: relative;
     display: block;
@@ -299,6 +308,9 @@
         margin: auto;
       }
     }
+
+@import "../sliders/slider_video";
+
   .section-title {
     max-width: 890px;
     margin: 0 auto 96px;

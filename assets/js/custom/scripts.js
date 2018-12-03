@@ -100,6 +100,29 @@
 
         //for sliders
         if (typeof Swiper !== 'undefined') {
+            //for hero slider
+            if ($('.slider-hero .swiper-container').length) {
+                var heroSlider = new Swiper('.slider-hero .swiper-container', {
+                    effect: 'fade',
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                });
+            }
+
+            //for video slider
+            if ($('.slider-video .swiper-container').length) {
+                var videoSlider = new Swiper('.slider-video .swiper-container', {
+                    spaceBetween: 30,
+                    navigation: {
+                        nextEl: '.swiper-custom-button-next',
+                        prevEl: '.swiper-custom-button-prev',
+                    }
+                });
+            }
+
+
             //for social slider
             if ($('.social-slider').length) {
                 var socilaSlider = new Swiper('.social-slider', {
