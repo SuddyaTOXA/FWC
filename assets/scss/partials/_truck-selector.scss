@@ -18,6 +18,7 @@
         }
       }
       &.bed-length {
+        display: none;
         margin-bottom: 44px;
       }
       @media all and (max-width: 767px) {
@@ -36,14 +37,19 @@
         }
       }
     }
+    .choose-bed-length-box {
+      display: none;
+    }
         .select-truck-box {
           position: relative;
+
         }
           .radio-truck {
             position: absolute;
             top: 10px;
             right: 10px;
             opacity: 0;
+            visibility: hidden;
             &:checked {
               & + label {
                 .select-truck-img-wrap {
@@ -115,6 +121,7 @@
                 padding-bottom: 54%;
                 margin-bottom: 26px;
               }
+            //@media all and (min-width: 769px) {}
               @media all and (max-width: 767px) {
                 margin-bottom: 12px;
                 .bed-length & {
@@ -134,6 +141,7 @@
             }
           }
         .select-truck-btn-box {
+          display: none;
           text-align: center;
           a.btn,.btn {
             min-width: 220px;

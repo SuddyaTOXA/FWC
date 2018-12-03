@@ -46,7 +46,7 @@
                 // Selectors
                 ignore: '[data-scroll-ignore]',
                 header: null,
-                topOnEmptyHash: true,
+                topOnEmptyHash: false,
 
                 // Speed & Duration
                 speed: 500,
@@ -85,46 +85,68 @@
         // }
 
         //for nicescroll
-        // if ($('.anchor-nav > ul').length) {
-        //     $('.anchor-nav > ul').niceScroll({cursorcolor:"#00F"});
+        // if ($('.specifications-accordion .inner-box').length) {
+        //     $('.specifications-accordion .inner-box').niceScroll({
+        //         cursorcolor: '#95a0a9',
+        //         cursoropacitymin: 0.5,
+        //         cursoropacitymax: 0.8,
+        //         // cursorborder: "none",
+        //         // cursorwidth: "6px",
+        //         // cursorborderradius: "6px",
+        //         // hidecursordelay: 800,
+        //         // scrollbarid: 'cursor-6px'
+        //     });
         // }
 
-        //initialize swiper when document ready
+        //for sliders
         if (typeof Swiper !== 'undefined') {
-            var mySwiper = new Swiper('.social-slider', {
-                slidesPerView: 3,
-                spaceBetween: 30,
-                navigation: {
-                    nextEl: '.swiper-social-button-next',
-                    prevEl: '.swiper-social-button-prev',
-                },
-                breakpoints: {
-                    540: {
-                        slidesPerView: 1
+            //for social slider
+            if ($('.social-slider').length) {
+                var socilaSlider = new Swiper('.social-slider', {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    navigation: {
+                        nextEl: '.swiper-social-button-next',
+                        prevEl: '.swiper-social-button-prev',
                     },
-                    767: {
-                        slidesPerView: 2
+                    breakpoints: {
+                        540: {
+                            slidesPerView: 1
+                        },
+                        767: {
+                            slidesPerView: 2
+                        }
                     }
-                }
-            });
+                });
+            }
+
+            //for plan slider
+            if ($('.slider-plan')) {
+                var planGalleryThumbs = new Swiper('.slider-plan .gallery-thumbs', {
+                    // setWrapperSize: 500,
+                    // height: 100,
+                    spaceBetween: 20,
+                    slidesPerView: 3,
+                    freeMode: true,
+                    watchSlidesVisibility: true,
+                    watchSlidesProgress: true,
+                    // centeredSlides: true
+                });
+
+                var planGalleryTop = new Swiper('.slider-plan .gallery-top', {
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    thumbs: {
+                        swiper: planGalleryThumbs
+                    }
+                });
+            }
 /*
-            var galleryThumbs = new Swiper('.gallery-thumbs', {
-                spaceBetween: 10,
-                slidesPerView: 4,
-                freeMode: true,
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-            });
-            var galleryTop = new Swiper('.gallery-top', {
-                spaceBetween: 10,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                thumbs: {
-                    swiper: galleryThumbs
-                }
-            });
+
 
             // loop
             var galleryThumbs = new Swiper('.gallery-thumbs', {
@@ -199,20 +221,37 @@
 
         //for select truck
         if ($('.section-select-truck').length && $('.select-truck-list').length) {
-            var truckList = $('.select-truck-list:not(.bed-length)'),
-                inputs = truckList.find('input');
+            $('.select-truck-list input').on('change', function () {
+                var listType = $(this).closest('ul.select-truck-list'),
+                    parentBox = $(this).parents('.section-select-truck'),
+                    bedLengthbox = parentBox.find('.choose-bed-length-box'),
+                    btnBox = parentBox.find('.select-truck-btn-box'),
+                    truckLengthList = parentBox.find('.select-truck-list.bed-length');
 
-            inputs.on('change', function () {
-                var type = $(this).data('truckType'),
-                    currentlist = $('.select-truck-list.bed-length[data-truck-group="'+type+'"]'),
-                    truckLengthList = $('.select-truck-list.bed-length');
+                    if (!(listType.hasClass('bed-length'))) {
+                        //select truck
+                        var type = $(this).data('truckType'),
+                            currentlist = $('.select-truck-list.bed-length[data-truck-group="'+type+'"]');
 
-                truckLengthList.find('input').prop('checked', false);
-                truckLengthList.fadeOut(350);
-                currentlist.fadeIn(350);
+                        btnBox.fadeOut();
+                        bedLengthbox.fadeIn(350);
+                        truckLengthList.find('input').prop('checked', false);
+                        truckLengthList.fadeOut(350);
+                        setTimeout(function () {
+                            currentlist.fadeIn(350);
+                        }, 350);
 
-            })
+                        $('html, body').animate({
+                            scrollTop: bedLengthbox.offset().top - 300
+                        }, 1000);
+
+                    } else {
+                        //select bed length
+                        btnBox.fadeIn(350);
+                    }
+            });
         }
+
 
         //for change color
         if ($('.color-box input').length) {

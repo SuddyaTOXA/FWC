@@ -336,10 +336,12 @@
       word-spacing: 0;
     }
     &.smaller {
-      margin-bottom: 55px;
+      //margin-bottom: 55px;
+      margin-bottom: 20px;
       font-size: 40px;
       font-weight: $normal;
-      letter-spacing: .03em;
+      //letter-spacing: .03em;
+      letter-spacing: 0;
       &.line {
         margin-bottom: 35px;
         padding-bottom: 20px;
@@ -535,6 +537,8 @@
     }
   }
 }
+
+@import '../sliders/slider_social';
 
 .section-upcoming-events {
   padding: 103px 0 170px;

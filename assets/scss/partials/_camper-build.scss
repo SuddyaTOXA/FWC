@@ -444,6 +444,7 @@
                     top: 50%;
                     @include translate();
                     opacity: 0;
+                    visibility: hidden;
                     &:checked + label .color:after {
                       opacity: 1;
                     }
@@ -553,6 +554,7 @@
                         }
                         &:after {
                           opacity: 1;
+                          background-image: url(../../img/icon_check.png);
                         }
                       }
                     }
@@ -570,6 +572,9 @@
                     &:hover,
                     &:focus {
                       .item-img-wrap {
+                        &:after {
+                          opacity: .7;
+                        }
                         img {
                           @include scale(1.1)
                         }
@@ -577,6 +582,7 @@
                     }
                   }
                 }
+
                 &.without-image {
                   min-height: 195px;
                   input {
@@ -584,6 +590,7 @@
                       & + label {
                         &:after {
                           opacity: 1;
+                          background-image: url(../../img/icon_check.png);
                         }
                       }
                     }
@@ -593,16 +600,26 @@
                       position: absolute;
                       z-index: 10;
                       content: '';
-                      bottom: 30px;
+                      top: 140px;
                       right: 20px;
                       width: 32px;
                       height: 32px;
                       background-color: $color-bg12;
-                      background-image: url(../../img/icon_check.png);
                       @include bg(center, 15px 13px, no-repeat);
                       @include border-radius(50%);
                       @include transition($transition-other);
-                      opacity: 0;
+                      opacity: .3;
+                    }
+                    @media all and (min-width: 769px) {
+                      &:after {
+                        opacity: 0;
+                      }
+                      &:hover,
+                      &:focus {
+                        &:after {
+                          opacity: .3;
+                        }
+                      }
                     }
                   }
                 }
@@ -643,11 +660,14 @@
                     width: 32px;
                     height: 32px;
                     background-color: $color-bg12;
-                    background-image: url(../../img/icon_check.png);
+                    //background-image: url(../../img/icon_check.png);
                     @include bg(center, 15px 13px, no-repeat);
                     @include border-radius(50%);
                     @include transition($transition-other);
-                    opacity: 0;
+                    opacity: .7;
+                    @media all and (min-width: 769px) {
+                      opacity: 0;
+                    }
                   }
                   &:before {
                     position: absolute;
