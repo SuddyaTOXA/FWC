@@ -178,3 +178,129 @@
     }
 
 @import "../sliders/slider_vertical";
+
+@import "../sliders/slider_swatch";
+
+
+.benefits-list-box {
+  max-width: 1030px;
+  margin: 0 auto 100px;
+  .section-desc + & {
+    margin-top: 98px;
+  }
+}
+  .benefits-list {
+    margin: 0 -15px -40px;
+    text-align: center;
+    counter-reset: myCounter;
+    > li {
+      display: inline-block;
+      width: 49%;
+      width: -webkit-calc(50% - #{4px});
+      width: calc(50% - #{4px});
+      padding: 0 15px;
+      margin-bottom: 50px;
+      text-align: left;
+      vertical-align: top;
+      &:nth-child(3n + 3) {
+        width: 66%;
+      }
+    }
+  }
+    .benefits {
+      position: relative;
+      padding: 5px 46px 5px 56px;
+      font-size: $size-small;
+      line-height: 1.45;
+      color: #3a3a3a;
+      color: rgba(58, 58, 58, 0.9);
+      background-color: $white;
+      @include box-shadow(0 1px 16px, rgba(98, 102, 106, 0.06));
+      &:before {
+        position: absolute;
+        counter-increment: myCounter;
+        content:counter(myCounter)'. ';
+        top: 50%;
+        left: 30px;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: $bold;
+        color: $light-blue;
+        @include translate(-50%, -50%);
+      }
+      > :not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+.download-btn-list-box {
+  max-width: 810px;
+  margin: 0 auto 130px;
+  text-align: center;
+}
+  .download-btn-list {
+    display: inline-block;
+    margin: 0 -18px -40px;
+    > li {
+      display: inline-block;
+      padding: 0 18px;
+      margin-bottom: 40px;
+    }
+  }
+
+.our-services-list-box {
+  text-align: center;
+  margin-bottom: 60px;
+}
+  .our-services-list {
+    display: inline-block;
+    width: 100%;
+    margin: 0 -15px -40px;
+    > li {
+      display: inline-block;
+      width: 32%;
+      width: -webkit-calc(33.33% - #{4px});
+      width: calc(33.33% - #{4px});
+      padding: 0 15px;
+      margin-bottom: 50px;
+      vertical-align: top;
+    }
+  }
+    .our-service-box {
+      //max-width: 280px;
+      padding: 32px 20px 50px;
+      background-color: $white;
+      @include box-shadow(0 0 6px, rgba(0, 0, 0, .08));
+      @include border-radius($radius-small);
+      .inner-box {
+        max-width: 250px;
+        margin: 0 auto;
+      }
+    }
+      .our-service-img-wrap {
+        display: inline-block;
+        width: 100%;
+        height: 60px;
+        margin-bottom: 23px;
+        line-height: 60px;
+        text-align: center;
+        img {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      .our-service-title {
+        margin-bottom: 18px;
+        font-size: 22px;
+        line-height: 1.2;
+        color: #3a3a3a;
+        letter-spacing: .02em;
+      }
+      .our-services-desc {
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-weight: $normal;
+        line-height: 1.75;
+        letter-spacing: .02em;
+        color: $color-text11;
+        opacity: .8;
+      }

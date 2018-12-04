@@ -27,31 +27,31 @@ a.btn, .btn {
       background-color: transparent;
     }
   }
-    &.blue {
-      color: $white;
-      border-color: $color-bg12;
-      background-color: $color-bg12;
+  &.blue {
+    color: $white;
+    border-color: $color-bg12;
+    background-color: $color-bg12;
+    @media all and (min-width: 769px) {
+      &.hover,
+      &:hover,
+      &:focus {
+        color: $color-text12;
+        background-color: transparent;
+      }
+    }
+    &.inverse {
+      color: $color-text11;
+      background-color: transparent;
       @media all and (min-width: 769px) {
         &.hover,
         &:hover,
         &:focus {
-          color: $color-text12;
-          background-color: transparent;
-        }
-      }
-      &.inverse {
-        color: $color-text11;
-        background-color: transparent;
-        @media all and (min-width: 769px) {
-          &.hover,
-          &:hover,
-          &:focus {
-            color: $white;
-            background-color: $color-bg12;
-          }
+          color: $white;
+          background-color: $color-bg12;
         }
       }
     }
+  }
   &.white {
     border-color: $white;
     background-color: $white;
@@ -66,11 +66,40 @@ a.btn, .btn {
       color: $white;
       background-color: transparent;
       @media all and (min-width: 769px) {
-        &.hover,
         &:hover,
         &:focus {
           color: $color-text3;
           background-color: $white;
+        }
+      }
+    }
+  }
+  &.download {
+    min-width: 240px;
+    padding: 10px 60px 13px 13px;
+    font-size: $size-small;
+    font-weight: $normal;
+    line-height: 1.4;
+    letter-spacing: 0;
+    word-spacing: 0;
+    text-align: center;
+    &:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 20px;
+      width: 26px;
+      height: 25px;
+      background-image: url(../../img/icon_download.png);
+      @include bg(center, contain, no-repeat);
+      @include translate(0, -50%);
+      @include transition($transition-link);
+    }
+    @media all and (min-width: 769px) {
+      &:hover,
+      &:focus {
+        &:after {
+          background-image: url(../../img/icon_download_blue.png);
         }
       }
     }
