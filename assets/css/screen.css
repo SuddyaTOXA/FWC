@@ -1942,7 +1942,7 @@ a.footer-link {
       opacity: 1; }
   .section-hero.slider-hero .swiper-container-horizontal > .swiper-pagination-bullets,
   .section-hero.slider-hero .swiper-pagination-custom, .section-hero.slider-hero .swiper-pagination-fraction {
-    bottom: 20px; }
+    bottom: 30px; }
   .home .section-hero.slider-hero {
     min-height: auto;
     padding: 0; }
@@ -1964,7 +1964,7 @@ a.footer-link {
 
 .section.slider-hero.vertical-line:after {
   z-index: 5;
-  height: 12px; }
+  height: 25px; }
 
 .section-meet-popup {
   padding: 144px 0 290px; }
@@ -4537,6 +4537,61 @@ a.back-link,
   .detail-img-wrap img {
     max-width: 100%;
     height: auto; }
+
+.slider-vertical {
+  overflow: hidden; }
+  .slider-vertical .swiper-container {
+    width: 100%;
+    height: 100%; }
+  .slider-vertical .slide-img-wrap {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-bottom: 71.5%;
+    background-color: #e2e4f0; }
+    .slider-vertical .slide-img-wrap img {
+      position: absolute;
+      z-index: 3;
+      min-height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      top: -9999px;
+      left: -9999px;
+      right: -9999px;
+      bottom: -9999px;
+      margin: auto;
+      -webkit-transform-origin: 50% 50%;
+      -khtml-transform-origin: 50% 50%;
+      -moz-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      -o-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-transition: 0.35s;
+      -khtml-transition: 0.35s;
+      -moz-transition: 0.35s;
+      -ms-transition: 0.35s;
+      -o-transition: 0.35s;
+      transition: 0.35s;
+      opacity: .7; }
+    .slider-vertical .slide-img-wrap.wider img {
+      min-width: 100%;
+      min-height: auto; }
+  .slider-vertical .gallery-right {
+    float: right;
+    max-width: 80%;
+    max-width: -webkit-calc(100% - 130px);
+    max-width: calc(100% - 130px);
+    padding-left: 70px; }
+  .slider-vertical .gallery-thumbs-left {
+    float: left;
+    width: 20%;
+    width: -webkit-calc(0% + 130px);
+    width: calc(0% + 130px);
+    height: 530px; }
+    .slider-vertical .gallery-thumbs-left .swiper-slide-thumb-active .slide-img-wrap {
+      opacity: 1; }
 
 .section-events .categories {
   margin-bottom: 80px; }

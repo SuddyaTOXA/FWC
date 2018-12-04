@@ -58,7 +58,7 @@
   }
   .swiper-container-horizontal>.swiper-pagination-bullets,
   .swiper-pagination-custom, .swiper-pagination-fraction {
-    bottom: 20px;
+    bottom: 30px;
   }
 
   .home & {
@@ -86,7 +86,7 @@
 
 .section.slider-hero.vertical-line:after {
   z-index: 5;
-  height: 12px;
+  height: 25px;
 }
 
 

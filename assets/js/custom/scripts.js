@@ -105,6 +105,9 @@
                 var heroSlider = new Swiper('.slider-hero .swiper-container', {
                     effect: 'fade',
                     loop: true,
+                    autoplay: {
+                        delay: 5000,
+                    },
                     pagination: {
                         el: '.swiper-pagination',
                         clickable: true
@@ -145,7 +148,7 @@
             }
 
             //for plan slider
-            if ($('.slider-plan')) {
+            if ($('.slider-plan .gallery-thumbs').length && $('.slider-plan .gallery-top').length) {
                 var planGalleryThumbs = new Swiper('.slider-plan .gallery-thumbs', {
                     // setWrapperSize: 500,
                     // height: 100,
@@ -160,12 +163,33 @@
                 var planGalleryTop = new Swiper('.slider-plan .gallery-top', {
                     spaceBetween: 10,
                     centeredSlides: true,
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
+                    // navigation: {
+                    //     nextEl: '.swiper-button-next',
+                    //     prevEl: '.swiper-button-prev',
+                    // },
                     thumbs: {
                         swiper: planGalleryThumbs
+                    }
+                });
+            }
+
+            //for vertical slider
+            if ($('.slider-vertical .gallery-right').length && $('.slider-vertical .gallery-thumbs-left').length) {
+                var verticalGalleryThumbs = new Swiper('.slider-vertical .gallery-thumbs-left', {
+                    direction: 'vertical',
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                    freeMode: true,
+                    watchSlidesVisibility: true,
+                    watchSlidesProgress: true,
+                });
+
+                var varticalGallery = new Swiper('.slider-plan .gallery-right', {
+                    // direction: 'vertical',
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                    thumbs: {
+                        swiper: verticalGalleryThumbs
                     }
                 });
             }
