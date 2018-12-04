@@ -18,8 +18,8 @@
         }
       }
       &.bed-length {
-        display: none;
-        margin-bottom: 44px;
+        //display: none;
+        //margin-bottom: 44px;
       }
       @media all and (max-width: 767px) {
         > li {
@@ -39,6 +39,10 @@
     }
     .choose-bed-length-box {
       display: none;
+      margin-bottom: 44px;
+      > :last-child {
+        margin-bottom: 0;
+      }
     }
         .select-truck-box {
           position: relative;
