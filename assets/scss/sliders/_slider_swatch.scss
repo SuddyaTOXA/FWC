@@ -18,7 +18,6 @@
       right: -9999px;
       bottom: -9999px;
       margin: auto;
-      opacity: .8;
       @include transform-origin();
       @include transition($transition-other);
     }
