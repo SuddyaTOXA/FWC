@@ -4362,6 +4362,149 @@ a.back-link,
 .section-how-video-details .section-desc {
   text-align: left; }
 
+.section-video-gallery .categories {
+  margin-bottom: 80px; }
+  .section-video-gallery .categories ul {
+    text-align: center; }
+  .section-video-gallery .categories li {
+    display: inline-block;
+    margin-bottom: 15px; }
+    @media (min-width: 768px) {
+      .section-video-gallery .categories li {
+        margin-bottom: 0; } }
+
+.video-gallery-list {
+  overflow: hidden;
+  margin: 0 -15px -45px; }
+  .video-gallery-list > li {
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+    margin-bottom: 46px; }
+    .video-gallery-list > li:nth-child(odd) {
+      clear: both; }
+    .video-gallery-list > li a {
+      display: block;
+      text-decoration: none; }
+      @media all and (min-width: 769px) {
+        .video-gallery-list > li a:hover .fas:before, .video-gallery-list > li a:focus .fas:before {
+          color: #00a3e0; }
+        .video-gallery-list > li a:hover .video-img-wrap img, .video-gallery-list > li a:focus .video-img-wrap img {
+          -webkit-transform: scale(1.1);
+          -khtml-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          transform: scale(1.1); }
+        .video-gallery-list > li a:hover .video-title, .video-gallery-list > li a:focus .video-title {
+          color: #00a3e0; } }
+  @media (max-width: 580px) {
+    .video-gallery-list > li {
+      width: 100%; } }
+
+.video-box {
+  position: relative; }
+  .video-box .fas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 80px;
+    color: #3e3e3e;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    padding: 0;
+    -webkit-transition: 0.35s;
+    -khtml-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -ms-transition: 0.35s;
+    -o-transition: 0.35s;
+    transition: 0.35s; }
+    .video-box .fas:before {
+      z-index: 2;
+      position: relative;
+      -webkit-transition: 0.35s;
+      -khtml-transition: 0.35s;
+      -moz-transition: 0.35s;
+      -ms-transition: 0.35s;
+      -o-transition: 0.35s;
+      transition: 0.35s; }
+    .video-box .fas:after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 50%;
+      z-index: 0;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transition: 0.35s;
+      -khtml-transition: 0.35s;
+      -moz-transition: 0.35s;
+      -ms-transition: 0.35s;
+      -o-transition: 0.35s;
+      transition: 0.35s; }
+
+.video-img-wrap {
+  margin-bottom: 45px;
+  padding-bottom: 63%;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+  .video-img-wrap:after {
+    position: absolute;
+    z-index: 7;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #101010;
+    opacity: .5;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: 0.35s;
+    -khtml-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -ms-transition: 0.35s;
+    -o-transition: 0.35s;
+    transition: 0.35s; }
+  @media (max-width: 767px) {
+    .video-img-wrap {
+      margin-bottom: 25px; } }
+
+.video-title {
+  max-width: 450px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: #62666a;
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s; }
+
 .section-camper-details .section-desc {
   max-width: 770px;
   letter-spacing: 0;
