@@ -88,11 +88,9 @@
         if ($('.specifications-accordion .inner-box').length) {
             setTimeout(function () {
                 $('.specifications-accordion .inner-box').niceScroll({
-                    cursoropacitymin: 0.2,
                     cursoropacitymax: 0.8,
                     cursorcolor:"#62666a",
                     cursorwidth:"6px",
-                    hidecursordelay: 1000,
                 });
             }, 50);
         }
