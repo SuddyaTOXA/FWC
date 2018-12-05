@@ -150,24 +150,13 @@
             //for plan slider
             if ($('.slider-plan .gallery-thumbs').length && $('.slider-plan .gallery-top').length) {
                 var planGalleryThumbs = new Swiper('.slider-plan .gallery-thumbs', {
-                    // setWrapperSize: 500,
-                    // height: 100,
                     spaceBetween: 20,
                     slidesPerView: 3,
-                    // centeredSlides: true,
-                    // freeMode: true,
-                    // watchSlidesVisibility: true,
-                    // watchSlidesProgress: true,
-                    // centeredSlides: true
                 });
 
                 var planGalleryTop = new Swiper('.slider-plan .gallery-top', {
                     spaceBetween: 10,
                     centeredSlides: true,
-                    // navigation: {
-                    //     nextEl: '.swiper-button-next',
-                    //     prevEl: '.swiper-button-prev',
-                    // },
                     thumbs: {
                         swiper: planGalleryThumbs
                     }
@@ -180,10 +169,6 @@
                     direction: 'vertical',
                     slidesPerView: 5,
                     spaceBetween: 20,
-                    // centeredSlides: true,
-                    // freeMode: true,
-                    // watchSlidesVisibility: true,
-                    // watchSlidesProgress: true,
                     breakpoints: {
                         991: {
                             slidesPerView: 4
@@ -199,14 +184,9 @@
                 });
 
                 var varticalGallery = new Swiper('.slider-vertical .gallery-right', {
-                    // direction: 'vertical',
                     spaceBetween: 20,
                     centeredSlides: true,
                     effect: 'fade',
-                    // navigation: {
-                    //     nextEl: '.swiper-button-next',
-                    //     prevEl: '.swiper-button-prev',
-                    // },
                     thumbs: {
                         swiper: verticalGalleryThumbs,
                     },
@@ -349,7 +329,7 @@
         }
 
         // for anchor nav
-        var stickyNav = $('.anchor-nav-box.build');
+        var stickyNav = $('.anchor-nav-box');
 
         if (stickyNav && stickyNav.length) {
             var offset = stickyNav.offset().top,
@@ -363,9 +343,10 @@
                         var currLink = $(this);
                         var refElement = $(currLink.attr("href")),
                             header = $('#header-main'),
-                            anchorNav = $('.anchor-nav-box'),
+                            // anchorNav = $('.anchor-nav-box'),
                             headerHeight = header.outerHeight(),
-                            anchorNavHeight = anchorNav.outerHeight(),
+                            anchorNavHeight = stickyNav.outerHeight(),
+                            anchorNavOffset = stickyNav.offset().top
                             offset = 0;
 
                         if (refElement && refElement.length) {
@@ -375,7 +356,9 @@
                                 offset =  anchorNavHeight + 50;
                             }
 
-                            var currSection = (refElement.position().top <= (scrollPos + offset)) && (refElement.position().top + refElement.outerHeight(true)) > (scrollPos + offset);
+                            var currSection = (refElement.offset().top <= (scrollPos + offset)) && (refElement.offset().top + refElement.outerHeight(true)) > (scrollPos + offset);
+
+
                             if (currSection) {
                                 stickyNavLinks.removeClass("active");
                                 currLink.addClass("active");
@@ -383,6 +366,8 @@
                             else {
                                 currLink.removeClass("active");
                             }
+
+                            console.log(refElement.position().top);
                         }
                     });
                 }
