@@ -299,6 +299,9 @@
   max-width: 810px;
   margin: 0 auto 130px;
   text-align: center;
+  @media all and (max-width: 767px) {
+    margin-bottom: 65px;
+  }
 }
   .download-btn-list {
     display: inline-block;

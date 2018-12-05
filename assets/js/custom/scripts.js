@@ -85,18 +85,17 @@
         // }
 
         //for nicescroll
-        // if ($('.specifications-accordion .inner-box').length) {
-        //     $('.specifications-accordion .inner-box').niceScroll({
-        //         cursorcolor: '#95a0a9',
-        //         cursoropacitymin: 0.5,
-        //         cursoropacitymax: 0.8,
-        //         // cursorborder: "none",
-        //         // cursorwidth: "6px",
-        //         // cursorborderradius: "6px",
-        //         // hidecursordelay: 800,
-        //         // scrollbarid: 'cursor-6px'
-        //     });
-        // }
+        if ($('.specifications-accordion .inner-box').length) {
+            setTimeout(function () {
+                $('.specifications-accordion .inner-box').niceScroll({
+                    cursoropacitymin: 0.2,
+                    cursoropacitymax: 0.8,
+                    cursorcolor:"#62666a",
+                    cursorwidth:"6px",
+                    hidecursordelay: 1000,
+                });
+            }, 50);
+        }
 
         //for sliders
         if (typeof Swiper !== 'undefined') {
@@ -366,8 +365,6 @@
                             else {
                                 currLink.removeClass("active");
                             }
-
-                            console.log(refElement.position().top);
                         }
                     });
                 }
@@ -552,6 +549,9 @@
                     panel.slideUp();
                 } else {
                     panel.slideDown();
+                    if (panel.has('.inner-box')) {
+                        panel.find('.inner-box').niceScroll().resize();
+                    }
                 }
 
             });
