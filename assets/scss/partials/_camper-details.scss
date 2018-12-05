@@ -48,13 +48,51 @@
       }
     }
   }
-  @media all and (max-width: 1200px) {
+  @media all and (max-width: 1220px) {
+    padding: 0 20px;
+    background-color: $white;
+    @include box-shadow(0 2px 15px 1px, rgba(27, 27, 27, .06));
     .container {
+      padding: 0;
       max-width: 100%;
+      @include border-radius(0);
+      box-shadow: none;
+    }
+  }
+  &.affix {
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    background-color: #fafafa;
+    //@include transition(background-color 0s);
+    @include box-shadow();
+    .direction-up & {
+      top: 82px;
+      @media all and (max-width: 1024px){
+        top: 70px;
+      }
+    }
+    .direction-down & {
+      top: 0;
+    }
+    & + .camper-customizer-box {
+      margin-top: 141px;
+    }
+    .overflow & {
+      z-index: 0;
+    }
+    .container {
+      background-color: transparent;
+      box-shadow: none;
       @include border-radius(0);
     }
   }
 }
+
+
 .anchor-btn-list {
   margin-left: 16px;
   > li {
@@ -147,6 +185,19 @@
             }
           }
         }
+        @media all and (max-width: 480px) {
+          .accordion {
+            padding: 15px 50px 15px 20px;
+            font-size: 20px;
+            .fa {
+              top: 12px;
+              right: 15px;
+            }
+          }
+          .panel {
+            padding: 2px 20px 30px;
+          }
+        }
       }
 
   .detail-box {
@@ -166,6 +217,17 @@
     .right-box {
       padding-left: 15px;
       padding-right: 5px;
+    }
+    @media all and (max-width: 991px) {
+      .left-box,
+      .right-box {
+        float: none;
+        padding: 0;
+        width: 100%;
+      }
+      .left-box {
+        margin: 0 auto 20px;
+      }
     }
   }
     .detail-img-wrap {
@@ -204,6 +266,14 @@
       vertical-align: top;
       &:nth-child(3n + 3) {
         width: 66%;
+      }
+    }
+    @media all and (max-width: 640px) {
+      > li {
+        width: 100%;
+        &:nth-child(3n + 3) {
+          width: 100%;
+        }
       }
     }
   }
@@ -263,6 +333,18 @@
       padding: 0 15px;
       margin-bottom: 50px;
       vertical-align: top;
+    }
+    @media all and (max-width: 767px) {
+      > li {
+        width: 49%;
+        width: -webkit-calc(50% - #{4px});
+        width: calc(50% - #{4px});
+      }
+    }
+    @media all and (max-width: 640px) {
+      > li {
+        width: 100%;
+      }
     }
   }
     .our-service-box {

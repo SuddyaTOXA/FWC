@@ -184,6 +184,18 @@
                     // freeMode: true,
                     // watchSlidesVisibility: true,
                     // watchSlidesProgress: true,
+                    breakpoints: {
+                        991: {
+                            slidesPerView: 4
+                        },
+                        860: {
+                            slidesPerView: 3
+                        },
+                        640: {
+                            direction: 'horizontal',
+                            slidesPerView: 3
+                        }
+                    }
                 });
 
                 var varticalGallery = new Swiper('.slider-vertical .gallery-right', {
@@ -197,7 +209,8 @@
                     // },
                     thumbs: {
                         swiper: verticalGalleryThumbs,
-                    }
+                    },
+
                 });
             }
 
@@ -210,6 +223,14 @@
                             nextEl: '.swiper-swatch-button-next',
                             prevEl: '.swiper-swatch-button-prev',
                         },
+                        breakpoints: {
+                            767: {
+                                slidesPerView: 2
+                            },
+                            480: {
+                                slidesPerView: 1
+                            }
+                        }
                     });
                 }
             }
@@ -377,7 +398,7 @@
                 html = $('html'),
                 body = $('body'),
                 header = $('#header-main'),
-                anchorNav = $('.anchor-nav-box.build'),
+                anchorNav = $('.anchor-nav-box'),
                 lastScrollTop = 0;
 
             $window.on('load resize', function () {
@@ -393,10 +414,14 @@
                         anchorNavHeight = anchorNav.outerHeight();
 
                     if (anchorNav.length) {
-                        var anchorNavOffset = anchorNav.offset().top;
+                        if (anchorNav.hasClass('.details')) {
+                            var anchorNavOffset = anchorNav.offset().top - 40;
+                        } else {
+                            var anchorNavOffset = anchorNav.offset().top;
+                        }
                     }
 
-                    if (currentPos > headerHeight) {
+                    if (currentPos > anchorNavOffset) {
                         setTimeout(function () {
                             if (!(anchorNav.hasClass('affix'))) {
                                 anchorNav.addClass('affix');
@@ -428,7 +453,7 @@
 
                                 //for anchor nav
                                 if (anchorNav.length) {
-                                    var anchorNavTrigger = headerHeight - 65;
+                                    var anchorNavTrigger = anchorNavOffset - 65;
 
                                     if (top < anchorNavTrigger) {
                                         if (anchorNav.hasClass('affix')) {
@@ -444,19 +469,21 @@
                                         body.removeClass('direction-up').addClass('direction-down');
                                     }
                                 }
-                            }
 
-                            //for anchor nav
-                            if (anchorNav.length) {
-                                var anchorNavTrigger = anchorNavOffset;
+                                //for anchor nav
+                                if (anchorNav.length) {
+                                    var anchorNavTrigger = anchorNavOffset;
 
-                                if (top > anchorNavTrigger) {
-                                    if (!(anchorNav.hasClass('affix'))) {
-                                        anchorNav.addClass('affix');
-                                        anchorNav.next().css('margin-top', anchorNavHeight);
+                                    if (top > anchorNavTrigger) {
+                                        if (!(anchorNav.hasClass('affix'))) {
+                                            anchorNav.addClass('affix');
+                                            anchorNav.next().css('margin-top', anchorNavHeight);
+                                        }
                                     }
                                 }
                             }
+
+
 
                             lastScrollTop = top;
                         });
@@ -484,7 +511,7 @@
 
                                 //for anchor nav
                                 if (anchorNav.length) {
-                                    var anchorNavTrigger = headerHeight;
+                                    var anchorNavTrigger = anchorNavOffset;
 
                                     if (top < anchorNavTrigger) {
                                         if (anchorNav.hasClass('affix')) {

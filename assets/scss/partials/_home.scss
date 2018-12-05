@@ -160,6 +160,12 @@
       }
       &.big {
         font-size: 80px;
+        @media all and (max-width: 767px) {
+          font-size: 50px;
+        }
+        @media all and (max-width: 480px) {
+          font-size: 45px;
+        }
       }
     }
 
@@ -169,6 +175,12 @@
       font-size: 30px;
       line-height: 1.1;
       text-transform: uppercase;
+      @media all and (max-width: 1024px) {
+        font-size: 26px;
+      }
+      @media all and (max-width: 767px) {
+        font-size: 24px;
+      }
     }
     .hero-desc {
       margin-bottom: 34px;

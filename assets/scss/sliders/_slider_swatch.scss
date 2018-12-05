@@ -52,6 +52,24 @@
         cursor: default;
       }
     }
+    > :not(:first-child) {
+      margin-left: 36px;
+    }
+    @media all and (max-width: 480px) {
+      a.btn,
+      .btn {
+        min-width: 100px;
+        font-size: 14px;
+        line-height: 14px;
+        .fas {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+      > :not(:first-child) {
+        margin-left: 18px;
+      }
+    }
   }
 
   .swiper-swatch-button-prev.swiper-button-disabled,
