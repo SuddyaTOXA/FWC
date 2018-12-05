@@ -4372,6 +4372,10 @@ a.back-link,
     @media (min-width: 768px) {
       .section-video-gallery .categories li {
         margin-bottom: 0; } }
+  .section-video-gallery .categories .btn {
+    margin: 0 8px;
+    border-radius: 0;
+    -webkit-border-radius: 0; }
 
 .video-gallery-list {
   overflow: hidden;
