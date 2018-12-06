@@ -43,6 +43,7 @@
   color: $white;
   background-color: #969696;
   @include bg();
+  background-position: center bottom; 
   .home & {
     min-height: 994px;
     padding-top: 236px;
@@ -50,6 +51,7 @@
   .content {
     line-height: 1.4;
   }
+
 
   @media all and (max-width: 1024px) {
     padding-top: 140px;
@@ -74,6 +76,10 @@
     .home & {
       min-height: 380px;
     }
+  }
+  @media all and (min-width: 1441px) {
+    @include aspect-ratio(16,9);
+    max-height: 900px;
   }
   .container {
     position: relative;
