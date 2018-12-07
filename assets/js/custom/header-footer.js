@@ -14,38 +14,30 @@
                 <nav class="main-nav desktop">\
                     <ul>\
                         <li><a href="dev-sitemap.html"><span class="icon-skiing"></span> My Life</a></li>\
-                        <li><a href="campers.html">Campers</a>\
-                        <ul class="sub-menu">\
-                                <li class="menu-item"><a href="#">All Models</a></li>\
-                                <li class="menu-item"><a href="#">Model Floorplans</a></li>\
-                                <li class="menu-item"><a href="#">Build & Price</a></li>\
-                                <li class="menu-item"><a href="#">Video Gallery</a></li>\
-                                <li class="menu-item"><a href="find-a-dealer.html">Find A Dealer*</a></li>\
-                            </ul>\
-                        </li>\
+                        <li><a href="campers.html">Campers</a></li>\
                         <li><a href="#">Financing</a></li>\
                         <li><a href="#">Events</a>\
                         <ul class="sub-menu">\
                                 <li class="menu-item"><a href="tradeshows.html">Trade Show &amp; Event Calendar*</a></li>\
-                                <li class="menu-item"><a href="#">Articles</a></li>\
-                                <li class="menu-item"><a href="#">Photos</a></li>\
-                                <li class="menu-item"><a href="#">Travel Stories</a></li>\
-                                <li class="menu-item"><a href="#">Updates</a></li>\
+                                <li class="menu-item"><a href="#">Contests</a></li>\
                             </ul>\
                         </li>\
                         <li><a href="support.html">Support</a>\
                             <ul class="sub-menu">\
-                                <li class="menu-item"><a href="#">Schedule A Service</a></li>\
-                                <li class="menu-item"><a href="#">Services Performed</a></li>\
+                                <li class="menu-item"><a href="#">Service</a></li>\
+                                <li class="menu-item"><a href="faq.html">FAQs Fast Facts*</a></li>\
                                 <li class="menu-item"><a href="truck-preparation.html">Truck Preparation Guide*</a></li>\
                                 <li class="menu-item"><a href="how-to-videos.html">Troubleshooting Videos*</a></li>\
-                                <li class="menu-item"><a href="how-to-videos.html">How-To Videos*</a></li>\
+                                <li class="menu-item"><a href="how-to-videos.html">Walkthrough Videos*</a></li>\
                                 <li class="menu-item"><a href="how-to-videos.html">Load-Unload Videos*</a></li>\
-                                <li class="menu-item"><a href="faq.html">FAQs  Fast Facts*</a></li>\
+                                <li class="menu-item"><a href="#">Articles/Reviews</a></li>\
                                 <li class="menu-item"><a href="owners-manual.html">Owners Manuals*</a></li>\
                                 <li class="menu-item"><a href="#">Warranties</a></li>\
                             </ul></li>\
-                        <li><a href="store.html">Store</a></li>\
+                        <li><a href="store.html">Store</a><ul class="sub-menu">\
+                                <li class="menu-item"><a href="#">Parts & Accessories</a></li>\
+                                <li class="menu-item"><a href="#">SWAG</a></li>\
+                            </ul></li>\
                         <li><a href="#">Rent</a></li>\
                         <li class="btn-dealer"><a href="find-a-dealer.html">Find Dealer</a></li>\
                     </ul>\
@@ -127,22 +119,22 @@
                     <li>\
                         <div class="footer-box">\
                             <a href="#" class="footer-title">Contact us</a>\
-                            <a href="#" class="footer-link">Find a Dealer</a>\
                             <a href="#" class="footer-link">Factory</a>\
                             <a href="#" class="footer-link">Service</a>\
-                            <a href="#" class="footer-link">Media</a>\
-                            <a href="#" class="footer-link">Influencers</a>\
+                            <a href="#" class="footer-link">Find a Dealer</a>\
                             <a href="#" class="footer-link">Dealer Inquiries</a>\
+                            <a href="#" class="footer-link">Influencers</a>\
+                            <a href="#" class="footer-link">Media</a>\
                         </div>\
                     </li>\
                     <li>\
                         <div class="footer-box">\
                             <a href="#" class="footer-title">News</a>\
-                            <a href="#" class="footer-link">Trade Show & Event Calendar</a>\
-                            <a href="#" class="footer-link">Articles</a>\
-                            <a href="#" class="footer-link">Owner Rallies</a>\
+                            <a href="#" class="footer-link">Event Calendar</a>\
+                            <a href="#" class="footer-link">Articles & Reviews</a>\
+                            <a href="#" class="footer-link">Photo Contest</a>\
                             <a href="#" class="footer-link">Photos</a>\
-                            <a href="#" class="footer-link">Stories</a>\
+                            <a href="#" class="footer-link">Travel Stories</a>\
                             <a href="#" class="footer-link">Updates</a>\
                         </div>\
                     </li>\
