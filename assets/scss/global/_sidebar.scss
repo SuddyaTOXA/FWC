@@ -157,6 +157,7 @@
             line-height: 1.2;
             letter-spacing: .02em;
             color: $color-text11;
+            @include transition($transition-other);
           }
           .popular-desc {
             font-size: 12px;

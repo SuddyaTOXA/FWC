@@ -1705,7 +1705,13 @@ textarea:-moz-placeholder {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: .02em;
-  color: #62666a; }
+  color: #62666a;
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s; }
 .sidebar .popular-desc {
   font-size: 12px;
   letter-spacing: .03em;
