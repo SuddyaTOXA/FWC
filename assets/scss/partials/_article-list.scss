@@ -15,19 +15,26 @@
       padding-left: 30px;
     }
     @media all and (max-width: 767px) {
+      display: table;
+      width: 100%;
      .content-box {
        float: none;
        width: 100%;
        margin-bottom: 80px;
      }
       .sidebar {
+        display: table-footer-group;
         float: none;
         width: 100%;
         max-width: 360px;
         padding: 0;
+        > * {
+          max-width: 360px;
+        }
       }
     }
   }
+
   .article-list {
     > li {
       &:not(:last-child){
@@ -107,5 +114,4 @@
             color: $light-blue;
             text-transform: uppercase;
             text-decoration: none;
-            opacity: .8;
           }
