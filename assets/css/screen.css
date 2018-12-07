@@ -235,19 +235,19 @@ h1, h2, h3, h4, h5, h6 {
     height: auto; }
     .content img.alignleft {
       float: left;
-      margin: 4px 12px 12px 0; }
+      margin: 4px 20px 20px 0; }
     .content img.alignright {
       float: right;
-      margin: 4px 0 12px 12px; }
+      margin: 4px 0 20px 20px; }
     .content img.aligncenter {
       display: block;
-      margin: 0 auto 12px;
+      margin: 0 auto 30px;
       clear: both; }
     @media all and (max-width: 1024px) {
       .content img.alignleft, .content img.alignright, .content img.aligncenter {
         float: none;
         display: block;
-        margin: 0 auto 12px;
+        margin: 0 auto 30px;
         clear: both; } }
   .inverse .content {
     color: #ffffff; }
@@ -1119,6 +1119,13 @@ textarea:-moz-placeholder {
       min-height: 70px !important;
       padding: 8px 0 3px !important;
       text-align: left; } }
+
+#header-main {
+  z-index: 1; }
+  .white-header-bg #header-main {
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2); }
 
 #header-scrolling {
   position: fixed;
@@ -3553,6 +3560,8 @@ a.more-info-btn,
   padding: 0 0 75px; }
 
 .anchor-nav-box {
+  position: relative;
+  z-index: 5;
   padding-top: 30px;
   background-color: #fafafa;
   border-bottom: 1px solid #62666a;
@@ -5541,15 +5550,24 @@ a.read-more,
   text-decoration: none;
   opacity: .8; }
 
+.section-article {
+  padding-top: 100px; }
+  @media all and (max-width: 1024px) {
+    .section-article {
+      padding-top: 0; } }
+
 .related-news-box {
+  clear: both;
   padding-top: 80px; }
   .related-news-box .group-title {
-    margin-bottom: 80px;
-    padding-bottom: 9px;
+    padding-bottom: 10px;
     text-transform: uppercase; }
     .related-news-box .group-title:after {
       width: 100%;
       max-width: 100%; }
+  @media all and (max-width: 767px) {
+    .related-news-box .group-title {
+      font-size: 24px; } }
 
 .related-news-list {
   overflow: hidden;

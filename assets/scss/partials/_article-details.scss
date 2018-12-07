@@ -1,12 +1,23 @@
+.section-article {
+  padding-top: 100px;
+  @media all and (max-width: 1024px) {
+    padding-top: 0;
+  }
+}
 .related-news-box {
+  clear: both;
   padding-top: 80px;
   .group-title {
-    margin-bottom: 80px;
-    padding-bottom: 9px;
+    padding-bottom: 10px;
     text-transform: uppercase;
     &:after {
       width: 100%;
       max-width: 100%;
+    }
+  }
+  @media all and (max-width: 767px) {
+    .group-title {
+      font-size: 24px;
     }
   }
 }

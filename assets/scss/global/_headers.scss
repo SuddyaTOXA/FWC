@@ -42,7 +42,12 @@
   }
 }
 
-#header-main {}
+#header-main {
+  z-index: 1;
+  .white-header-bg & {
+    @include box-shadow(0 5px 10px 0, rgba($black, .2));
+  }
+}
 
 #header-scrolling {
   position: fixed;

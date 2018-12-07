@@ -171,15 +171,15 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
     &.alignleft {
       float: left;
-      margin: 4px 12px 12px 0;
+      margin: 4px 20px 20px 0;
     }
     &.alignright {
       float: right;
-      margin: 4px 0 12px 12px;
+      margin: 4px 0 20px 20px;
     }
     &.aligncenter{
       display: block;
-      margin: 0 auto 12px;
+      margin: 0 auto 30px;
       clear: both;
     }
     @media all and (max-width: 1024px) {
@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
       &.aligncenter{
         float: none;
         display: block;
-        margin: 0 auto 12px;
+        margin: 0 auto 30px;
         clear: both;
       }
     }
