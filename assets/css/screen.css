@@ -5572,6 +5572,7 @@ a.read-more,
       max-width: 100%; }
   @media all and (max-width: 767px) {
     .related-news-box {
+      padding-top: 0;
       padding-bottom: 60px; }
       .related-news-box .group-title {
         font-size: 24px; } }
