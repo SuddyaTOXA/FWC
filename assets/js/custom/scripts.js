@@ -44,7 +44,7 @@
             var scroll = new SmoothScroll('a[href*="#"]', {
 
                 // Selectors
-                ignore: '[data-scroll-ignore]',
+                ignore: 'a[href="#"]',
                 header: null,
                 topOnEmptyHash: false,
 
