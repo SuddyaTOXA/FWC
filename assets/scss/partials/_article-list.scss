@@ -50,7 +50,7 @@
           font-size: $size-main;
           line-height: 1.5;
           letter-spacing: .03em;
-          > :not(:last-child){
+          > :not(img):not(:last-child){
             margin-bottom: 33px;
           }
           @media all and (max-width: 1024px) {

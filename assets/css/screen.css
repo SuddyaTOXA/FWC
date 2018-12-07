@@ -5494,7 +5494,7 @@ a.back-link,
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: .03em; }
-    .article-box .content > :not(:last-child) {
+    .article-box .content > :not(img):not(:last-child) {
       margin-bottom: 33px; }
     @media all and (max-width: 1024px) {
       .article-box .content {
