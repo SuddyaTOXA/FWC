@@ -36,11 +36,13 @@
     }
   }
       .article-box {
-        a {
+        > a {
           text-decoration: none;
           @media all and (min-width: 769px) {
             &:hover,
-            &:focus {}
+            &:focus {
+              color: $color-text2;
+            }
           }
         }
         .content {
@@ -90,9 +92,11 @@
             //letter-spacing: .03em;
             color: $color-text11;
             @media all and (min-width: 769px) {
-              &:hover,
-              &:focus {
-                color: $color-text2;
+              a {
+                &:hover,
+                &:focus {
+                  color: $color-text2;
+                }
               }
             }
           }
@@ -100,5 +104,6 @@
           .read-more {
             color: $light-blue;
             text-transform: uppercase;
+            text-decoration: none;
             opacity: .8;
           }

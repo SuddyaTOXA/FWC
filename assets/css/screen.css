@@ -177,11 +177,13 @@ h1, h2, h3, h4, h5, h6 {
   .content h6 {
     font-size: 20px; }
   .content a {
-    color: #212020; }
+    color: #212020;
+    text-decoration: underline; }
     .content a:hover {
       opacity: 0.7;
       text-decoration: none; }
   .content ul > li {
+    overflow: hidden;
     position: relative;
     padding-left: 25px;
     margin-bottom: 1px;
@@ -208,6 +210,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     counter-reset: myCounter; }
     .content ol > li {
+      overflow: hidden;
       position: relative;
       padding-left: 30px;
       margin-bottom: 1px;
@@ -240,6 +243,12 @@ h1, h2, h3, h4, h5, h6 {
       display: block;
       margin: 0 auto 12px;
       clear: both; }
+    @media all and (max-width: 1024px) {
+      .content img.alignleft, .content img.alignright, .content img.aligncenter {
+        float: none;
+        display: block;
+        margin: 0 auto 12px;
+        clear: both; } }
   .inverse .content {
     color: #ffffff; }
     .inverse .content ul > li:before {
@@ -337,6 +346,12 @@ h1, h2, h3, h4, h5, h6 {
 /*----------------------------------------------------------------------------------*/
 .wrapper {
   position: relative; }
+
+.white-header-bg #main-content {
+  padding-top: 132px; }
+@media all and (max-width: 1024px) {
+  #main-content {
+    padding-top: 70px; } }
 
 .videoWrapper {
   position: relative;
@@ -1657,13 +1672,20 @@ textarea:-moz-placeholder {
   overflow: hidden; }
   .sidebar .popular-box a {
     text-decoration: none; }
-    .sidebar .popular-box a:hover, .sidebar .popular-box a:focus {
+    .sidebar .popular-box a:hover .popular-title, .sidebar .popular-box a:focus .popular-title {
       color: #ffc72c; }
+    .sidebar .popular-box a:hover .popular-img-wrap img, .sidebar .popular-box a:focus .popular-img-wrap img {
+      -webkit-transform: scale(1.1);
+      -khtml-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1); }
 .sidebar .popular-img-wrap {
   float: left;
   width: 80px;
   height: 80px;
-  padding-bottom: 29.7%;
+  padding-bottom: 0;
   margin-right: 22px;
   margin-bottom: 0; }
 .sidebar .popular-info-box {
@@ -3522,10 +3544,7 @@ a.more-info-btn,
 
 .section-build-my-camper {
   overflow: hidden;
-  padding: 123px 0 75px; }
-  @media all and (max-width: 1024px) {
-    .section-build-my-camper {
-      padding-top: 70px; } }
+  padding: 0 0 75px; }
 
 .anchor-nav-box {
   padding-top: 30px;
@@ -5459,8 +5478,11 @@ a.back-link,
 
 .article-box {
   margin-bottom: 0; }
-  .article-box a {
+  .article-box > a {
     text-decoration: none; }
+    @media all and (min-width: 769px) {
+      .article-box > a:hover, .article-box > a:focus {
+        color: #ffc72c; } }
   .article-box .content {
     color: #62666a;
     font-size: 18px;
@@ -5502,13 +5524,128 @@ a.back-link,
   font-weight: 400;
   color: #62666a; }
   @media all and (min-width: 769px) {
-    .article-info:hover, .article-info:focus {
+    .article-info a:hover, .article-info a:focus {
       color: #ffc72c; } }
 
 a.read-more,
 .read-more {
   color: #00a3e0;
   text-transform: uppercase;
+  text-decoration: none;
   opacity: .8; }
+
+.related-news-box {
+  padding-top: 80px; }
+  .related-news-box .group-title {
+    margin-bottom: 80px;
+    padding-bottom: 9px;
+    text-transform: uppercase; }
+    .related-news-box .group-title:after {
+      width: 100%;
+      max-width: 100%; }
+
+.related-news-list {
+  overflow: hidden;
+  margin: 0 -15px -30px; }
+  .related-news-list > li {
+    float: left;
+    width: 33.33%;
+    padding: 0 15px;
+    margin-bottom: 30px; }
+    .related-news-list > li:nth-child(3n + 1) {
+      clear: both; }
+    .related-news-list > li a {
+      text-decoration: none;
+      cursor: pointer; }
+      @media all and (min-width: 769px) {
+        .related-news-list > li a:hover a.read-more,
+        .related-news-list > li a:hover .read-more, .related-news-list > li a:focus a.read-more,
+        .related-news-list > li a:focus .read-more {
+          color: #ffc72c; }
+        .related-news-list > li a:hover .related-img-wrap img, .related-news-list > li a:focus .related-img-wrap img {
+          -webkit-transform: scale(1.1);
+          -khtml-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          transform: scale(1.1); } }
+    @media all and (max-width: 991px) {
+      .related-news-list > li {
+        width: 50%; }
+        .related-news-list > li:nth-child(3n + 1) {
+          clear: none; }
+        .related-news-list > li:nth-child(odd) {
+          clear: both; } }
+    @media all and (max-width: 640px) {
+      .related-news-list > li {
+        width: 100%; } }
+
+.related-box {
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+
+.related-img-wrap {
+  padding-bottom: 82%;
+  -webkit-border-radius: 5px 5px 0 0;
+  -khtml-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0; }
+  @media all and (max-width: 767px) {
+    .related-img-wrap {
+      padding-bottom: 72%; } }
+
+.related-info {
+  padding: 26px 28px 18px; }
+  .related-info .desc {
+    margin-bottom: 13px;
+    font-size: 18px;
+    color: #62666a;
+    opacity: .8; }
+  .related-info .btn-box {
+    margin-right: -15px;
+    text-align: right; }
+  .related-info a.read-more,
+  .related-info .read-more {
+    font-weight: 500;
+    cursor: default; }
+  @media all and (max-width: 1024px) {
+    .related-info a.read-more,
+    .related-info .read-more,
+    .related-info .desc {
+      font-size: 17px; } }
+  @media all and (max-width: 767px) {
+    .related-info {
+      padding: 22px 20px 15px; }
+      .related-info a.read-more,
+      .related-info .read-more,
+      .related-info .desc {
+        font-size: 16px; }
+      .related-info .btn-box {
+        margin-right: 0; } }
+
+.related-title {
+  overflow: hidden;
+  margin-bottom: 12px;
+  font-size: 25px;
+  letter-spacing: .01em;
+  font-weight: 400;
+  color: #62666a;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+  @media all and (max-width: 1024px) {
+    .related-title {
+      font-size: 22px; } }
+  @media all and (max-width: 767px) {
+    .related-title {
+      font-size: 20px; } }
 
 /*# sourceMappingURL=screen.css.map */

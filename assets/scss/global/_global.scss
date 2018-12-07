@@ -109,6 +109,7 @@ h1, h2, h3, h4, h5, h6 {
   h6 { font-size: 20px; }
   a {
     color: $color-text3;
+    text-decoration: underline;
     &:hover {
       opacity: 0.7;
       text-decoration: none;
@@ -116,6 +117,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   ul {
     > li {
+      overflow: hidden;
       position: relative;
       padding-left: 25px;
       margin-bottom: 1px;
@@ -140,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     counter-reset: myCounter;
     > li {
+      overflow: hidden;
       position: relative;
       padding-left: 30px;
       margin-bottom: 1px;
@@ -178,6 +181,16 @@ h1, h2, h3, h4, h5, h6 {
       display: block;
       margin: 0 auto 12px;
       clear: both;
+    }
+    @media all and (max-width: 1024px) {
+      &.alignleft,
+      &.alignright,
+      &.aligncenter{
+        float: none;
+        display: block;
+        margin: 0 auto 12px;
+        clear: both;
+      }
     }
   }
   .inverse & {
@@ -304,7 +317,14 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   position: relative;
 }
-#main-content {}
+#main-content {
+  .white-header-bg & {
+    padding-top: 132px;
+  }
+  @media all and (max-width: 1024px) {
+    padding-top: 70px;
+  }
+}
 
 // Video Wrapper
 .videoWrapper {

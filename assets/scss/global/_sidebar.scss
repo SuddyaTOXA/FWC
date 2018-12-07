@@ -116,7 +116,14 @@
             text-decoration: none;
             &:hover,
             &:focus {
-              color: $color-text2;
+              .popular-title {
+                color: $color-text2;
+              }
+              .popular-img-wrap {
+                img {
+                  @include scale(1.1);
+                }
+              }
             }
           }
         }
@@ -124,7 +131,7 @@
           float: left;
           width: 80px;
           height: 80px;
-          padding-bottom: 29.7%;
+          padding-bottom: 0;
           margin-right: 22px;
           margin-bottom: 0;
           img {}
