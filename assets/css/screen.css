@@ -5493,8 +5493,7 @@ a.back-link,
     color: #62666a;
     font-size: 18px;
     line-height: 1.5;
-    letter-spacing: .03em;
-    opacity: .8; }
+    letter-spacing: .03em; }
     .article-box .content > :not(:last-child) {
       margin-bottom: 33px; }
     @media all and (max-width: 1024px) {
@@ -5503,6 +5502,8 @@ a.back-link,
     @media all and (max-width: 767px) {
       .article-box .content {
         font-size: 16px; } }
+    .article-list .article-box .content {
+      color: rgba(98, 102, 106, 0.8); }
 
 .article-img-wrap {
   margin-bottom: 40px; }
