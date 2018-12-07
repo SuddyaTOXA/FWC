@@ -5573,7 +5573,7 @@ a.read-more,
   @media all and (max-width: 767px) {
     .related-news-box {
       padding-top: 0;
-      padding-bottom: 60px; }
+      padding-bottom: 80px; }
       .related-news-box .group-title {
         font-size: 24px; } }
 
@@ -5652,8 +5652,8 @@ a.read-more,
   @media all and (max-width: 1024px) {
     .related-info a.read-more,
     .related-info .read-more,
-    .related-info .desc {
-      font-size: 17px; } }
+    .related-info .desc {.related-news-box
+    font-size: 17px; } }
   @media all and (max-width: 767px) {
     .related-info {
       padding: 22px 20px 15px; }
