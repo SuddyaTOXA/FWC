@@ -1123,7 +1123,7 @@ textarea:-moz-placeholder {
       text-align: left; } }
 
 #header-main {
-  z-index: 1; }
+  z-index: 2; }
   .white-header-bg #header-main {
     -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
@@ -4574,6 +4574,12 @@ a.back-link,
 .section-how-video-details .section-desc {
   text-align: left; }
 
+.section-hero.video {
+  padding: 80px 0 80px;
+  max-height: 2000px; }
+  .section-hero.video:before {
+    display: none; }
+
 .section-video-gallery .categories {
   margin-bottom: 80px; }
   .section-video-gallery .categories ul {
@@ -5939,8 +5945,7 @@ a.read-more,
         height: 4px; } }
 
 .inventory-detail-list-wrap {
-  margin-bottom: 125px;
-  text-align: center; }
+  margin-bottom: 125px; }
 
 .inventory-detail-list {
   margin: 0 -12px -80px;
