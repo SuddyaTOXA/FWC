@@ -85,6 +85,9 @@
           @media all and (max-width: 991px) {
             max-height: 205px;
           }
+          @media all and (max-width: 860px) {
+            max-height: 180px;
+          }
           @media all and (max-width: 767px) {
             max-height: initial;
             max-width: 100%;

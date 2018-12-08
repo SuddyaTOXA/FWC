@@ -5867,6 +5867,9 @@ a.read-more,
     @media all and (max-width: 991px) {
       .inventory-box .inner-content-wrap {
         max-height: 205px; } }
+    @media all and (max-width: 860px) {
+      .inventory-box .inner-content-wrap {
+        max-height: 180px; } }
     @media all and (max-width: 767px) {
       .inventory-box .inner-content-wrap {
         max-height: initial;
