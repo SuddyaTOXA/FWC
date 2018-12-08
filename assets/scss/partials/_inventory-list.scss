@@ -1,0 +1,229 @@
+.section-inventory-list {}
+  .inventory-list {
+    > li {
+      &:nth-child(odd) {
+        .inventory-box {
+          .inner-box {
+            //padding: 0;
+            //background-color: green;
+          }
+          > :nth-child(even) {
+            padding: 40px 80px;
+            //vertical-align: middle;
+           //background-color: blue;
+          }
+        }
+      }
+      &:nth-child(even) {
+        .inventory-box {
+          .inner-box {
+            //background-color: red;
+          }
+
+          > :nth-child(odd) {
+            padding: 40px 80px;
+            //vertical-align: middle;
+            //background-color: orange;
+          }
+        }
+      }
+      @media all and (max-width: 1024px) {
+        &:nth-child(odd) {
+          .inventory-box {
+            .inner-box {
+              //padding: 0;
+              //background-color: green;
+            }
+            > :nth-child(even) {
+              padding: 30px;
+              //vertical-align: middle;
+              //background-color: blue;
+            }
+          }
+        }
+        &:nth-child(even) {
+          .inventory-box {
+            .inner-box {
+              //background-color: red;
+            }
+
+            > :nth-child(odd) {
+              padding: 30px;
+              //vertical-align: middle;
+              //background-color: orange;
+            }
+          }
+        }
+      }
+      @media all and (max-width: 767px) {
+        &:nth-child(odd) {
+          .inventory-box {
+            //.inner-box {
+            //  width: 100%;
+            //  //padding: 0;
+            //  //background-color: green;
+            //}
+            > :nth-child(odd) {
+              display: block;
+            }
+            > :nth-child(even) {
+              display: block;
+              padding-bottom: 80px;
+              //display: table-footer-group;
+              //padding: 40px;
+              //vertical-align: middle;
+              //background-color: blue;
+            }
+          }
+        }
+        &:nth-child(even) {
+          .inventory-box {
+            //.inner-box {
+            //  //background-color: red;
+            //}
+
+            > :nth-child(odd) {
+              padding-bottom: 80px;
+            }
+            > :nth-child(even) {
+              display: table-header-group;
+              //display: table-header-group;
+              //padding: 40px;
+              //vertical-align: middle;
+              //background-color: orange;
+            }
+          }
+        }
+      }
+      @media all and (max-width: 767px) {
+        &:nth-child(odd) {
+          .inventory-box {
+            //.inner-box {
+            //  width: 100%;
+            //  //padding: 0;
+            //  //background-color: green;
+            //}
+            > :nth-child(odd) {
+              display: block;
+            }
+            > :nth-child(even) {
+              padding-left: 0;
+              padding-right: 0;
+              //display: table-footer-group;
+              //padding: 40px;
+              //vertical-align: middle;
+              //background-color: blue;
+            }
+          }
+        }
+        &:nth-child(even) {
+          .inventory-box {
+            //.inner-box {
+            //  //background-color: red;
+            //}
+
+            > :nth-child(odd) {
+              padding-left: 0;
+              padding-right: 0;
+              //padding-bottom: 80px;
+            }
+            > :nth-child(even) {
+              display: table-header-group;
+              //display: table-header-group;
+              //padding: 40px;
+              //vertical-align: middle;
+              //background-color: orange;
+            }
+          }
+        }
+      }
+    }
+  }
+      .inventory-box {
+        display: table;
+        width: 100%;
+        .inner-box {
+          display: table-cell;
+          width: 50%;
+          vertical-align: middle;
+          //padding-left: 80px;
+          //background-color: yellow;
+        }
+        .inner-content-wrap {
+          overflow: hidden;
+          max-width: 440px;
+          max-height: 320px;
+          padding-right: 10px;
+          > :last-child {
+            margin-bottom: 0;
+          }
+          @media all and (max-width: 1090px) {
+            max-height: 290px;
+          }
+          @media all and (max-width: 991px) {
+            max-height: 240px;
+          }
+          @media all and (max-width: 860px) {
+            max-height: 200px;
+          }
+          @media all and (max-width: 767px) {
+            max-height: initial;
+          }
+          @media all and (max-width: 1090px) { }
+        }
+        > :nth-child(even) {}
+        .centered-img {
+          width: 100%;
+          padding-bottom: 77%;
+        }
+        .content {
+          margin-bottom: 30px;
+          letter-spacing: .03em;
+          line-height: 1.5;
+          color: $color-text11;
+          color: rgba($color-text11, .8);
+        }
+        a.btn,
+        .btn {
+          min-width: 140px;
+          text-transform: uppercase;
+        }
+        @media all and (max-width: 767px) {
+          .inner-box {
+            width: 100%;
+          }
+        }
+
+      }
+        .inventory-title {
+          margin-bottom: 23px;
+          font-size: 26px;
+          font-weight: $normal;
+          line-height: 1.2;
+          letter-spacing: .03em;
+          color: $color-text11;
+          text-transform: uppercase;
+          & + .inventory-subtitle {
+            margin-top: -22px;
+          }
+          @media all and (max-width: 1024px) {
+            font-size: 24px;
+          }
+          @media all and (max-width: 767px) {
+            font-size: 22px;
+          }
+        }
+        .inventory-subtitle {
+          margin-bottom: 25px;
+          font-size: 20px;
+          font-weight: $normal;
+          line-height: 1.2;
+          letter-spacing: .03em;
+          color: $color-text11;
+          @media all and (max-width: 1024px) {
+            font-size: 19px;
+          }
+          @media all and (max-width: 767px) {
+            font-size: 18px;
+          }
+        }
