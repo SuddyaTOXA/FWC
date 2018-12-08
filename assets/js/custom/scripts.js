@@ -20,24 +20,22 @@
         prevent();
 
         // for burger menu
-        $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function () {
+        function burgerMenu() {
             $('.mobile-menu-toggle').toggleClass('active');
             $('.mobile-menu-wrap').toggleClass('showing');
             $('#header-main').toggleClass('white-bg');
             $('body').toggleClass('overflow');
+        }
+        $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function () {
+            burgerMenu();
         });
-
         $(window).on('resize', function () {
             var windowWidth = $(window).width();
-            if (windowWidth > 1024) {
-                if ($('.mobile-menu-toggle').hasClass('active')) {
-                    $('.mobile-menu-toggle').removeClass('active');
-                    $('.mobile-menu-wrap').removeClass('showing');
-                    $('#header-main').removeClass('white-bg');
-                    $(document.body).removeClass('overflow');
-                }
+            if (windowWidth > 1024 && $('.mobile-menu-toggle').hasClass('active')) {
+                burgerMenu();
             }
         });
+
 
         //for smooth-scroll
         // if (typeof smoothScroll !== 'undefined') {
