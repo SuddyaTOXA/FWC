@@ -1431,6 +1431,9 @@ textarea:-moz-placeholder {
   .mobile-menu > li {
     position: relative;
     display: block; }
+    .mobile-menu > li.btn-dealer {
+      margin-top: 10px;
+      margin-bottom: 10px; }
     .mobile-menu > li a {
       position: relative;
       display: inline-block;

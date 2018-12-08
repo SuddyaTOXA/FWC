@@ -146,13 +146,16 @@
   }
 }
 
-
 .mobile-menu {
   padding-top: 20px;
   padding-bottom: 20px;
   > li {
     position: relative;
     display: block;
+    &.btn-dealer {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
     a {
       position: relative;
       display: inline-block;
