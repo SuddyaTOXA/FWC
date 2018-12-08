@@ -43,7 +43,6 @@
       &.full-inventory-info {
         overflow: hidden;
         width: 100%;
-        margin-bottom: 120px;
         .left-box,
         .right-box {
           float: left;
@@ -83,12 +82,6 @@
         .more-info-btn {
           display: none;
         }
-
-        //height: 520px;
-         //> * {
-         //  display: none;
-         //  background-color: green;
-         //}
         @media all and (max-width: 1024px) {
           .rigth-box {
             padding-left: 15px;

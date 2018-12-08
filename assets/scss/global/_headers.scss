@@ -43,7 +43,7 @@
 }
 
 #header-main {
-  z-index: 2;
+  z-index: 10;
   .white-header-bg & {
     @include box-shadow(0 5px 10px 0, rgba($black, .2));
   }

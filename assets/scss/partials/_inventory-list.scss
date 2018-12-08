@@ -1,138 +1,61 @@
 .section-inventory-list {}
   .inventory-list {
+    @media all and (max-width: 1170px) {
+      margin: 0 -20px;
+    }
+    @media all and (max-width: 860px) {
+      margin: 0;
+    }
     > li {
       &:nth-child(odd) {
         .inventory-box {
-          .inner-box {
-            //padding: 0;
-            //background-color: green;
-          }
           > :nth-child(even) {
             padding: 40px 80px;
-            //vertical-align: middle;
-           //background-color: blue;
           }
         }
       }
       &:nth-child(even) {
         .inventory-box {
-          .inner-box {
-            //background-color: red;
-          }
-
           > :nth-child(odd) {
             padding: 40px 80px;
-            //vertical-align: middle;
-            //background-color: orange;
           }
         }
       }
       @media all and (max-width: 1024px) {
         &:nth-child(odd) {
           .inventory-box {
-            .inner-box {
-              //padding: 0;
-              //background-color: green;
-            }
             > :nth-child(even) {
-              padding: 30px;
-              //vertical-align: middle;
-              //background-color: blue;
+              padding: 20px;
             }
           }
         }
         &:nth-child(even) {
           .inventory-box {
-            .inner-box {
-              //background-color: red;
-            }
-
             > :nth-child(odd) {
-              padding: 30px;
-              //vertical-align: middle;
-              //background-color: orange;
+              padding: 20px;
             }
           }
         }
       }
-      @media all and (max-width: 767px) {
+      @media all and (max-width: 860px) {
         &:nth-child(odd) {
           .inventory-box {
-            //.inner-box {
-            //  width: 100%;
-            //  //padding: 0;
-            //  //background-color: green;
-            //}
             > :nth-child(odd) {
               display: block;
             }
             > :nth-child(even) {
               display: block;
-              padding-bottom: 80px;
-              //display: table-footer-group;
-              //padding: 40px;
-              //vertical-align: middle;
-              //background-color: blue;
+              padding: 30px 0 80px;
             }
           }
         }
         &:nth-child(even) {
           .inventory-box {
-            //.inner-box {
-            //  //background-color: red;
-            //}
-
             > :nth-child(odd) {
-              padding-bottom: 80px;
+              padding: 30px 0 80px;
             }
             > :nth-child(even) {
               display: table-header-group;
-              //display: table-header-group;
-              //padding: 40px;
-              //vertical-align: middle;
-              //background-color: orange;
-            }
-          }
-        }
-      }
-      @media all and (max-width: 767px) {
-        &:nth-child(odd) {
-          .inventory-box {
-            //.inner-box {
-            //  width: 100%;
-            //  //padding: 0;
-            //  //background-color: green;
-            //}
-            > :nth-child(odd) {
-              display: block;
-            }
-            > :nth-child(even) {
-              padding-left: 0;
-              padding-right: 0;
-              //display: table-footer-group;
-              //padding: 40px;
-              //vertical-align: middle;
-              //background-color: blue;
-            }
-          }
-        }
-        &:nth-child(even) {
-          .inventory-box {
-            //.inner-box {
-            //  //background-color: red;
-            //}
-
-            > :nth-child(odd) {
-              padding-left: 0;
-              padding-right: 0;
-              //padding-bottom: 80px;
-            }
-            > :nth-child(even) {
-              display: table-header-group;
-              //display: table-header-group;
-              //padding: 40px;
-              //vertical-align: middle;
-              //background-color: orange;
             }
           }
         }
@@ -146,30 +69,26 @@
           display: table-cell;
           width: 50%;
           vertical-align: middle;
-          //padding-left: 80px;
-          //background-color: yellow;
+          > :last-child {
+            margin-bottom: 0;
+          }
         }
         .inner-content-wrap {
           overflow: hidden;
           max-width: 440px;
-          max-height: 320px;
+          max-height: 255px;
+          margin-bottom: 30px;
           padding-right: 10px;
           > :last-child {
             margin-bottom: 0;
           }
-          @media all and (max-width: 1090px) {
-            max-height: 290px;
-          }
           @media all and (max-width: 991px) {
-            max-height: 240px;
+            max-height: 205px;
           }
           @media all and (max-width: 860px) {
-            max-height: 200px;
-          }
-          @media all and (max-width: 767px) {
             max-height: initial;
+            max-width: 100%;
           }
-          @media all and (max-width: 1090px) { }
         }
         > :nth-child(even) {}
         .centered-img {
@@ -188,7 +107,7 @@
           min-width: 140px;
           text-transform: uppercase;
         }
-        @media all and (max-width: 767px) {
+        @media all and (max-width: 860px) {
           .inner-box {
             width: 100%;
           }
