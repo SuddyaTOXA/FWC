@@ -257,7 +257,7 @@
         }
 
         //for More Info btn
-        if (($('.service-box').length || $('.item-box').length || $('.product-box').length) && $('.more-info-btn').length) {
+        if (($('.service-box').length || $('.item-box').length || $('.product-box').length || $('.inventory-detail-box').length) && $('.more-info-btn').length) {
             $('.more-info-btn').on('click', function (e) {
                 e.preventDefault();
                 console.log('click');
