@@ -5943,7 +5943,6 @@ a.read-more,
   text-align: center; }
 
 .inventory-detail-list {
-  display: inline-block;
   margin: 0 -12px -80px;
   text-align: left; }
   .inventory-detail-list > li {
