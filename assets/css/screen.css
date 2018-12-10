@@ -457,7 +457,7 @@ a.btn, .btn {
       color: #62666a;
       background-color: transparent; }
       @media all and (min-width: 769px) {
-        a.btn.blue.inverse.hover, .section-how-videos .list-item:hover a.btn, .section-how-video-details .list-item:hover a.btn, .section-events .list-item:hover a.btn, a.btn.blue.inverse:hover, a.btn.blue.inverse:focus, .btn.blue.inverse.hover, .section-how-videos .list-item:hover .btn, .section-how-video-details .list-item:hover .btn, .section-events .list-item:hover .btn, .btn.blue.inverse:hover, .btn.blue.inverse:focus {
+        a.btn.blue.inverse.hover, .section-how-videos .list-item:hover a.btn, .section-how-video-details .list-item:hover a.btn, .section-events .list-item:hover a.btn, .section-event .list-item:hover a.btn, a.btn.blue.inverse:hover, a.btn.blue.inverse:focus, .btn.blue.inverse.hover, .section-how-videos .list-item:hover .btn, .section-how-video-details .list-item:hover .btn, .section-events .list-item:hover .btn, .section-event .list-item:hover .btn, .btn.blue.inverse:hover, .btn.blue.inverse:focus {
           color: #ffffff;
           background-color: #00a3e0; } }
   a.btn.white, .btn.white {
@@ -5399,23 +5399,23 @@ ul.anchor-btn-list {
   color: #62666a;
   opacity: .8; }
 
-.section-events .categories {
+.section-events .categories, .section-event .categories {
   margin-bottom: 80px; }
-  .section-events .categories ul {
+  .section-events .categories ul, .section-event .categories ul {
     text-align: center; }
-  .section-events .categories li {
+  .section-events .categories li, .section-event .categories li {
     display: inline-block;
     margin-bottom: 15px; }
     @media (min-width: 768px) {
-      .section-events .categories li {
+      .section-events .categories li, .section-event .categories li {
         margin-bottom: 0; } }
-  .section-events .categories .btn {
+  .section-events .categories .btn, .section-event .categories .btn {
     margin: 0 8px;
     border-radius: 0;
     -webkit-border-radius: 0; }
-.section-events .itemlink {
+.section-events .itemlink, .section-event .itemlink {
   text-decoration: none; }
-.section-events .list-item {
+.section-events .list-item, .section-event .list-item {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -5423,38 +5423,48 @@ ul.anchor-btn-list {
   margin-bottom: 50px;
   border: solid 1px #d5d5d5;
   padding: 30px 30px 20px 30px; }
-  .section-events .list-item > div {
+  .section-events .list-item > div, .section-event .list-item > div {
     display: block; }
-  .section-events .list-item:hover {
+  .section-events .list-item:hover, .section-event .list-item:hover {
     border-color: #00a3e0; }
-    .section-events .list-item:hover .fas:before {
+    .section-events .list-item:hover .fas:before, .section-event .list-item:hover .fas:before {
       color: #00a3e0; }
-.section-events .image {
+.section-events .image, .section-event .image {
   position: relative;
   margin-bottom: 0; }
-  .section-events .image img {
+  .section-events .image img, .section-event .image img {
     width: 100%;
     margin-bottom: 0; }
   @media (min-width: 768px) {
-    .section-events .image {
+    .section-events .image, .section-event .image {
       width: 50%; } }
-.section-events .text h3 {
+.section-events .text h3, .section-event .text h3 {
   color: #3e3e3e; }
-.section-events .text li {
+.section-events .text li, .section-event .text li {
   padding: 0;
   color: #62666a; }
-  .section-events .text li:before {
+  .section-events .text li:before, .section-event .text li:before {
     display: none; }
-.section-events .text .fas,
-.section-events .text .far {
+.section-events .text .fas, .section-event .text .fas,
+.section-events .text .far,
+.section-event .text .far {
   color: #00a3e0;
   margin-right: 8px; }
 @media (min-width: 768px) {
-  .section-events .text {
+  .section-events .text, .section-event .text {
     width: 50%;
     padding-left: 50px; } }
-.section-events .btn {
+.section-events .btn, .section-event .btn {
   margin-top: 25px; }
+
+.section-event {
+  padding-top: 100px; }
+  .section-event .list-item {
+    align-items: flex-start; }
+  .section-event h5 {
+    margin-top: 30px;
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 8px; }
 
 .contact-wrapper {
   display: flex;
